@@ -26,3 +26,6 @@ htmlcov/
 
 # Copier update conflicts
 *.rej
+
+# Locally generated benchmark runs
+runs/
