@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Filing processing benchmark descriptor",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "$schema",
+    "dataset_id",
+    "version",
+    "description",
+    "manifest",
+    "stages",
+    "selection"
+  ],
+  "properties": {
+    "$schema": { "type": "string" },
+    "dataset_id": { "type": "string", "minLength": 1 },
+    "version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "description": { "type": "string", "minLength": 1 },
+    "manifest": { "const": "manifest.jsonl" },
+    "stages": {
+      "type": "array",
+      "prefixItems": [
+        { "const": "raw" },
+        { "const": "normalized" },
+        { "const": "extractions" }
+      ],
+      "items": false
+    },
+    "selection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["regulators", "form_types", "filings_per_form", "total_filings"],
+      "properties": {
+        "regulators": { "type": "array", "items": { "type": "string" } },
+        "form_types": { "type": "array", "items": { "type": "string" } },
+        "filings_per_form": { "type": "integer", "minimum": 1 },
+        "total_filings": { "type": "integer", "minimum": 1 }
+      }
+    }
+  }
+}
