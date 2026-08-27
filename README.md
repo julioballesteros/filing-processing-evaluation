@@ -1,6 +1,15 @@
-# filing-processing-evaluation
+# Filing Processing Evaluation
 
-Tool for evaluating filing processors with dataset of expected results
+Reproducible dataset and evaluation tooling for financial-filing parsers and
+LLM extractors. The first release defines a 20-document golden-set seed with
+10 SEC 10-K filings and 10 SEC 10-Q filings.
+
+The benchmark is evaluation infrastructure, not training data. Raw filings
+are reconstructed from immutable SEC accessions, reviewed references are
+versioned, and candidate service outputs belong outside the dataset.
+
+See [`dataset/README.md`](dataset/README.md) for the selection and stage
+contract.
 
 ## Requirements
 
@@ -19,11 +28,32 @@ Commit the generated `uv.lock` file so local development and CI use the same
 resolved dependencies.
 
 
-## Run the application
+## Validate the dataset
 
 ```bash
-uv run filing-processing-evaluation
+uv run filing-processing-evaluation validate
 ```
+
+This validates the manifest without requiring the raw cache. Use
+`--form 10-K` or `--form 10-Q` to select one subset.
+
+## Construct the raw stage
+
+[SEC fair-access guidance](https://www.sec.gov/about/developer-resources)
+asks automated clients to identify themselves and moderate their request rate.
+Set a user agent containing your application and contact email, then download:
+
+```bash
+export SEC_USER_AGENT="filing-processing-evaluation your-email@example.com"
+uv run filing-processing-evaluation download
+uv run filing-processing-evaluation validate --check-raw
+```
+
+The downloader is sequential, rate-limited, uses atomic file replacement, and
+creates `dataset/raw.lock.jsonl` containing content hashes. Raw documents are
+ignored by Git; the lock file is intended to be committed with a dataset
+release. Downloads can be filtered with `--form` or repeated `--filing-id`
+arguments.
 
 
 ## Quality checks
@@ -39,8 +69,8 @@ The same commands are available through `make format`, `make lint`,
 `make typecheck`, `make test`, and `make check`.
 
 
-GitHub Actions runs the complete check suite for pushes to `main` and pull
-requests.
+GitHub Actions runs the complete check suite, including offline manifest
+validation, for pushes to `main` and pull requests. Tests never call SEC.
 
 
 ## Updating from the template

@@ -1,4 +1,4 @@
-.PHONY: install hooks format format-check lint lint-fix typecheck test check
+.PHONY: install hooks format format-check lint lint-fix typecheck test check dataset-validate dataset-download
 
 install:
 	uv sync --all-groups
@@ -26,3 +26,9 @@ test:
 	uv run pytest
 
 check: format-check lint typecheck test
+
+dataset-validate:
+	uv run filing-processing-evaluation validate
+
+dataset-download:
+	uv run filing-processing-evaluation download
