@@ -13,12 +13,33 @@ industry classification.
 ## Stages
 
 - `raw/` is a local cache populated by the downloader and excluded from Git.
-- `normalized/` will contain reviewed normalized references.
+- `normalized/` contains references conforming to
+  `schemas/normalized-document.schema.json`.
 - `extractions/` will contain reviewed references grouped by extraction task.
 
-The latter two directories are intentionally empty until their schemas and
-annotation protocol are defined. Outputs from systems under test must not be
-placed in these directories.
+Every normalized document follows the same provider-independent contract and
+remains a generated draft until its block boundaries, heading hierarchy, and
+logical tables have been reviewed. Normalized documents contain:
+
+- A schema version, filing ID, and raw-file SHA-256.
+- Self-contained filing metadata and a human-readable document title.
+- A flat, ordered list of headings, paragraphs, list items, and logical tables.
+- A separate section hierarchy pointing to heading blocks.
+- Logical table cells with inferred header roles and compact coordinates.
+- Source page numbers and XHTML paths for every block, plus original table-cell
+  coordinates for auditability.
+
+`normalized/manifest.jsonl` records each reference path, schema version,
+content hash, and review state. Generated artifacts enter as `draft`; only the
+explicit `accept-normalized` workflow marks a human-reviewed artifact as
+`reviewed`. A changed content hash resets that status.
+
+The baseline excludes hidden Inline XBRL metadata, empty layout tables, spacer
+rows and columns, recurring page furniture, and semantic page-break blocks. It
+preserves visible values but does not yet normalize Inline XBRL facts into a
+separate fact model. `extractions/` remains empty until its annotation protocol
+is defined. Outputs from systems under test must not be placed in either
+reference directory.
 
 ## Integrity
 

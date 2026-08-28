@@ -7,7 +7,7 @@ import json
 import re
 import unicodedata
 import xml.etree.ElementTree as ET
-from bisect import bisect_left, bisect_right
+from bisect import bisect_left
 from collections import Counter, defaultdict
 from collections.abc import Mapping
 from dataclasses import dataclass
@@ -405,6 +405,20 @@ def _combine_cell_text(left: str, right: str) -> str:
     return normalize_text(f"{left} {right}")
 
 
+def _nearest_anchor_index(anchors: list[int], physical_column: int) -> int:
+    """Map a spacer-grid position to its visually nearest logical column."""
+    insertion = bisect_left(anchors, physical_column)
+    if insertion == 0:
+        return 0
+    if insertion == len(anchors):
+        return len(anchors) - 1
+    previous = anchors[insertion - 1]
+    following = anchors[insertion]
+    if physical_column - previous < following - physical_column:
+        return insertion - 1
+    return insertion
+
+
 def _normalize_table(table: ET.Element) -> dict[str, Any] | None:
     physical_cells, physical_rows, physical_columns = _extract_physical_cells(table)
     if not any(physical_cell.text for physical_cell in physical_cells):
@@ -429,7 +443,7 @@ def _normalize_table(table: ET.Element) -> dict[str, Any] | None:
         for candidate_cell in rows[physical_row]:
             physical_column = int(candidate_cell["column"])
             physical_end = int(candidate_cell["end_column"])
-            column = max(0, bisect_right(anchors, physical_column) - 1)
+            column = _nearest_anchor_index(anchors, physical_column)
             end = max(column + 1, bisect_left(anchors, physical_end))
             covered_rows = [
                 row

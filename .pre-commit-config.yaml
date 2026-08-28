@@ -5,6 +5,8 @@ repos:
     rev: v6.0.0
     hooks:
       - id: check-added-large-files
+        # Canonical normalized JSON is versioned; raw filings remain Git-ignored.
+        args: [--maxkb=10240]
       - id: check-case-conflict
       - id: check-merge-conflict
       - id: check-toml

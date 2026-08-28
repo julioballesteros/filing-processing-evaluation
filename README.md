@@ -55,6 +55,69 @@ ignored by Git; the lock file is intended to be committed with a dataset
 release. Downloads can be filtered with `--form` or repeated `--filing-id`
 arguments.
 
+## Build normalized drafts
+
+Create deterministic normalized drafts for every locked raw filing in the
+manifest:
+
+```bash
+uv run filing-processing-evaluation normalize
+```
+
+Use `--form 10-K`, `--form 10-Q`, or repeatable `--filing-id` arguments to
+target a subset. The equivalent Make target has the same defaults:
+
+```bash
+make dataset-normalize
+make dataset-normalize FORM=10-Q
+make dataset-normalize FILING_ID=MANIFEST_FILING_ID
+```
+
+Each successful filing is written immediately and recorded in the normalized
+manifest. A malformed filing does not prevent the remaining selected filings
+from being attempted, but the command returns a nonzero status if any filing
+fails.
+
+To inspect one result, set `FILING_ID` to an entry from `dataset/manifest.jsonl`
+and render it beside the raw SEC document:
+
+```bash
+FILING_ID=MANIFEST_FILING_ID
+uv run filing-processing-evaluation render \
+  --input "dataset/normalized/${FILING_ID}.json" \
+  --compare-raw
+```
+
+The comparison page is written to `runs/rendered/` and excluded from Git. The
+generated JSON is a baseline draft, not automatically canonical: review block
+boundaries, section assignments, and table topology before accepting it as
+benchmark truth. This keeps the system under test independent from reference
+creation.
+
+Normalization produces logical tables rather than the SEC document's spacer
+grid: empty layout cells are removed, currency and percentage fragments are
+joined, column headers and row headers are identified, and original cell
+coordinates remain available as provenance. Every block also records its
+source page number and XHTML path. Page boundaries are audit metadata rather
+than scored semantic blocks.
+
+Default normalization updates `dataset/normalized/manifest.jsonl` with the
+artifact hash and a `draft` review state. After completing the visual review,
+record human acceptance explicitly:
+
+```bash
+uv run filing-processing-evaluation accept-normalized \
+  --filing-id "${FILING_ID}" \
+  --reviewer "Your Name"
+```
+
+The corresponding general Make workflows are `make dataset-render
+FILING_ID=...` and `make dataset-accept FILING_ID=... REVIEWER="Your Name"`.
+Both require an explicit filing ID; no company-specific default is assumed.
+
+Acceptance is preserved when an identical artifact is regenerated and reset to
+`draft` whenever its content hash changes.
+
 
 ## Quality checks
 

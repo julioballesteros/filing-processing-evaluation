@@ -72,14 +72,27 @@ def _parser() -> argparse.ArgumentParser:
     )
 
     normalize = subparsers.add_parser(
-        "normalize", help="Create a reviewable normalized draft for one raw filing."
+        "normalize",
+        help=(
+            "Create reviewable normalized drafts for selected locked raw filings; "
+            "all manifest entries are selected by default."
+        ),
     )
     normalize.add_argument("--manifest", type=Path, default=DEFAULT_MANIFEST)
-    normalize.add_argument("--filing-id", required=True)
+    normalize.add_argument("--form", choices=("10-K", "10-Q"))
+    normalize.add_argument(
+        "--filing-id",
+        action="append",
+        default=[],
+        help="Normalize one filing ID; repeat to select multiple filings.",
+    )
     normalize.add_argument(
         "--output",
         type=Path,
-        help="Output JSON path; defaults to dataset/normalized/<filing-id>.json.",
+        help=(
+            "Output JSON path when exactly one filing is selected; defaults to "
+            "dataset/normalized/<filing-id>.json."
+        ),
     )
 
     accept = subparsers.add_parser(
@@ -117,6 +130,24 @@ def _find_filing(entries: list[Filing], filing_id: str) -> Filing:
     raise DatasetError(f"unknown filing ID: {filing_id}")
 
 
+def _select_filings(
+    entries: list[Filing], *, form_type: str | None, filing_ids: set[str]
+) -> list[Filing]:
+    known_ids = {entry.filing_id for entry in entries}
+    unknown_ids = sorted(filing_ids - known_ids)
+    if unknown_ids:
+        raise DatasetError(f"unknown filing IDs: {', '.join(unknown_ids)}")
+    selected = [
+        entry
+        for entry in entries
+        if form_type in {None, entry.form_type}
+        and (not filing_ids or entry.filing_id in filing_ids)
+    ]
+    if not selected:
+        raise DatasetError("filing selection is empty")
+    return selected
+
+
 def main(argv: Sequence[str] | None = None) -> int:
     """Run the command-line interface."""
     args = _parser().parse_args(argv)
@@ -133,34 +164,63 @@ def main(argv: Sequence[str] | None = None) -> int:
 
         if args.command == "normalize":
             entries = load_manifest(args.manifest)
-            filing = _find_filing(entries, args.filing_id)
+            filings = _select_filings(
+                entries,
+                form_type=args.form,
+                filing_ids=set(args.filing_id),
+            )
+            if args.output is not None and len(filings) != 1:
+                raise DatasetError(
+                    "--output requires a selection containing exactly one filing"
+                )
             lock = load_lock(args.manifest.parent / "raw.lock.jsonl")
-            lock_entry = lock.get(filing.filing_id)
-            if lock_entry is None:
-                raise DatasetError(f"no raw lock entry for {filing.filing_id}")
-            document = normalize_filing(
-                filing,
-                dataset_dir=args.manifest.parent,
-                expected_sha256=lock_entry.sha256,
-            )
-            output = args.output or (
-                args.manifest.parent / "normalized" / f"{filing.filing_id}.json"
-            )
-            write_normalized(document, output)
-            normalized_manifest = None
-            if args.output is None:
-                normalized_manifest = update_normalized_manifest(
-                    dataset_dir=args.manifest.parent,
-                    normalized_path=output,
-                    document=document,
+            missing_lock_ids = [
+                filing.filing_id for filing in filings if filing.filing_id not in lock
+            ]
+            if missing_lock_ids:
+                raise DatasetError(
+                    "no raw lock entry for: " + ", ".join(missing_lock_ids)
+                )
+
+            failures: list[tuple[str, str]] = []
+            normalized_count = 0
+            for filing in filings:
+                try:
+                    document = normalize_filing(
+                        filing,
+                        dataset_dir=args.manifest.parent,
+                        expected_sha256=lock[filing.filing_id].sha256,
+                    )
+                    output = args.output or (
+                        args.manifest.parent / "normalized" / f"{filing.filing_id}.json"
+                    )
+                    write_normalized(document, output)
+                    if args.output is None:
+                        update_normalized_manifest(
+                            dataset_dir=args.manifest.parent,
+                            normalized_path=output,
+                            document=document,
+                        )
+                    normalized_count += 1
+                    print(
+                        f"Normalized draft: {output} "
+                        f"({len(document['sections'])} sections, "
+                        f"{len(document['blocks'])} blocks)"
+                    )
+                except DatasetError as error:
+                    failures.append((filing.filing_id, str(error)))
+                    print(f"error: {filing.filing_id}: {error}")
+
+            if args.output is None and normalized_count:
+                print(
+                    "Normalized manifest: "
+                    f"{args.manifest.parent / 'normalized' / 'manifest.jsonl'}"
                 )
             print(
-                f"Normalized draft: {output} "
-                f"({len(document['sections'])} sections, {len(document['blocks'])} blocks)"
+                f"Normalization complete: {normalized_count} succeeded, "
+                f"{len(failures)} failed"
             )
-            if normalized_manifest is not None:
-                print(f"Normalized manifest: {normalized_manifest} (draft)")
-            return 0
+            return 2 if failures else 0
 
         if args.command == "accept-normalized":
             normalized_path = (

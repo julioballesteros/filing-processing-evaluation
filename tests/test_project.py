@@ -5,6 +5,7 @@ from __future__ import annotations
 import hashlib
 import io
 import json
+import xml.etree.ElementTree as ET
 from collections import Counter
 from dataclasses import asdict
 from pathlib import Path
@@ -22,6 +23,8 @@ from filing_processing_evaluation.dataset import (
     validate_dataset,
 )
 from filing_processing_evaluation.normalization import (
+    _normalize_table,
+    _validate_table,
     load_normalized,
     normalize_filing,
     normalize_text,
@@ -85,6 +88,31 @@ def _prepare_normalization_fixture(tmp_path: Path) -> tuple[Filing, str, Path]:
     }
     (tmp_path / "raw.lock.jsonl").write_text(json.dumps(lock) + "\n")
     return entry, digest, manifest
+
+
+def _prepare_batch_normalization_fixture(
+    tmp_path: Path,
+) -> tuple[list[Filing], Path]:
+    entries = load_manifest(MANIFEST)[:2]
+    manifest = tmp_path / "manifest.jsonl"
+    _write_manifest(manifest, entries)
+    locks = []
+    for entry in entries:
+        raw_path = tmp_path / entry.raw_path
+        raw_path.parent.mkdir(parents=True)
+        raw_path.write_bytes(SAMPLE_XHTML)
+        locks.append(
+            {
+                "filing_id": entry.filing_id,
+                "retrieved_at": "2026-08-27T10:00:00Z",
+                "sha256": hashlib.sha256(SAMPLE_XHTML).hexdigest(),
+                "size_bytes": len(SAMPLE_XHTML),
+            }
+        )
+    (tmp_path / "raw.lock.jsonl").write_text(
+        "".join(json.dumps(lock) + "\n" for lock in locks), encoding="utf-8"
+    )
+    return entries, manifest
 
 
 def test_committed_manifest_has_ten_paired_companies_and_forms() -> None:
@@ -387,6 +415,57 @@ def test_normalized_round_trip_and_renderer(tmp_path: Path) -> None:
     assert "hidden XBRL metadata" not in html
 
 
+def _normalized_table(source: str) -> dict[str, Any]:
+    table = _normalize_table(ET.fromstring(source))
+    assert table is not None
+    table["id"] = "test-table"
+    _validate_table(table)
+    return table
+
+
+def test_logical_table_aligns_offset_currency_fragments_to_numeric_columns() -> None:
+    table = _normalized_table("""<table>
+        <tr><td>Year ended</td><td colspan="2"></td><td>2024</td><td colspan="3"></td><td>2023</td><td></td></tr>
+        <tr><td>Revenue</td><td></td><td>$</td><td>247,442</td><td colspan="2"></td><td>$</td><td>219,790</td><td></td></tr>
+        <tr><td>Net income</td><td colspan="2"></td><td>88,308</td><td colspan="3"></td><td>71,383</td><td></td></tr>
+        </table>""")
+
+    revenue = [cell for cell in table["cells"] if cell["row"] == 1]
+    assert [(cell["column"], cell["text"]) for cell in revenue] == [
+        (0, "Revenue"),
+        (1, "$247,442"),
+        (2, "$219,790"),
+    ]
+
+
+def test_logical_table_keeps_wide_and_row_spanning_headers_disjoint() -> None:
+    wide_header = _normalized_table("""<table>
+        <tr><td rowspan="2" colspan="3">(in millions)</td><td colspan="9"></td><td colspan="15">Year ended December 31,</td><td colspan="6"></td></tr>
+        <tr><td colspan="15"></td><td colspan="3">2025</td><td colspan="3"></td><td colspan="3">2024</td><td colspan="3"></td><td colspan="3">2023</td></tr>
+        <tr><td colspan="3">Operating activities</td><td colspan="15"></td><td>$</td><td>(147)</td><td colspan="4"></td><td>$</td><td>(42)</td><td colspan="4"></td><td>$</td><td>13</td><td></td></tr>
+        </table>""")
+    cells = {cell["text"]: cell for cell in wide_header["cells"]}
+    assert (cells["(in millions)"]["column"], cells["(in millions)"]["row_span"]) == (
+        0,
+        2,
+    )
+    assert cells["Year ended December 31,"]["column"] == 1
+    assert [cells[str(year)]["column"] for year in (2025, 2024, 2023)] == [1, 2, 3]
+
+    tied_header = _normalized_table("""<table>
+        <tr><td colspan="33"></td><td rowspan="2" colspan="3">Collateral</td><td colspan="3"></td></tr>
+        <tr><td colspan="30"></td><td colspan="3">Nonperforming</td></tr>
+        <tr><td colspan="3">Exposure</td><td colspan="27"></td><td>10</td><td colspan="5"></td><td>20</td><td colspan="2"></td></tr>
+        <tr><td colspan="3">Other</td><td colspan="27"></td><td>11</td><td colspan="5"></td><td>21</td><td colspan="2"></td></tr>
+        </table>""")
+    cells = {cell["text"]: cell for cell in tied_header["cells"]}
+    assert (cells["Collateral"]["column"], cells["Collateral"]["row_span"]) == (
+        2,
+        2,
+    )
+    assert cells["Nonperforming"]["column"] == 1
+
+
 def test_normalization_and_render_cli(
     tmp_path: Path, capsys: pytest.CaptureFixture[str]
 ) -> None:
@@ -465,6 +544,141 @@ def test_default_normalize_and_accept_cli_update_reference_manifest(
     output = capsys.readouterr().out
     assert "Normalized manifest" in output
     assert "Accepted normalized reference" in output
+
+
+def test_normalize_cli_processes_manifest_in_batch(
+    tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    entries, manifest = _prepare_batch_normalization_fixture(tmp_path)
+
+    assert main(["normalize", "--manifest", str(manifest)]) == 0
+
+    for entry in entries:
+        assert (tmp_path / "normalized" / f"{entry.filing_id}.json").is_file()
+    reference_entries = [
+        json.loads(line)
+        for line in (tmp_path / "normalized" / "manifest.jsonl")
+        .read_text(encoding="utf-8")
+        .splitlines()
+    ]
+    assert [entry["filing_id"] for entry in reference_entries] == sorted(
+        entry.filing_id for entry in entries
+    )
+    assert "Normalization complete: 2 succeeded, 0 failed" in capsys.readouterr().out
+
+
+def test_normalize_cli_filters_batch_and_rejects_ambiguous_output(
+    tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    entries, manifest = _prepare_batch_normalization_fixture(tmp_path)
+    output = tmp_path / "one.json"
+
+    assert (
+        main(
+            [
+                "normalize",
+                "--manifest",
+                str(manifest),
+                "--form",
+                "10-K",
+                "--output",
+                str(output),
+            ]
+        )
+        == 0
+    )
+    assert load_normalized(output)["filing_id"] == entries[0].filing_id
+
+    assert (
+        main(
+            [
+                "normalize",
+                "--manifest",
+                str(manifest),
+                "--output",
+                str(tmp_path / "ambiguous.json"),
+            ]
+        )
+        == 2
+    )
+    assert "--output requires" in capsys.readouterr().out
+
+
+def test_normalize_cli_reports_batch_failures_and_continues(
+    tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    entries, manifest = _prepare_batch_normalization_fixture(tmp_path)
+    invalid_payload = b"not xml"
+    invalid_path = tmp_path / entries[1].raw_path
+    invalid_path.write_bytes(invalid_payload)
+    locks = load_lock(tmp_path / "raw.lock.jsonl")
+    lock_lines = []
+    for entry in entries:
+        lock = locks[entry.filing_id]
+        if entry == entries[1]:
+            lock_lines.append(
+                {
+                    "filing_id": entry.filing_id,
+                    "retrieved_at": lock.retrieved_at,
+                    "sha256": hashlib.sha256(invalid_payload).hexdigest(),
+                    "size_bytes": len(invalid_payload),
+                }
+            )
+        else:
+            lock_lines.append(asdict(lock))
+    (tmp_path / "raw.lock.jsonl").write_text(
+        "".join(json.dumps(lock) + "\n" for lock in lock_lines), encoding="utf-8"
+    )
+
+    assert main(["normalize", "--manifest", str(manifest)]) == 2
+    assert (tmp_path / "normalized" / f"{entries[0].filing_id}.json").is_file()
+    assert not (tmp_path / "normalized" / f"{entries[1].filing_id}.json").exists()
+    output = capsys.readouterr().out
+    assert f"error: {entries[1].filing_id}" in output
+    assert "Normalization complete: 1 succeeded, 1 failed" in output
+
+
+def test_normalize_cli_rejects_invalid_batch_selection(
+    tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    entries, manifest = _prepare_batch_normalization_fixture(tmp_path)
+
+    assert (
+        main(
+            [
+                "normalize",
+                "--manifest",
+                str(manifest),
+                "--filing-id",
+                "unknown",
+            ]
+        )
+        == 2
+    )
+    assert "unknown filing IDs" in capsys.readouterr().out
+
+    assert (
+        main(
+            [
+                "normalize",
+                "--manifest",
+                str(manifest),
+                "--form",
+                "10-Q",
+                "--filing-id",
+                entries[0].filing_id,
+            ]
+        )
+        == 2
+    )
+    assert "filing selection is empty" in capsys.readouterr().out
+
+    locks = load_lock(tmp_path / "raw.lock.jsonl")
+    (tmp_path / "raw.lock.jsonl").write_text(
+        json.dumps(asdict(locks[entries[0].filing_id])) + "\n", encoding="utf-8"
+    )
+    assert main(["normalize", "--manifest", str(manifest)]) == 2
+    assert f"no raw lock entry for: {entries[1].filing_id}" in capsys.readouterr().out
 
 
 @pytest.mark.parametrize(
