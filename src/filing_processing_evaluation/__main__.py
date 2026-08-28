@@ -9,9 +9,22 @@ from pathlib import Path
 
 from filing_processing_evaluation.dataset import (
     DatasetError,
+    Filing,
     download_filings,
+    load_lock,
     load_manifest,
     validate_dataset,
+)
+from filing_processing_evaluation.normalization import (
+    load_normalized,
+    normalize_filing,
+    update_normalized_manifest,
+    write_normalized,
+)
+from filing_processing_evaluation.rendering import (
+    relative_href,
+    render_normalized_html,
+    write_rendered_html,
 )
 
 DEFAULT_MANIFEST = Path("dataset/manifest.jsonl")
@@ -57,7 +70,51 @@ def _parser() -> argparse.ArgumentParser:
     download.add_argument(
         "--force", action="store_true", help="Download files that already exist again."
     )
+
+    normalize = subparsers.add_parser(
+        "normalize", help="Create a reviewable normalized draft for one raw filing."
+    )
+    normalize.add_argument("--manifest", type=Path, default=DEFAULT_MANIFEST)
+    normalize.add_argument("--filing-id", required=True)
+    normalize.add_argument(
+        "--output",
+        type=Path,
+        help="Output JSON path; defaults to dataset/normalized/<filing-id>.json.",
+    )
+
+    accept = subparsers.add_parser(
+        "accept-normalized",
+        help="Mark a reviewed normalized artifact as canonical in its manifest.",
+    )
+    accept.add_argument("--manifest", type=Path, default=DEFAULT_MANIFEST)
+    accept.add_argument("--filing-id", required=True)
+    accept.add_argument(
+        "--reviewer", required=True, help="Name or identifier of the human reviewer."
+    )
+
+    render = subparsers.add_parser(
+        "render", help="Render normalized JSON as safe, standalone HTML."
+    )
+    render.add_argument("--input", type=Path, required=True)
+    render.add_argument("--manifest", type=Path, default=DEFAULT_MANIFEST)
+    render.add_argument(
+        "--output",
+        type=Path,
+        help="Output HTML path; defaults to runs/rendered/<filing-id>.html.",
+    )
+    render.add_argument(
+        "--compare-raw",
+        action="store_true",
+        help="Embed the local raw filing beside the normalized rendering.",
+    )
     return parser
+
+
+def _find_filing(entries: list[Filing], filing_id: str) -> Filing:
+    for entry in entries:
+        if entry.filing_id == filing_id:
+            return entry
+    raise DatasetError(f"unknown filing ID: {filing_id}")
 
 
 def main(argv: Sequence[str] | None = None) -> int:
@@ -72,6 +129,78 @@ def main(argv: Sequence[str] | None = None) -> int:
                 f"Valid dataset: {summary.total} filings "
                 f"({summary.by_form['10-K']} 10-K, {summary.by_form['10-Q']} 10-Q)"
             )
+            return 0
+
+        if args.command == "normalize":
+            entries = load_manifest(args.manifest)
+            filing = _find_filing(entries, args.filing_id)
+            lock = load_lock(args.manifest.parent / "raw.lock.jsonl")
+            lock_entry = lock.get(filing.filing_id)
+            if lock_entry is None:
+                raise DatasetError(f"no raw lock entry for {filing.filing_id}")
+            document = normalize_filing(
+                filing,
+                dataset_dir=args.manifest.parent,
+                expected_sha256=lock_entry.sha256,
+            )
+            output = args.output or (
+                args.manifest.parent / "normalized" / f"{filing.filing_id}.json"
+            )
+            write_normalized(document, output)
+            normalized_manifest = None
+            if args.output is None:
+                normalized_manifest = update_normalized_manifest(
+                    dataset_dir=args.manifest.parent,
+                    normalized_path=output,
+                    document=document,
+                )
+            print(
+                f"Normalized draft: {output} "
+                f"({len(document['sections'])} sections, {len(document['blocks'])} blocks)"
+            )
+            if normalized_manifest is not None:
+                print(f"Normalized manifest: {normalized_manifest} (draft)")
+            return 0
+
+        if args.command == "accept-normalized":
+            normalized_path = (
+                args.manifest.parent / "normalized" / f"{args.filing_id}.json"
+            )
+            document = load_normalized(normalized_path)
+            if document["filing_id"] != args.filing_id:
+                raise DatasetError(
+                    "normalized artifact filing ID does not match its path"
+                )
+            normalized_manifest = update_normalized_manifest(
+                dataset_dir=args.manifest.parent,
+                normalized_path=normalized_path,
+                document=document,
+                reviewer=args.reviewer,
+            )
+            print(
+                f"Accepted normalized reference: {args.filing_id} "
+                f"({normalized_manifest})"
+            )
+            return 0
+
+        if args.command == "render":
+            document = load_normalized(args.input)
+            filing_id = str(document["filing_id"])
+            output = args.output or Path("runs/rendered") / f"{filing_id}.html"
+            raw_href = None
+            if args.compare_raw:
+                filing = _find_filing(load_manifest(args.manifest), filing_id)
+                raw_path = args.manifest.parent / filing.raw_path
+                if not raw_path.is_file():
+                    raise DatasetError(f"raw artifact not found: {raw_path}")
+                raw_href = relative_href(raw_path, output)
+            html = render_normalized_html(
+                document,
+                raw_href=raw_href,
+                json_href=relative_href(args.input, output),
+            )
+            write_rendered_html(html, output)
+            print(f"Rendered normalized filing: {output}")
             return 0
 
         if not args.user_agent:
