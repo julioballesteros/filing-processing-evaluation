@@ -4,13 +4,12 @@ version = "0.1.0"
 description = "Tool for evaluating filing processors with dataset of expected results"
 readme = "README.md"
 requires-python = ">=3.13"
-dependencies = []
-
-
+dependencies = [
+    "typer>=0.27.2,<0.28",
+]
 
 [project.scripts]
-"filing-processing-evaluation" = "filing_processing_evaluation.__main__:main"
-
+"filing-processing-evaluation" = "filing_processing_evaluation.cli:app"
 
 [build-system]
 requires = ["uv_build>=0.12.5,<0.13"]
