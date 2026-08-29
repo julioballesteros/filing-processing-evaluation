@@ -16,8 +16,8 @@ from filing_processing_evaluation.dataset import (
     validate_dataset,
 )
 from filing_processing_evaluation.normalization import (
+    NormalizationService,
     load_normalized,
-    normalize_filing,
     update_normalized_manifest,
     write_normalized,
 )
@@ -184,9 +184,10 @@ def main(argv: Sequence[str] | None = None) -> int:
 
             failures: list[tuple[str, str]] = []
             normalized_count = 0
+            normalization_service = NormalizationService()
             for filing in filings:
                 try:
-                    document = normalize_filing(
+                    document = normalization_service.normalize(
                         filing,
                         dataset_dir=args.manifest.parent,
                         expected_sha256=lock[filing.filing_id].sha256,

@@ -23,6 +23,7 @@ from filing_processing_evaluation.dataset import (
     validate_dataset,
 )
 from filing_processing_evaluation.normalization import (
+    NormalizationService,
     _normalize_table,
     _validate_table,
     load_normalized,
@@ -317,7 +318,9 @@ def test_normalize_filing_preserves_structure_and_omits_furniture(
 ) -> None:
     entry, digest, _ = _prepare_normalization_fixture(tmp_path)
 
-    document = normalize_filing(entry, dataset_dir=tmp_path, expected_sha256=digest)
+    document = NormalizationService().normalize(
+        entry, dataset_dir=tmp_path, expected_sha256=digest
+    )
 
     assert document["schema_version"] == "1.1.0"
     assert document["raw_sha256"] == digest
