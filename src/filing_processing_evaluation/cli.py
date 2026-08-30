@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-from enum import StrEnum
 from pathlib import Path
 from typing import Annotated, Never
 
@@ -24,6 +23,7 @@ from filing_processing_evaluation.dataset import (
     load_manifest,
     validate_dataset,
 )
+from filing_processing_evaluation.models import FormType
 from filing_processing_evaluation.normalization import (
     NormalizationError,
 )
@@ -42,17 +42,6 @@ app = typer.Typer(
 )
 
 
-class FormType(StrEnum):
-    """Filing forms currently supported by the dataset."""
-
-    annual = "10-K"
-    quarterly = "10-Q"
-
-
-def _form_value(form: FormType | None) -> str | None:
-    return form.value if form is not None else None
-
-
 def _abort(error: DatasetError | ArtifactError | NormalizationError) -> Never:
     typer.echo(f"error: {error}")
     raise typer.Exit(code=2)
@@ -66,7 +55,7 @@ def _find_filing(entries: list[Filing], filing_id: str) -> Filing:
 
 
 def _select_filings(
-    entries: list[Filing], *, form_type: str | None, filing_ids: set[str]
+    entries: list[Filing], *, form_type: FormType | None, filing_ids: set[str]
 ) -> list[Filing]:
     known_ids = {entry.filing_id for entry in entries}
     unknown_ids = sorted(filing_ids - known_ids)
@@ -102,14 +91,13 @@ def validate(
 ) -> None:
     """Validate the manifest, lock file, and optional raw files."""
     try:
-        summary = validate_dataset(
-            manifest, check_raw=check_raw, form_type=_form_value(form)
-        )
+        summary = validate_dataset(manifest, check_raw=check_raw, form_type=form)
     except DatasetError as error:
         _abort(error)
     typer.echo(
         f"Valid dataset: {summary.total} filings "
-        f"({summary.by_form['10-K']} 10-K, {summary.by_form['10-Q']} 10-Q)"
+        f"({summary.by_form[FormType.TEN_K]} 10-K, "
+        f"{summary.by_form[FormType.TEN_Q]} 10-Q)"
     )
 
 
@@ -155,7 +143,7 @@ def download(
             entries,
             dataset_dir=manifest.parent,
             user_agent=user_agent,
-            form_type=_form_value(form),
+            form_type=form,
             filing_ids=set(filing_id or []),
             delay=delay,
             force=force,
@@ -203,7 +191,7 @@ def normalize(
         entries = load_manifest(manifest)
         filings = _select_filings(
             entries,
-            form_type=_form_value(form),
+            form_type=form,
             filing_ids=set(filing_id or []),
         )
         if output is not None and len(filings) != 1:

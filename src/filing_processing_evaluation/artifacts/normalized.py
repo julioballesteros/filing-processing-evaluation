@@ -10,6 +10,7 @@ from typing import Any, cast
 
 from filing_processing_evaluation.artifacts.errors import ArtifactError
 from filing_processing_evaluation.artifacts.files import sha256_file
+from filing_processing_evaluation.models import FormType
 from filing_processing_evaluation.normalization.errors import NormalizationError
 from filing_processing_evaluation.normalization.models import NormalizedDocument
 from filing_processing_evaluation.normalization.schema import SCHEMA_VERSION
@@ -52,6 +53,8 @@ def load_normalized(path: Path) -> NormalizedDocument:
         validate_normalized(value)
     except NormalizationError as error:
         raise ArtifactError(f"{error}: {path}") from error
+    metadata = cast(dict[str, Any], value["document"])
+    metadata["form_type"] = FormType(metadata["form_type"])
     return cast(NormalizedDocument, value)
 
 

@@ -10,7 +10,7 @@ import xml.etree.ElementTree as ET
 from collections import Counter
 from dataclasses import asdict, replace
 from pathlib import Path
-from typing import Any, NoReturn
+from typing import Any, NoReturn, cast
 
 import pytest
 from typer.testing import CliRunner
@@ -32,6 +32,7 @@ from filing_processing_evaluation.dataset import (
     load_manifest,
     validate_dataset,
 )
+from filing_processing_evaluation.models import FormType
 from filing_processing_evaluation.normalization import (
     NormalizationError,
     NormalizationService,
@@ -138,12 +139,18 @@ def test_committed_manifest_has_ten_paired_companies_and_forms() -> None:
     entries = load_manifest(MANIFEST)
 
     assert len(entries) == 20
-    assert Counter(entry.form_type for entry in entries) == {"10-K": 10, "10-Q": 10}
-    forms_by_cik: dict[str, set[str]] = {}
+    assert all(isinstance(entry.form_type, FormType) for entry in entries)
+    assert Counter(entry.form_type for entry in entries) == {
+        FormType.TEN_K: 10,
+        FormType.TEN_Q: 10,
+    }
+    forms_by_cik: dict[str, set[FormType]] = {}
     for entry in entries:
         forms_by_cik.setdefault(entry.cik, set()).add(entry.form_type)
     assert len(forms_by_cik) == 10
-    assert all(forms == {"10-K", "10-Q"} for forms in forms_by_cik.values())
+    assert all(
+        forms == {FormType.TEN_K, FormType.TEN_Q} for forms in forms_by_cik.values()
+    )
 
 
 def test_cli_help_lists_flat_commands() -> None:
@@ -460,7 +467,10 @@ def test_filing_type_workflows_are_separate_and_dispatchable(tmp_path: Path) -> 
         TenQNormalizer().normalize(annual_source)
     unsupported_source = replace(
         annual_source,
-        metadata=replace(annual_source.metadata, form_type="8-K"),
+        metadata=replace(
+            annual_source.metadata,
+            form_type=cast(FormType, "8-K"),
+        ),
     )
     with pytest.raises(NormalizationError, match="no normalization workflow"):
         NormalizationService().normalize(unsupported_source)
@@ -482,6 +492,7 @@ def test_normalized_round_trip_and_renderer(tmp_path: Path) -> None:
     write_rendered_html(html, rendered_path)
 
     assert load_normalized(normalized_path) == document
+    assert isinstance(loaded["document"]["form_type"], FormType)
     assert rendered_path.read_text(encoding="utf-8") == html
     assert "Raw SEC filing" in html
     assert "Open normalized JSON" in html

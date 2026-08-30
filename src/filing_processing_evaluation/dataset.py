@@ -15,6 +15,8 @@ from urllib.error import HTTPError, URLError
 from urllib.parse import urlparse
 from urllib.request import Request, urlopen
 
+from filing_processing_evaluation.models import FormType
+
 
 class DatasetError(Exception):
     """Raised when the dataset definition or an artifact is invalid."""
@@ -31,7 +33,7 @@ class Filing:
     cik: str
     ticker: str
     sector: str
-    form_type: str
+    form_type: FormType
     is_amendment: bool
     filing_date: str
     period_end_date: str
@@ -52,8 +54,16 @@ class Filing:
                 f"manifest line {line_number} has invalid fields; "
                 f"missing={missing}, extra={extra}"
             )
+        values = dict(value)
         try:
-            filing = cls(**value)
+            values["form_type"] = FormType(values["form_type"])
+        except (TypeError, ValueError) as error:
+            raise DatasetError(
+                f"manifest line {line_number} ({values.get('filing_id')}) "
+                f"has unsupported form_type {values.get('form_type')!r}"
+            ) from error
+        try:
+            filing = cls(**values)
         except TypeError as error:
             raise DatasetError(f"manifest line {line_number}: {error}") from error
         filing._validate(line_number)
@@ -83,8 +93,6 @@ class Filing:
             raise DatasetError(f"{prefix} is_amendment must be boolean")
         if self.regulator != "sec" or self.provider != "sec-edgar":
             raise DatasetError(f"{prefix} has an unsupported regulator or provider")
-        if self.form_type not in {"10-K", "10-Q"}:
-            raise DatasetError(f"{prefix} has unsupported form_type {self.form_type!r}")
         if self.is_amendment:
             raise DatasetError(f"{prefix} unexpectedly selects an amended filing")
         if len(self.cik) != 10 or not self.cik.isdigit():
@@ -180,7 +188,7 @@ class ValidationSummary:
     """Counts returned after successful validation."""
 
     total: int
-    by_form: Mapping[str, int]
+    by_form: Mapping[FormType, int]
 
 
 def _read_json_lines(path: Path) -> Iterable[tuple[int, Mapping[str, Any]]]:
@@ -241,7 +249,10 @@ def _digest(path: Path) -> tuple[str, int]:
 
 
 def validate_dataset(
-    manifest_path: Path, *, check_raw: bool = False, form_type: str | None = None
+    manifest_path: Path,
+    *,
+    check_raw: bool = False,
+    form_type: FormType | None = None,
 ) -> ValidationSummary:
     """Validate dataset metadata and, optionally, downloaded artifacts."""
     entries = load_manifest(manifest_path)
@@ -265,7 +276,11 @@ def validate_dataset(
                 raise DatasetError(f"raw artifact failed integrity check: {artifact}")
     counts = Counter(entry.form_type for entry in selected)
     return ValidationSummary(
-        total=len(selected), by_form={"10-K": counts["10-K"], "10-Q": counts["10-Q"]}
+        total=len(selected),
+        by_form={
+            FormType.TEN_K: counts[FormType.TEN_K],
+            FormType.TEN_Q: counts[FormType.TEN_Q],
+        },
     )
 
 
@@ -318,7 +333,7 @@ def download_filings(
     *,
     dataset_dir: Path,
     user_agent: str,
-    form_type: str | None = None,
+    form_type: FormType | None = None,
     filing_ids: set[str] | None = None,
     delay: float = 0.2,
     force: bool = False,

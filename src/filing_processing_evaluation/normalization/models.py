@@ -7,6 +7,8 @@ from collections.abc import Mapping
 from dataclasses import dataclass
 from typing import Any, TypedDict
 
+from filing_processing_evaluation.models import FormType
+
 
 @dataclass(frozen=True)
 class FilingMetadata:
@@ -14,7 +16,7 @@ class FilingMetadata:
 
     filing_id: str
     company_name: str
-    form_type: str
+    form_type: FormType
     filing_date: str
     period_end_date: str
     primary_document: str
@@ -154,7 +156,7 @@ class NormalizedMetadata(TypedDict):
     source_title: str
     language: str
     company_name: str
-    form_type: str
+    form_type: FormType
     filing_date: str
     period_end_date: str
 

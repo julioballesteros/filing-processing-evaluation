@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import hashlib
 
+from filing_processing_evaluation.models import FormType
 from filing_processing_evaluation.normalization.errors import NormalizationError
 from filing_processing_evaluation.normalization.models import (
     Diagnostic,
@@ -29,7 +30,7 @@ from filing_processing_evaluation.normalization.stages.sections import (
 class TenKNormalizer:
     """Normalize a loaded annual report through the 10-K workflow."""
 
-    form_type = "10-K"
+    form_type = FormType.TEN_K
 
     def __init__(self) -> None:
         self._parser = XhtmlParser()

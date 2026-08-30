@@ -5,6 +5,7 @@ from __future__ import annotations
 from collections.abc import Iterable
 from typing import Protocol
 
+from filing_processing_evaluation.models import FormType
 from filing_processing_evaluation.normalization.errors import NormalizationError
 from filing_processing_evaluation.normalization.models import (
     NormalizationInput,
@@ -19,7 +20,7 @@ from filing_processing_evaluation.normalization.workflows import (
 class NormalizationWorkflow(Protocol):
     """One independently callable filing-type normalization workflow."""
 
-    form_type: str
+    form_type: FormType
 
     def normalize(self, source: NormalizationInput) -> NormalizationResult: ...
 

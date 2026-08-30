@@ -5,6 +5,7 @@ from __future__ import annotations
 from collections.abc import Mapping
 from typing import Any
 
+from filing_processing_evaluation.models import FormType
 from filing_processing_evaluation.normalization.errors import NormalizationError
 from filing_processing_evaluation.normalization.schema import SCHEMA_VERSION
 
@@ -42,8 +43,12 @@ def validate_normalized(document: Mapping[str, Any]) -> None:
         for field in metadata_fields
     ):
         raise NormalizationError("normalized document metadata has invalid fields")
-    if metadata["form_type"] not in {"10-K", "10-Q"}:
-        raise NormalizationError("normalized document has an unsupported form type")
+    try:
+        FormType(metadata["form_type"])
+    except ValueError as error:
+        raise NormalizationError(
+            "normalized document has an unsupported form type"
+        ) from error
     filing_id = document.get("filing_id")
     raw_sha256 = document.get("raw_sha256")
     if not isinstance(filing_id, str) or not filing_id:
