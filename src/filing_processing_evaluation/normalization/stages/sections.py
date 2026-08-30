@@ -34,7 +34,12 @@ def section_definition(text: str) -> SectionDefinition | None:
         return SectionDefinition(level=1, label=label, title=title)
     if match := ITEM_PATTERN.match(text):
         label = f"Item {match.group(1).upper()}"
-        title = match.group(2).strip(" .") or None
+        candidate_title = match.group(2).strip(" .")
+        title = (
+            candidate_title
+            if candidate_title and not candidate_title.startswith(",")
+            else None
+        )
         return SectionDefinition(level=2, label=label, title=title)
     if text.upper() == "SIGNATURE":
         return SectionDefinition(level=1, label="SIGNATURE", title=None)

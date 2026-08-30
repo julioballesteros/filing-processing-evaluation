@@ -10,6 +10,7 @@ from typing import cast
 
 import pytest
 
+from filing_processing_evaluation.application import FilingNormalizationApplication
 from filing_processing_evaluation.artifacts import (
     ArtifactError,
     FileSystemRawFilingLoader,
@@ -17,6 +18,7 @@ from filing_processing_evaluation.artifacts import (
 from filing_processing_evaluation.dataset import load_manifest
 from filing_processing_evaluation.models import FormType
 from filing_processing_evaluation.normalization import (
+    SCHEMA_VERSION,
     NormalizationError,
     NormalizationService,
     TenKNormalizer,
@@ -41,7 +43,7 @@ def test_normalize_filing_preserves_structure_and_omits_furniture(
     result = NormalizationService().normalize(source)
     document = result.document
 
-    assert document["schema_version"] == "1.1.0"
+    assert document["schema_version"] == SCHEMA_VERSION
     assert document["raw_sha256"] == digest
     assert document["document"] == {
         "title": (
@@ -150,6 +152,64 @@ def test_filing_type_workflows_are_separate_and_dispatchable(tmp_path: Path) -> 
         NormalizationService().normalize(unsupported_source)
     with pytest.raises(ValueError, match="form types must be unique"):
         NormalizationService((TenKNormalizer(), TenKNormalizer()))
+
+
+def test_repeated_page_section_headings_reuse_active_sections(tmp_path: Path) -> None:
+    entry = load_manifest(MANIFEST)[0]
+    content = b"""<html xmlns="http://www.w3.org/1999/xhtml">
+      <head><title>Continuation headings</title></head>
+      <body>
+        <div>PART I</div>
+        <div>Item 1</div>
+        <div>ITEM 1. FINANCIAL STATEMENTS</div>
+        <div>First-page content.</div>
+        <hr/>
+        <div>PART I</div>
+        <div>Item 1</div>
+        <div>Second-page content.</div>
+        <hr/>
+        <div>PART II</div>
+        <div>Item 1</div>
+        <div>Different-part content.</div>
+      </body>
+    </html>"""
+    raw_path = tmp_path / entry.raw_path
+    raw_path.parent.mkdir(parents=True)
+    raw_path.write_bytes(content)
+
+    result = FilingNormalizationApplication(
+        FileSystemRawFilingLoader(tmp_path)
+    ).normalize(entry, expected_sha256=hashlib.sha256(content).hexdigest())
+
+    assert [
+        (section["label"], section["title"]) for section in result.document["sections"]
+    ] == [
+        ("PART I", None),
+        ("Item 1", "FINANCIAL STATEMENTS"),
+        ("PART II", None),
+        ("Item 1", None),
+    ]
+    item_section = result.document["sections"][1]
+    content_blocks = [
+        block
+        for block in result.document["blocks"]
+        if block.get("text") in {"First-page content.", "Second-page content."}
+    ]
+    assert {block["section_id"] for block in content_blocks} == {item_section["id"]}
+    different_part_block = next(
+        block
+        for block in result.document["blocks"]
+        if block.get("text") == "Different-part content."
+    )
+    assert different_part_block["section_id"] == result.document["sections"][3]["id"]
+    assert (
+        next(
+            diagnostic.details["repeated_section_headings"]
+            for diagnostic in result.diagnostics
+            if diagnostic.stage == "build_blocks"
+        )
+        == 3
+    )
 
 
 @pytest.mark.parametrize(

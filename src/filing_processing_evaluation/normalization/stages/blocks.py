@@ -29,10 +29,13 @@ class _StructureBuilder:
         self.blocks: list[dict[str, Any]] = []
         self.sections: list[dict[str, Any]] = []
         self._section_by_level: dict[int, str] = {}
+        self._section_definition_by_level: dict[int, SectionDefinition] = {}
+        self._section_by_id: dict[str, dict[str, Any]] = {}
         self._saw_nonitalic_major_heading = False
         self._inside_note = False
         self._note_has_nonitalic_subheading = False
         self.discarded_empty_tables = 0
+        self.repeated_section_headings = 0
 
     @property
     def current_section_id(self) -> str | None:
@@ -71,9 +74,23 @@ class _StructureBuilder:
         )
         return block_id
 
-    def _start_section(
+    def _resolve_section(
         self, definition: SectionDefinition, heading_block_id: str
     ) -> str:
+        active_definition = self._section_definition_by_level.get(definition.level)
+        if (
+            active_definition is not None
+            and active_definition.label == definition.label
+        ):
+            section_id = self._section_by_level[definition.level]
+            section = self._section_by_id[section_id]
+            if active_definition.title is None and definition.title is not None:
+                section["title"] = definition.title
+                section["heading_block_id"] = heading_block_id
+                self._section_definition_by_level[definition.level] = definition
+            self.repeated_section_headings += 1
+            return section_id
+
         parent_levels = [
             level for level in self._section_by_level if level < definition.level
         ]
@@ -81,23 +98,29 @@ class _StructureBuilder:
             self._section_by_level[max(parent_levels)] if parent_levels else None
         )
         section_id = f"s{len(self.sections) + 1:04d}"
-        self.sections.append(
-            {
-                "id": section_id,
-                "order": len(self.sections) + 1,
-                "parent_id": parent_id,
-                "level": definition.level,
-                "label": definition.label,
-                "title": definition.title,
-                "heading_block_id": heading_block_id,
-            }
-        )
+        section = {
+            "id": section_id,
+            "order": len(self.sections) + 1,
+            "parent_id": parent_id,
+            "level": definition.level,
+            "label": definition.label,
+            "title": definition.title,
+            "heading_block_id": heading_block_id,
+        }
+        self.sections.append(section)
+        self._section_by_id[section_id] = section
         self._section_by_level = {
             level: existing_id
             for level, existing_id in self._section_by_level.items()
             if level < definition.level
         }
+        self._section_definition_by_level = {
+            level: existing_definition
+            for level, existing_definition in self._section_definition_by_level.items()
+            if level < definition.level
+        }
         self._section_by_level[definition.level] = section_id
+        self._section_definition_by_level[definition.level] = definition
         self._saw_nonitalic_major_heading = False
         self._inside_note = False
         self._note_has_nonitalic_subheading = False
@@ -146,7 +169,7 @@ class _StructureBuilder:
                 level = 3
             block_id = self._add_block("heading", value.source, level=level, text=text)
             if definition is not None:
-                section_id = self._start_section(definition, block_id)
+                section_id = self._resolve_section(definition, block_id)
                 self.blocks[-1]["section_id"] = section_id
             elif not features.mostly_italic:
                 self._saw_nonitalic_major_heading = True
@@ -193,6 +216,7 @@ class BlockBuilder:
                 "sections": len(builder.sections),
                 "tables": table_blocks,
                 "discarded_empty_tables": builder.discarded_empty_tables,
+                "repeated_section_headings": builder.repeated_section_headings,
             },
         )
         return StageOutcome(
