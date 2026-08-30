@@ -13,7 +13,7 @@ from filing_processing_evaluation.normalization.service import (
     NormalizationService,
     normalize_filing,
 )
-from filing_processing_evaluation.normalization.tables import (
+from filing_processing_evaluation.normalization.stages.tables import (
     normalize_table as _normalize_table,
 )
 from filing_processing_evaluation.normalization.validation import (

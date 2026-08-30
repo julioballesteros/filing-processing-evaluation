@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import hashlib
+import inspect
 import io
 import json
 import xml.etree.ElementTree as ET
@@ -439,6 +440,9 @@ def test_normalize_filing_preserves_structure_and_omits_furniture(
 
 
 def test_filing_type_workflows_are_separate_and_dispatchable(tmp_path: Path) -> None:
+    assert not inspect.signature(TenKNormalizer).parameters
+    assert not inspect.signature(TenQNormalizer).parameters
+
     entries, _ = _prepare_batch_normalization_fixture(tmp_path)
     loader = FileSystemRawFilingLoader(tmp_path)
     digest = hashlib.sha256(SAMPLE_XHTML).hexdigest()

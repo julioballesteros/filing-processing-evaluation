@@ -1,4 +1,4 @@
-"""Logical table normalization for SEC spacer-grid tables."""
+"""Table normalization used by the block-building stage."""
 
 from __future__ import annotations
 

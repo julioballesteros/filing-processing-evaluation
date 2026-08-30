@@ -1,9 +1,10 @@
-"""SEC section-heading recognition."""
+"""Form-specific section recognition used by the block-building stage."""
 
 from __future__ import annotations
 
 import re
 from dataclasses import dataclass
+from typing import Protocol
 
 PART_PATTERN = re.compile(r"^PART\s+([IVX]+)(?:\s*[—-]\s*(.*))?$", re.IGNORECASE)
 ITEM_PATTERN = re.compile(r"^Item\s+(\d+[A-Z]?)\.?\s*(.*)$", re.IGNORECASE)
@@ -19,6 +20,12 @@ class SectionDefinition:
     title: str | None
 
 
+class SectionPolicy(Protocol):
+    """Recognize form-specific top-level filing sections."""
+
+    def definition(self, text: str) -> SectionDefinition | None: ...
+
+
 def section_definition(text: str) -> SectionDefinition | None:
     """Recognize structural SEC part, item, and signature headings."""
     if match := PART_PATTERN.fullmatch(text):
@@ -32,3 +39,17 @@ def section_definition(text: str) -> SectionDefinition | None:
     if text.upper() == "SIGNATURE":
         return SectionDefinition(level=1, label="SIGNATURE", title=None)
     return None
+
+
+class TenKSectionPolicy:
+    """Recognize the part and item hierarchy of an annual report."""
+
+    def definition(self, text: str) -> SectionDefinition | None:
+        return section_definition(text)
+
+
+class TenQSectionPolicy:
+    """Recognize the part and item hierarchy of a quarterly report."""
+
+    def definition(self, text: str) -> SectionDefinition | None:
+        return section_definition(text)

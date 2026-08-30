@@ -5,7 +5,6 @@ from filing_processing_evaluation.normalization.stages.assembly import (
 )
 from filing_processing_evaluation.normalization.stages.blocks import (
     BlockBuilder,
-    SectionPolicy,
 )
 from filing_processing_evaluation.normalization.stages.classification import (
     ElementClassifier,
@@ -14,6 +13,11 @@ from filing_processing_evaluation.normalization.stages.parsing import XhtmlParse
 from filing_processing_evaluation.normalization.stages.projection import (
     InlineXbrlProjector,
 )
+from filing_processing_evaluation.normalization.stages.sections import (
+    SectionPolicy,
+    TenKSectionPolicy,
+    TenQSectionPolicy,
+)
 
 __all__ = [
     "BlockBuilder",
@@ -21,5 +25,7 @@ __all__ = [
     "ElementClassifier",
     "InlineXbrlProjector",
     "SectionPolicy",
+    "TenKSectionPolicy",
+    "TenQSectionPolicy",
     "XhtmlParser",
 ]

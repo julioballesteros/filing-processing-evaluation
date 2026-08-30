@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from collections.abc import Callable
-from typing import Any, Protocol
+from typing import Any
 
 from filing_processing_evaluation.normalization.errors import NormalizationError
 from filing_processing_evaluation.normalization.models import (
@@ -15,17 +15,12 @@ from filing_processing_evaluation.normalization.models import (
     StageOutcome,
     StructuredDocument,
 )
-from filing_processing_evaluation.normalization.sections import (
+from filing_processing_evaluation.normalization.stages.sections import (
     NOTE_PATTERN,
     SectionDefinition,
+    SectionPolicy,
 )
-from filing_processing_evaluation.normalization.tables import normalize_table
-
-
-class SectionPolicy(Protocol):
-    """Recognize form-specific top-level filing sections."""
-
-    def definition(self, text: str) -> SectionDefinition | None: ...
+from filing_processing_evaluation.normalization.stages.tables import normalize_table
 
 
 class _StructureBuilder:

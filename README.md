@@ -77,9 +77,10 @@ The normalizer core is storage-independent: it accepts a fully loaded filing and
 returns a normalized document plus deterministic stage diagnostics. Filesystem
 loading, lock-hash verification, JSON persistence, and review-manifest updates
 are artifact adapters outside the service. Separate `TenKNormalizer` and
-`TenQNormalizer` workflows explicitly compose the shared XHTML parsing, visible
-HTML projection, element classification, block/table construction, and document
-assembly stages.
+`TenQNormalizer` workflows each own a fixed composition of XHTML parsing,
+visible HTML projection, element classification, block/table construction, and
+document assembly stages. Shared stage implementations do not make a workflow
+externally configurable; form-specific workflows can diverge as their rules evolve.
 
 Add `--diagnostics` to inspect the counts and decisions emitted by every stage:
 

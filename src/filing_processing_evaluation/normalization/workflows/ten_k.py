@@ -10,10 +10,18 @@ from filing_processing_evaluation.normalization.models import (
     NormalizationInput,
     NormalizationResult,
 )
-from filing_processing_evaluation.normalization.workflows.components import (
-    WorkflowStages,
+from filing_processing_evaluation.normalization.stages.assembly import (
+    DocumentAssembler,
 )
-from filing_processing_evaluation.normalization.workflows.sections import (
+from filing_processing_evaluation.normalization.stages.blocks import BlockBuilder
+from filing_processing_evaluation.normalization.stages.classification import (
+    ElementClassifier,
+)
+from filing_processing_evaluation.normalization.stages.parsing import XhtmlParser
+from filing_processing_evaluation.normalization.stages.projection import (
+    InlineXbrlProjector,
+)
+from filing_processing_evaluation.normalization.stages.sections import (
     TenKSectionPolicy,
 )
 
@@ -23,8 +31,12 @@ class TenKNormalizer:
 
     form_type = "10-K"
 
-    def __init__(self, stages: WorkflowStages | None = None) -> None:
-        self._stages = stages if stages is not None else WorkflowStages()
+    def __init__(self) -> None:
+        self._parser = XhtmlParser()
+        self._projector = InlineXbrlProjector()
+        self._classifier = ElementClassifier()
+        self._block_builder = BlockBuilder()
+        self._assembler = DocumentAssembler()
         self._section_policy = TenKSectionPolicy()
 
     def normalize(self, source: NormalizationInput) -> NormalizationResult:
@@ -36,23 +48,23 @@ class TenKNormalizer:
             )
         diagnostics: list[Diagnostic] = []
 
-        parsed = self._stages.parser.parse(source)
+        parsed = self._parser.parse(source)
         diagnostics.extend(parsed.diagnostics)
 
-        projected = self._stages.projector.project(parsed.value)
+        projected = self._projector.project(parsed.value)
         diagnostics.extend(projected.diagnostics)
 
-        classified = self._stages.classifier.classify(projected.value)
+        classified = self._classifier.classify(projected.value)
         diagnostics.extend(classified.diagnostics)
 
-        structured = self._stages.block_builder.build(
+        structured = self._block_builder.build(
             classified.value,
             section_policy=self._section_policy,
             filing_id=source.metadata.filing_id,
         )
         diagnostics.extend(structured.diagnostics)
 
-        assembled = self._stages.assembler.assemble(
+        assembled = self._assembler.assemble(
             source,
             structured.value,
             raw_sha256=hashlib.sha256(source.content).hexdigest(),
