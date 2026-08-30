@@ -8,6 +8,14 @@ from typing import Annotated, Never
 
 import typer
 
+from filing_processing_evaluation.application import FilingNormalizationApplication
+from filing_processing_evaluation.artifacts import (
+    ArtifactError,
+    FileSystemRawFilingLoader,
+    load_normalized,
+    update_normalized_manifest,
+    write_normalized,
+)
 from filing_processing_evaluation.dataset import (
     DatasetError,
     Filing,
@@ -17,10 +25,7 @@ from filing_processing_evaluation.dataset import (
     validate_dataset,
 )
 from filing_processing_evaluation.normalization import (
-    NormalizationService,
-    load_normalized,
-    update_normalized_manifest,
-    write_normalized,
+    NormalizationError,
 )
 from filing_processing_evaluation.rendering import (
     relative_href,
@@ -48,7 +53,7 @@ def _form_value(form: FormType | None) -> str | None:
     return form.value if form is not None else None
 
 
-def _abort(error: DatasetError) -> Never:
+def _abort(error: DatasetError | ArtifactError | NormalizationError) -> Never:
     typer.echo(f"error: {error}")
     raise typer.Exit(code=2)
 
@@ -185,6 +190,13 @@ def normalize(
             )
         ),
     ] = None,
+    show_diagnostics: Annotated[
+        bool,
+        typer.Option(
+            "--diagnostics",
+            help="Print deterministic diagnostics emitted by each workflow stage.",
+        ),
+    ] = False,
 ) -> None:
     """Create reviewable normalized drafts for selected locked raw filings."""
     try:
@@ -209,14 +221,16 @@ def normalize(
 
     failures: list[tuple[str, str]] = []
     normalized_count = 0
-    normalization_service = NormalizationService()
+    normalization_application = FilingNormalizationApplication(
+        FileSystemRawFilingLoader(manifest.parent)
+    )
     for filing in filings:
         try:
-            document = normalization_service.normalize(
+            result = normalization_application.normalize(
                 filing,
-                dataset_dir=manifest.parent,
                 expected_sha256=lock[filing.filing_id].sha256,
             )
+            document = result.document
             normalized_path = output or (
                 manifest.parent / "normalized" / f"{filing.filing_id}.json"
             )
@@ -233,7 +247,14 @@ def normalize(
                 f"({len(document['sections'])} sections, "
                 f"{len(document['blocks'])} blocks)"
             )
-        except DatasetError as error:
+            if show_diagnostics:
+                for diagnostic in result.diagnostics:
+                    details = ", ".join(
+                        f"{key}={value}"
+                        for key, value in sorted(diagnostic.details.items())
+                    )
+                    typer.echo(f"  {diagnostic.stage}: {diagnostic.code} ({details})")
+        except (ArtifactError, NormalizationError) as error:
             failures.append((filing.filing_id, str(error)))
             typer.echo(f"error: {filing.filing_id}: {error}")
 
@@ -270,14 +291,14 @@ def accept_normalized(
         normalized_path = manifest.parent / "normalized" / f"{filing_id}.json"
         document = load_normalized(normalized_path)
         if document["filing_id"] != filing_id:
-            raise DatasetError("normalized artifact filing ID does not match its path")
+            raise ArtifactError("normalized artifact filing ID does not match its path")
         normalized_manifest = update_normalized_manifest(
             dataset_dir=manifest.parent,
             normalized_path=normalized_path,
             document=document,
             reviewer=reviewer,
         )
-    except DatasetError as error:
+    except (ArtifactError, NormalizationError) as error:
         _abort(error)
     typer.echo(f"Accepted normalized reference: {filing_id} ({normalized_manifest})")
 
@@ -323,6 +344,6 @@ def render(
             json_href=relative_href(input_path, rendered_path),
         )
         write_rendered_html(html, rendered_path)
-    except DatasetError as error:
+    except (ArtifactError, DatasetError, NormalizationError) as error:
         _abort(error)
     typer.echo(f"Rendered normalized filing: {rendered_path}")

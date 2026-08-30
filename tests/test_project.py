@@ -7,13 +7,21 @@ import io
 import json
 import xml.etree.ElementTree as ET
 from collections import Counter
-from dataclasses import asdict
+from dataclasses import asdict, replace
 from pathlib import Path
 from typing import Any, NoReturn
 
 import pytest
 from typer.testing import CliRunner
 
+from filing_processing_evaluation.application import FilingNormalizationApplication
+from filing_processing_evaluation.artifacts import (
+    ArtifactError,
+    FileSystemRawFilingLoader,
+    load_normalized,
+    update_normalized_manifest,
+    write_normalized,
+)
 from filing_processing_evaluation.cli import app
 from filing_processing_evaluation.dataset import (
     DatasetError,
@@ -24,15 +32,15 @@ from filing_processing_evaluation.dataset import (
     validate_dataset,
 )
 from filing_processing_evaluation.normalization import (
+    NormalizationError,
     NormalizationService,
+    NormalizedDocument,
+    TenKNormalizer,
+    TenQNormalizer,
     _normalize_table,
     _validate_table,
-    load_normalized,
-    normalize_filing,
     normalize_text,
-    update_normalized_manifest,
     validate_normalized,
-    write_normalized,
 )
 from filing_processing_evaluation.rendering import (
     relative_href,
@@ -116,6 +124,13 @@ def _prepare_batch_normalization_fixture(
         "".join(json.dumps(lock) + "\n" for lock in locks), encoding="utf-8"
     )
     return entries, manifest
+
+
+def _normalize_document(
+    filing: Filing, *, dataset_dir: Path, expected_sha256: str
+) -> NormalizedDocument:
+    application = FilingNormalizationApplication(FileSystemRawFilingLoader(dataset_dir))
+    return application.normalize(filing, expected_sha256=expected_sha256).document
 
 
 def test_committed_manifest_has_ten_paired_companies_and_forms() -> None:
@@ -340,9 +355,9 @@ def test_normalize_filing_preserves_structure_and_omits_furniture(
 ) -> None:
     entry, digest, _ = _prepare_normalization_fixture(tmp_path)
 
-    document = NormalizationService().normalize(
-        entry, dataset_dir=tmp_path, expected_sha256=digest
-    )
+    source = FileSystemRawFilingLoader(tmp_path).load(entry, expected_sha256=digest)
+    result = NormalizationService().normalize(source)
+    document = result.document
 
     assert document["schema_version"] == "1.1.0"
     assert document["raw_sha256"] == digest
@@ -414,11 +429,44 @@ def test_normalize_filing_preserves_structure_and_omits_furniture(
     }
     assert table["cells"][2]["column"] == 1
     assert table["cells"][2]["column_span"] == 1
+    assert [diagnostic.stage for diagnostic in result.diagnostics] == [
+        "parse_xhtml",
+        "project_visible_html",
+        "classify_elements",
+        "build_blocks",
+        "assemble_document",
+    ]
+
+
+def test_filing_type_workflows_are_separate_and_dispatchable(tmp_path: Path) -> None:
+    entries, _ = _prepare_batch_normalization_fixture(tmp_path)
+    loader = FileSystemRawFilingLoader(tmp_path)
+    digest = hashlib.sha256(SAMPLE_XHTML).hexdigest()
+    annual_source = loader.load(entries[0], expected_sha256=digest)
+    quarterly_source = loader.load(entries[1], expected_sha256=digest)
+
+    annual = TenKNormalizer().normalize(annual_source)
+    quarterly = TenQNormalizer().normalize(quarterly_source)
+
+    assert annual.document["document"]["form_type"] == "10-K"
+    assert quarterly.document["document"]["form_type"] == "10-Q"
+    assert NormalizationService().normalize(annual_source) == annual
+    assert NormalizationService().normalize(quarterly_source) == quarterly
+    with pytest.raises(NormalizationError, match="10-Q workflow cannot normalize"):
+        TenQNormalizer().normalize(annual_source)
+    unsupported_source = replace(
+        annual_source,
+        metadata=replace(annual_source.metadata, form_type="8-K"),
+    )
+    with pytest.raises(NormalizationError, match="no normalization workflow"):
+        NormalizationService().normalize(unsupported_source)
+    with pytest.raises(ValueError, match="form types must be unique"):
+        NormalizationService((TenKNormalizer(), TenKNormalizer()))
 
 
 def test_normalized_round_trip_and_renderer(tmp_path: Path) -> None:
     entry, digest, _ = _prepare_normalization_fixture(tmp_path)
-    document = normalize_filing(entry, dataset_dir=tmp_path, expected_sha256=digest)
+    document = _normalize_document(entry, dataset_dir=tmp_path, expected_sha256=digest)
     normalized_path = tmp_path / "normalized" / "example.json"
     write_normalized(document, normalized_path)
 
@@ -506,6 +554,7 @@ def test_normalization_and_render_cli(tmp_path: Path) -> None:
             entry.filing_id,
             "--output",
             str(normalized_path),
+            "--diagnostics",
         ],
     )
     render_result = CLI_RUNNER.invoke(
@@ -527,6 +576,8 @@ def test_normalization_and_render_cli(tmp_path: Path) -> None:
     assert normalized_path.is_file()
     assert rendered_path.is_file()
     assert "Normalized draft" in normalize_result.output
+    assert "parse_xhtml: xhtml_parsed" in normalize_result.output
+    assert "assemble_document: document_validated" in normalize_result.output
     assert "Rendered normalized filing" in render_result.output
 
 
@@ -720,32 +771,32 @@ def test_normalizer_rejects_invalid_raw_documents(
     raw_path.write_bytes(content)
     digest = hashlib.sha256(content).hexdigest()
 
-    with pytest.raises(DatasetError, match=message):
-        normalize_filing(entry, dataset_dir=tmp_path, expected_sha256=digest)
+    with pytest.raises(NormalizationError, match=message):
+        _normalize_document(entry, dataset_dir=tmp_path, expected_sha256=digest)
 
 
 def test_normalizer_rejects_missing_or_modified_raw_artifact(tmp_path: Path) -> None:
     entry = load_manifest(MANIFEST)[0]
-    with pytest.raises(DatasetError, match="raw artifact not found"):
-        normalize_filing(entry, dataset_dir=tmp_path, expected_sha256="0" * 64)
+    with pytest.raises(ArtifactError, match="raw artifact not found"):
+        _normalize_document(entry, dataset_dir=tmp_path, expected_sha256="0" * 64)
 
     raw_path = tmp_path / entry.raw_path
     raw_path.parent.mkdir(parents=True)
     raw_path.write_bytes(SAMPLE_XHTML)
-    with pytest.raises(DatasetError, match="failed integrity check"):
-        normalize_filing(entry, dataset_dir=tmp_path, expected_sha256="0" * 64)
+    with pytest.raises(ArtifactError, match="failed integrity check"):
+        _normalize_document(entry, dataset_dir=tmp_path, expected_sha256="0" * 64)
 
 
 def test_normalized_loader_and_renderer_reject_invalid_shapes(tmp_path: Path) -> None:
     path = tmp_path / "document.json"
     path.write_text("not json")
-    with pytest.raises(DatasetError, match="invalid JSON"):
+    with pytest.raises(ArtifactError, match="invalid JSON"):
         load_normalized(path)
     path.write_text("[]")
-    with pytest.raises(DatasetError, match="JSON object"):
+    with pytest.raises(ArtifactError, match="JSON object"):
         load_normalized(path)
     path.write_text(json.dumps({"schema_version": "0.0.0"}))
-    with pytest.raises(DatasetError, match="unsupported schema"):
+    with pytest.raises(ArtifactError, match="unsupported schema"):
         load_normalized(path)
 
     malformed: dict[str, Any] = {
@@ -769,7 +820,7 @@ def test_normalize_text_uses_unicode_nfc() -> None:
 
 def test_normalized_manifest_tracks_hash_and_review_state(tmp_path: Path) -> None:
     entry, digest, _ = _prepare_normalization_fixture(tmp_path)
-    document = normalize_filing(entry, dataset_dir=tmp_path, expected_sha256=digest)
+    document = _normalize_document(entry, dataset_dir=tmp_path, expected_sha256=digest)
     normalized_path = tmp_path / "normalized" / f"{entry.filing_id}.json"
     write_normalized(document, normalized_path)
 
@@ -806,10 +857,10 @@ def test_normalized_manifest_tracks_hash_and_review_state(tmp_path: Path) -> Non
 
 def test_normalized_manifest_rejects_unsafe_and_invalid_updates(tmp_path: Path) -> None:
     entry, digest, _ = _prepare_normalization_fixture(tmp_path)
-    document = normalize_filing(entry, dataset_dir=tmp_path, expected_sha256=digest)
+    document = _normalize_document(entry, dataset_dir=tmp_path, expected_sha256=digest)
     outside = tmp_path.parent / "outside-normalized.json"
     write_normalized(document, outside)
-    with pytest.raises(DatasetError, match="inside the dataset"):
+    with pytest.raises(ArtifactError, match="inside the dataset"):
         update_normalized_manifest(
             dataset_dir=tmp_path,
             normalized_path=outside,
@@ -818,7 +869,7 @@ def test_normalized_manifest_rejects_unsafe_and_invalid_updates(tmp_path: Path) 
 
     wrong_stage = tmp_path / "draft.json"
     write_normalized(document, wrong_stage)
-    with pytest.raises(DatasetError, match="below normalized"):
+    with pytest.raises(ArtifactError, match="below normalized"):
         update_normalized_manifest(
             dataset_dir=tmp_path,
             normalized_path=wrong_stage,
@@ -827,7 +878,7 @@ def test_normalized_manifest_rejects_unsafe_and_invalid_updates(tmp_path: Path) 
 
     normalized_path = tmp_path / "normalized" / f"{entry.filing_id}.json"
     write_normalized(document, normalized_path)
-    with pytest.raises(DatasetError, match="reviewer must not be empty"):
+    with pytest.raises(ArtifactError, match="reviewer must not be empty"):
         update_normalized_manifest(
             dataset_dir=tmp_path,
             normalized_path=normalized_path,
@@ -840,22 +891,22 @@ def test_semantic_validator_rejects_broken_references_and_tables(
     tmp_path: Path,
 ) -> None:
     entry, digest, _ = _prepare_normalization_fixture(tmp_path)
-    document = normalize_filing(entry, dataset_dir=tmp_path, expected_sha256=digest)
+    document = _normalize_document(entry, dataset_dir=tmp_path, expected_sha256=digest)
 
     duplicate = json.loads(json.dumps(document))
     duplicate["blocks"][1]["id"] = duplicate["blocks"][0]["id"]
-    with pytest.raises(DatasetError, match="IDs must be unique"):
+    with pytest.raises(NormalizationError, match="IDs must be unique"):
         validate_normalized(duplicate)
 
     invalid_page = json.loads(json.dumps(document))
     invalid_page["blocks"][0]["source"]["page_number"] = 0
-    with pytest.raises(DatasetError, match="invalid provenance"):
+    with pytest.raises(NormalizationError, match="invalid provenance"):
         validate_normalized(invalid_page)
 
     overlapping = json.loads(json.dumps(document))
     table = next(block for block in overlapping["blocks"] if block["type"] == "table")
     table["cells"][1]["column"] = table["cells"][0]["column"]
-    with pytest.raises(DatasetError, match="cells overlap"):
+    with pytest.raises(NormalizationError, match="cells overlap"):
         validate_normalized(overlapping)
 
 
@@ -863,38 +914,38 @@ def test_semantic_validator_rejects_invalid_metadata_and_cell_provenance(
     tmp_path: Path,
 ) -> None:
     entry, digest, _ = _prepare_normalization_fixture(tmp_path)
-    document = normalize_filing(entry, dataset_dir=tmp_path, expected_sha256=digest)
+    document = _normalize_document(entry, dataset_dir=tmp_path, expected_sha256=digest)
 
     bad_metadata = json.loads(json.dumps(document))
     bad_metadata["document"].pop("company_name")
-    with pytest.raises(DatasetError, match="metadata has invalid fields"):
+    with pytest.raises(NormalizationError, match="metadata has invalid fields"):
         validate_normalized(bad_metadata)
 
     bad_form = json.loads(json.dumps(document))
     bad_form["document"]["form_type"] = "8-K"
-    with pytest.raises(DatasetError, match="unsupported form type"):
+    with pytest.raises(NormalizationError, match="unsupported form type"):
         validate_normalized(bad_form)
 
     bad_hash = json.loads(json.dumps(document))
     bad_hash["raw_sha256"] = "bad"
-    with pytest.raises(DatasetError, match="invalid raw SHA"):
+    with pytest.raises(NormalizationError, match="invalid raw SHA"):
         validate_normalized(bad_hash)
 
     bad_type = json.loads(json.dumps(document))
     bad_type["blocks"][0]["type"] = "unknown"
-    with pytest.raises(DatasetError, match="invalid type"):
+    with pytest.raises(NormalizationError, match="invalid type"):
         validate_normalized(bad_type)
 
     bad_table = json.loads(json.dumps(document))
     table = next(block for block in bad_table["blocks"] if block["type"] == "table")
     table["source_shape"] = {}
-    with pytest.raises(DatasetError, match="invalid source shape"):
+    with pytest.raises(NormalizationError, match="invalid source shape"):
         validate_normalized(bad_table)
 
     bad_role = json.loads(json.dumps(document))
     table = next(block for block in bad_role["blocks"] if block["type"] == "table")
     table["cells"][0]["role"] = "unknown"
-    with pytest.raises(DatasetError, match="invalid cell role"):
+    with pytest.raises(NormalizationError, match="invalid cell role"):
         validate_normalized(bad_role)
 
     missing_source = json.loads(json.dumps(document))
@@ -902,5 +953,5 @@ def test_semantic_validator_rejects_invalid_metadata_and_cell_provenance(
         block for block in missing_source["blocks"] if block["type"] == "table"
     )
     table["cells"][0]["source_cells"] = []
-    with pytest.raises(DatasetError, match="no source coordinates"):
+    with pytest.raises(NormalizationError, match="no source coordinates"):
         validate_normalized(missing_source)

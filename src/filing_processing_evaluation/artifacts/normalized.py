@@ -1,4 +1,4 @@
-"""Persistence for normalized documents and their review manifest."""
+"""Filesystem persistence for normalized documents and their review manifest."""
 
 from __future__ import annotations
 
@@ -6,10 +6,12 @@ import json
 from collections.abc import Mapping
 from datetime import UTC, datetime
 from pathlib import Path
-from typing import Any
+from typing import Any, cast
 
-from filing_processing_evaluation.dataset import DatasetError
-from filing_processing_evaluation.normalization.files import sha256_file
+from filing_processing_evaluation.artifacts.errors import ArtifactError
+from filing_processing_evaluation.artifacts.files import sha256_file
+from filing_processing_evaluation.normalization.errors import NormalizationError
+from filing_processing_evaluation.normalization.models import NormalizedDocument
 from filing_processing_evaluation.normalization.schema import SCHEMA_VERSION
 from filing_processing_evaluation.normalization.validation import validate_normalized
 
@@ -24,32 +26,33 @@ NORMALIZED_MANIFEST_FIELDS = {
 }
 
 
-def write_normalized(document: dict[str, Any], path: Path) -> None:
+def write_normalized(document: Mapping[str, Any], path: Path) -> None:
     """Write a normalized document deterministically and atomically."""
     validate_normalized(document)
     path.parent.mkdir(parents=True, exist_ok=True)
     temporary = path.with_suffix(path.suffix + ".tmp")
     temporary.write_text(
-        json.dumps(document, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+        json.dumps(dict(document), ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
     )
     temporary.replace(path)
 
 
-def load_normalized(path: Path) -> dict[str, Any]:
+def load_normalized(path: Path) -> NormalizedDocument:
     """Load and semantically validate a normalized document."""
     if not path.is_file():
-        raise DatasetError(f"normalized document not found: {path}")
+        raise ArtifactError(f"normalized document not found: {path}")
     try:
         value = json.loads(path.read_text(encoding="utf-8"))
     except json.JSONDecodeError as error:
-        raise DatasetError(f"normalized document is invalid JSON: {path}") from error
+        raise ArtifactError(f"normalized document is invalid JSON: {path}") from error
     if not isinstance(value, dict):
-        raise DatasetError(f"normalized document must be a JSON object: {path}")
+        raise ArtifactError(f"normalized document must be a JSON object: {path}")
     try:
         validate_normalized(value)
-    except DatasetError as error:
-        raise DatasetError(f"{error}: {path}") from error
-    return value
+    except NormalizationError as error:
+        raise ArtifactError(f"{error}: {path}") from error
+    return cast(NormalizedDocument, value)
 
 
 def _load_normalized_manifest(path: Path) -> dict[str, dict[str, Any]]:
@@ -64,16 +67,16 @@ def _load_normalized_manifest(path: Path) -> dict[str, dict[str, Any]]:
         try:
             value = json.loads(line)
         except json.JSONDecodeError as error:
-            raise DatasetError(
+            raise ArtifactError(
                 f"normalized manifest line {line_number} is invalid JSON"
             ) from error
         if not isinstance(value, dict) or set(value) != NORMALIZED_MANIFEST_FIELDS:
-            raise DatasetError(
+            raise ArtifactError(
                 f"normalized manifest line {line_number} has invalid fields"
             )
         filing_id = value.get("filing_id")
         if not isinstance(filing_id, str) or filing_id in entries:
-            raise DatasetError("normalized manifest filing IDs must be unique")
+            raise ArtifactError("normalized manifest filing IDs must be unique")
         status = value.get("status")
         reviewed_at = value.get("reviewed_at")
         reviewed_by = value.get("reviewed_by")
@@ -86,7 +89,7 @@ def _load_normalized_manifest(path: Path) -> dict[str, dict[str, Any]]:
             or not isinstance(sha256, str)
             or len(sha256) != 64
         ):
-            raise DatasetError(
+            raise ArtifactError(
                 f"normalized manifest line {line_number} has invalid values"
             )
         if (
@@ -99,7 +102,7 @@ def _load_normalized_manifest(path: Path) -> dict[str, dict[str, Any]]:
                 or not reviewed_by
             )
         ):
-            raise DatasetError(
+            raise ArtifactError(
                 f"normalized manifest line {line_number} has invalid review state"
             )
         entries[filing_id] = value
@@ -118,13 +121,13 @@ def update_normalized_manifest(
     try:
         relative_path = normalized_path.resolve().relative_to(dataset_dir.resolve())
     except ValueError as error:
-        raise DatasetError(
+        raise ArtifactError(
             "normalized artifact must be inside the dataset directory"
         ) from error
     if not relative_path.parts or relative_path.parts[0] != "normalized":
-        raise DatasetError("normalized artifact path must be below normalized/")
+        raise ArtifactError("normalized artifact path must be below normalized/")
     if not normalized_path.is_file():
-        raise DatasetError(f"normalized document not found: {normalized_path}")
+        raise ArtifactError(f"normalized document not found: {normalized_path}")
     filing_id = str(document["filing_id"])
     manifest_path = dataset_dir / "normalized" / "manifest.jsonl"
     entries = _load_normalized_manifest(manifest_path)
@@ -145,7 +148,7 @@ def update_normalized_manifest(
             entry_reviewed_at = None
     else:
         if not reviewer.strip():
-            raise DatasetError("reviewer must not be empty")
+            raise ArtifactError("reviewer must not be empty")
         status = "reviewed"
         entry_reviewer = reviewer.strip()
         entry_reviewed_at = reviewed_at or datetime.now(UTC).isoformat().replace(

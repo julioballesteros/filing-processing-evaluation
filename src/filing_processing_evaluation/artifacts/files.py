@@ -1,9 +1,14 @@
-"""File-level helpers shared by normalization services and storage."""
+"""Low-level hashing helpers for artifact adapters."""
 
 from __future__ import annotations
 
 import hashlib
 from pathlib import Path
+
+
+def sha256_bytes(content: bytes) -> str:
+    """Return the SHA-256 digest of loaded content."""
+    return hashlib.sha256(content).hexdigest()
 
 
 def sha256_file(path: Path) -> str:

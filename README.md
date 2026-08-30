@@ -73,6 +73,22 @@ make dataset-normalize FORM=10-Q
 make dataset-normalize FILING_ID=MANIFEST_FILING_ID
 ```
 
+The normalizer core is storage-independent: it accepts a fully loaded filing and
+returns a normalized document plus deterministic stage diagnostics. Filesystem
+loading, lock-hash verification, JSON persistence, and review-manifest updates
+are artifact adapters outside the service. Separate `TenKNormalizer` and
+`TenQNormalizer` workflows explicitly compose the shared XHTML parsing, visible
+HTML projection, element classification, block/table construction, and document
+assembly stages.
+
+Add `--diagnostics` to inspect the counts and decisions emitted by every stage:
+
+```bash
+uv run filing-processing-evaluation normalize \
+  --filing-id MANIFEST_FILING_ID \
+  --diagnostics
+```
+
 Each successful filing is written immediately and recorded in the normalized
 manifest. A malformed filing does not prevent the remaining selected filings
 from being attempted, but the command returns a nonzero status if any filing
