@@ -30,6 +30,10 @@ def _is_page_furniture(text: str) -> bool:
     return len(text) < 120 and PAGE_FURNITURE_PATTERN.search(text) is not None
 
 
+def _is_page_number(text: str, source_page_number: int) -> bool:
+    return text.isascii() and text.isdigit() and int(text) == source_page_number
+
+
 class ElementClassifier:
     """Turn projected HTML elements into text and table candidates."""
 
@@ -41,6 +45,7 @@ class ElementClassifier:
         elements: list[ClassifiedElement] = []
         discarded_empty_text = 0
         discarded_page_furniture = 0
+        discarded_page_numbers = 0
         for value in projected.elements:
             if isinstance(value, ProjectedTable):
                 elements.append(
@@ -54,6 +59,9 @@ class ElementClassifier:
                 continue
             if _is_page_furniture(text):
                 discarded_page_furniture += 1
+                continue
+            if _is_page_number(text, value.source.page_number):
+                discarded_page_numbers += 1
                 continue
             profile = style_profile(value.element)
             features = TextFeatures(
@@ -85,6 +93,7 @@ class ElementClassifier:
                 "table_candidates": len(elements) - text_elements,
                 "discarded_empty_text": discarded_empty_text,
                 "discarded_page_furniture": discarded_page_furniture,
+                "discarded_page_numbers": discarded_page_numbers,
             },
         )
         return StageOutcome(

@@ -29,13 +29,14 @@ def _needs_fragment_separator(left: str, right: str) -> bool:
     return left_word and right_word
 
 
-def _join_fragments(fragments: list[str]) -> str:
+def _join_fragments(fragments: list[tuple[str, bool]]) -> str:
     combined = ""
-    for fragment in fragments:
+    for fragment, continues_previous in fragments:
         if not fragment:
             continue
         if (
             combined
+            and not continues_previous
             and not combined[-1].isspace()
             and not fragment[0].isspace()
             and _needs_fragment_separator(combined[-1], fragment[0])
@@ -43,6 +44,18 @@ def _join_fragments(fragments: list[str]) -> str:
             combined += " "
         combined += fragment
     return normalize_text(combined)
+
+
+def _continues_fitted_span(left: ET.Element, right: ET.Element) -> bool:
+    """Return whether adjacent generated spans form one uninterrupted text run."""
+    if local_name(left.tag) != "span" or local_name(right.tag) != "span" or left.tail:
+        return False
+    left_style = _style_properties(left)
+    return (
+        left_style == _style_properties(right)
+        and left_style.get("white-space") == "pre-wrap"
+        and left_style.get("min-width") == "fit-content"
+    )
 
 
 def is_hidden(element: ET.Element) -> bool:
@@ -53,20 +66,36 @@ def is_hidden(element: ET.Element) -> bool:
 
 def visible_text(element: ET.Element) -> str:
     """Extract normalized text while excluding hidden descendants."""
-    fragments: list[str] = []
+    fragments: list[tuple[str, bool]] = []
 
-    def collect(node: ET.Element) -> None:
+    def collect(node: ET.Element, *, continues_previous: bool = False) -> bool:
         if is_hidden(node):
-            return
+            return False
+        emitted = False
         if node.text:
-            fragments.append(node.text)
+            fragments.append((node.text, continues_previous))
+            emitted = True
+        previous_child: ET.Element | None = None
         for child in node:
             if local_name(child.tag) == "br":
-                fragments.append(" ")
+                fragments.append((" ", True))
+                child_emitted = True
             else:
-                collect(child)
+                child_emitted = collect(
+                    child,
+                    continues_previous=(
+                        continues_previous
+                        if not emitted
+                        else previous_child is not None
+                        and _continues_fitted_span(previous_child, child)
+                    ),
+                )
+            emitted = emitted or child_emitted
             if child.tail:
-                fragments.append(child.tail)
+                fragments.append((child.tail, False))
+                emitted = True
+            previous_child = child
+        return emitted
 
     collect(element)
     return _join_fragments(fragments)

@@ -161,16 +161,20 @@ def test_repeated_page_section_headings_reuse_active_sections(tmp_path: Path) ->
       <body>
         <div>PART I</div>
         <div>Item 1</div>
-        <div>ITEM 1. FINANCIAL STATEMENTS</div>
+        <div><span style="white-space:pre-wrap;min-width:fit-content">ITEM 1. FINA</span><span style="white-space:pre-wrap;min-width:fit-content">NCIAL STATEMENTS</span></div>
         <div>First-page content.</div>
+        <div>2026</div>
+        <div>1</div>
         <hr/>
         <div>PART I</div>
         <div>Item 1</div>
         <div>Second-page content.</div>
+        <div>2</div>
         <hr/>
         <div>PART II</div>
         <div>Item 1</div>
         <div>Different-part content.</div>
+        <div>3</div>
       </body>
     </html>"""
     raw_path = tmp_path / entry.raw_path
@@ -202,6 +206,18 @@ def test_repeated_page_section_headings_reuse_active_sections(tmp_path: Path) ->
         if block.get("text") == "Different-part content."
     )
     assert different_part_block["section_id"] == result.document["sections"][3]["id"]
+    assert any(block.get("text") == "2026" for block in result.document["blocks"])
+    assert not any(
+        block.get("text") in {"1", "2", "3"} for block in result.document["blocks"]
+    )
+    assert (
+        next(
+            diagnostic.details["discarded_page_numbers"]
+            for diagnostic in result.diagnostics
+            if diagnostic.stage == "classify_elements"
+        )
+        == 3
+    )
     assert (
         next(
             diagnostic.details["repeated_section_headings"]
