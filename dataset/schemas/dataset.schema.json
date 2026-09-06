@@ -30,11 +30,14 @@
     "selection": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["regulators", "form_types", "filings_per_form", "total_filings"],
+      "required": ["regulators", "form_types", "filings_by_form", "total_filings"],
       "properties": {
         "regulators": { "type": "array", "items": { "type": "string" } },
         "form_types": { "type": "array", "items": { "type": "string" } },
-        "filings_per_form": { "type": "integer", "minimum": 1 },
+        "filings_by_form": {
+          "type": "object",
+          "additionalProperties": { "type": "integer", "minimum": 1 }
+        },
         "total_filings": { "type": "integer", "minimum": 1 }
       }
     }

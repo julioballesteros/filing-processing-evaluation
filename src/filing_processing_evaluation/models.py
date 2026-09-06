@@ -8,3 +8,4 @@ class FormType(StrEnum):
 
     TEN_K = "10-K"
     TEN_Q = "10-Q"
+    EIGHT_K = "8-K"

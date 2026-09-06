@@ -57,6 +57,7 @@ def prepare_normalization_fixture(tmp_path: Path) -> tuple[Filing, str, Path]:
     manifest = tmp_path / "manifest.jsonl"
     write_manifest(manifest, [entry])
     lock = {
+        "artifact_id": "primary",
         "filing_id": entry.filing_id,
         "retrieved_at": "2026-08-27T10:00:00Z",
         "sha256": digest,
@@ -80,6 +81,7 @@ def prepare_batch_normalization_fixture(
         raw_path.write_bytes(SAMPLE_XHTML)
         locks.append(
             {
+                "artifact_id": "primary",
                 "filing_id": entry.filing_id,
                 "retrieved_at": "2026-08-27T10:00:00Z",
                 "sha256": hashlib.sha256(SAMPLE_XHTML).hexdigest(),

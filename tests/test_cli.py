@@ -12,7 +12,7 @@ from typer.testing import CliRunner
 
 from filing_processing_evaluation.artifacts import load_normalized
 from filing_processing_evaluation.cli import app
-from filing_processing_evaluation.dataset import load_lock
+from filing_processing_evaluation.dataset import DownloadSummary, load_lock
 from tests.support import (
     MANIFEST,
     prepare_batch_normalization_fixture,
@@ -42,7 +42,7 @@ def test_validate_cli_supports_form_filter() -> None:
     )
 
     assert result.exit_code == 0
-    assert result.output == "Valid dataset: 10 filings (0 10-K, 10 10-Q)\n"
+    assert result.output == "Valid dataset: 10 filings (0 10-K, 10 10-Q, 0 8-K)\n"
 
 
 def test_download_cli_requires_user_agent() -> None:
@@ -61,7 +61,7 @@ def test_download_cli_delegates_to_downloader(
 ) -> None:
     monkeypatch.setattr(
         "filing_processing_evaluation.cli.download_filings",
-        lambda *args, **kwargs: 1,
+        lambda *args, **kwargs: DownloadSummary(filings=1, artifacts=1),
     )
 
     result = CLI_RUNNER.invoke(
@@ -77,7 +77,7 @@ def test_download_cli_delegates_to_downloader(
     )
 
     assert result.exit_code == 0
-    assert result.output == "Raw dataset ready: 1 filing(s)\n"
+    assert result.output == "Raw dataset ready: 1 filing(s), 1 artifact(s)\n"
 
 
 def test_normalization_and_render_cli(tmp_path: Path) -> None:
@@ -120,6 +120,16 @@ def test_normalization_and_render_cli(tmp_path: Path) -> None:
     assert "parse_xhtml: xhtml_parsed" in normalize_result.output
     assert "assemble_document: document_validated" in normalize_result.output
     assert "Rendered normalized filing" in render_result.output
+
+
+def test_normalize_cli_explicitly_rejects_8k() -> None:
+    result = CLI_RUNNER.invoke(
+        app,
+        ["normalize", "--manifest", str(MANIFEST), "--form", "8-K"],
+    )
+
+    assert result.exit_code == 2
+    assert "8-K raw artifacts are not supported by normalization yet" in result.output
 
 
 def test_default_normalize_and_accept_cli_update_reference_manifest(
@@ -223,10 +233,11 @@ def test_normalize_cli_reports_batch_failures_and_continues(tmp_path: Path) -> N
     locks = load_lock(tmp_path / "raw.lock.jsonl")
     lock_lines = []
     for entry in entries:
-        lock = locks[entry.filing_id]
+        lock = locks[(entry.filing_id, "primary")]
         if entry == entries[1]:
             lock_lines.append(
                 {
+                    "artifact_id": "primary",
                     "filing_id": entry.filing_id,
                     "retrieved_at": lock.retrieved_at,
                     "sha256": hashlib.sha256(invalid_payload).hexdigest(),
@@ -281,7 +292,8 @@ def test_normalize_cli_rejects_invalid_batch_selection(tmp_path: Path) -> None:
 
     locks = load_lock(tmp_path / "raw.lock.jsonl")
     (tmp_path / "raw.lock.jsonl").write_text(
-        json.dumps(asdict(locks[entries[0].filing_id])) + "\n", encoding="utf-8"
+        json.dumps(asdict(locks[(entries[0].filing_id, "primary")])) + "\n",
+        encoding="utf-8",
     )
     missing_lock_result = CLI_RUNNER.invoke(
         app, ["normalize", "--manifest", str(manifest)]

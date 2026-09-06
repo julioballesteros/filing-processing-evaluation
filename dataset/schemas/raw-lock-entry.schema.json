@@ -3,9 +3,10 @@
   "title": "Downloaded raw filing lock entry",
   "type": "object",
   "additionalProperties": false,
-  "required": ["filing_id", "sha256", "size_bytes", "retrieved_at"],
+  "required": ["filing_id", "artifact_id", "sha256", "size_bytes", "retrieved_at"],
   "properties": {
     "filing_id": { "type": "string", "pattern": "^sec-[0-9]{10}-[0-9]{2}-[0-9]{6}$" },
+    "artifact_id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
     "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
     "size_bytes": { "type": "integer", "minimum": 1 },
     "retrieved_at": { "type": "string", "format": "date-time" }

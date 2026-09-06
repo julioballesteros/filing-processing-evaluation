@@ -1,14 +1,17 @@
 # Dataset
 
-Version `0.1.0` is a deliberately small golden-set seed: one 10-K and one
-10-Q from each of ten SEC registrants. The companies span ten business areas,
-but this release is a regression fixture rather than a statistically
-representative benchmark.
+Version `0.2.0` is a deliberately small golden set: one 10-K, one 10-Q, and one
+earnings-announcement 8-K from each of ten SEC registrants. The companies span
+ten business areas, but this release is a regression fixture rather than a
+statistically representative benchmark.
 
 `manifest.jsonl` is the authoritative inventory. Every line identifies an
-immutable SEC accession and its primary Inline XBRL HTML document. The
-`sector` field describes sample diversity; it is not intended as an official
-industry classification.
+immutable SEC accession and its primary Inline XBRL HTML document. An 8-K entry
+also declares one explicitly selected HTML earnings-release exhibit, the SEC
+items used to select the filing, and the filing's event date. Exhibit selection
+is explicit because an accession may contain several `EX-99.*` documents with
+different purposes. The `sector` field describes sample diversity; it is not
+intended as an official industry classification.
 
 ## Stages
 
@@ -44,13 +47,15 @@ reference directory.
 ## Integrity
 
 The first successful download creates `raw.lock.jsonl` beside the manifest.
-It records the SHA-256 digest, size, and retrieval time of each artifact. The
-raw files remain untracked, while the lock file should be reviewed and
-committed as part of a dataset release. Later downloads are rejected if SEC
-content does not match the committed lock.
+It records the filing ID, filing-local artifact ID, SHA-256 digest, size, and
+retrieval time of each artifact. The raw files remain untracked, while the lock
+file should be reviewed and committed as part of a dataset release. Later
+downloads are rejected if SEC content does not match the committed lock.
 
-Only the primary filing document is selected in this release. Exhibits and the
-complete SEC submission package are explicitly out of scope.
+The raw 8-K subset includes each primary filing and its declared
+`earnings-release` exhibit. Other exhibits, presentations, financial
+supplements, graphics, and the complete SEC submission package remain out of
+scope. The normalized stage continues to cover only 10-K and 10-Q documents.
 
 SEC asks automated clients to identify themselves and limit request rates; see
 its [developer guidance](https://www.sec.gov/about/developer-resources) and

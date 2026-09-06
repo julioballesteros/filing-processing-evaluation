@@ -1,8 +1,10 @@
 # Filing Processing Evaluation
 
 Reproducible dataset and evaluation tooling for financial-filing parsers and
-LLM extractors. The first release defines a 20-document golden-set seed with
-10 SEC 10-K filings and 10 SEC 10-Q filings.
+LLM extractors. The dataset defines a 30-filing golden set with 10 SEC 10-K
+filings, 10 SEC 10-Q filings, and 10 SEC 8-K earnings announcements. Each 8-K
+raw entry includes its primary filing document and one selected earnings-release
+exhibit.
 
 The benchmark is evaluation infrastructure, not training data. Raw filings
 are reconstructed from immutable SEC accessions, reviewed references are
@@ -34,8 +36,8 @@ resolved dependencies.
 uv run filing-processing-evaluation validate
 ```
 
-This validates the manifest without requiring the raw cache. Use
-`--form 10-K` or `--form 10-Q` to select one subset.
+This validates the manifest without requiring the raw cache. Use `--form 10-K`,
+`--form 10-Q`, or `--form 8-K` to select one subset.
 
 ## Construct the raw stage
 
@@ -50,22 +52,32 @@ uv run filing-processing-evaluation validate --check-raw
 ```
 
 The downloader is sequential, rate-limited, uses atomic file replacement, and
-creates `dataset/raw.lock.jsonl` containing content hashes. Raw documents are
-ignored by Git; the lock file is intended to be committed with a dataset
-release. Downloads can be filtered with `--form` or repeated `--filing-id`
-arguments.
+creates `dataset/raw.lock.jsonl` containing content hashes. Locks identify both
+the filing and the artifact within that filing. Raw documents are ignored by
+Git; the lock file is intended to be committed with a dataset release.
+Downloads can be filtered with `--form` or repeated `--filing-id` arguments.
+Selecting an 8-K downloads both its primary document and its declared
+earnings-release exhibit:
+
+```bash
+uv run filing-processing-evaluation download --form 8-K
+uv run filing-processing-evaluation validate --form 8-K --check-raw
+```
 
 ## Build normalized drafts
 
-Create deterministic normalized drafts for every locked raw filing in the
-manifest:
+Create deterministic normalized drafts for the supported 10-K and 10-Q raw
+filings in the manifest:
 
 ```bash
 uv run filing-processing-evaluation normalize
 ```
 
-Use `--form 10-K`, `--form 10-Q`, or repeatable `--filing-id` arguments to
-target a subset. The equivalent Make target has the same defaults:
+8-K earnings-release normalization is not implemented yet; raw 8-K entries are
+skipped by the default normalization command and explicitly rejected by
+`--form 8-K`. Use `--form 10-K`, `--form 10-Q`, or repeatable `--filing-id`
+arguments to target a supported subset. The equivalent Make target has the same
+defaults:
 
 ```bash
 make dataset-normalize

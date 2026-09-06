@@ -44,11 +44,13 @@ def validate_normalized(document: Mapping[str, Any]) -> None:
     ):
         raise NormalizationError("normalized document metadata has invalid fields")
     try:
-        FormType(metadata["form_type"])
+        form_type = FormType(metadata["form_type"])
     except ValueError as error:
         raise NormalizationError(
             "normalized document has an unsupported form type"
         ) from error
+    if form_type not in {FormType.TEN_K, FormType.TEN_Q}:
+        raise NormalizationError("normalized document has an unsupported form type")
     filing_id = document.get("filing_id")
     raw_sha256 = document.get("raw_sha256")
     if not isinstance(filing_id, str) or not filing_id:

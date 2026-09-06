@@ -94,11 +94,10 @@ def validate(
         summary = validate_dataset(manifest, check_raw=check_raw, form_type=form)
     except DatasetError as error:
         _abort(error)
-    typer.echo(
-        f"Valid dataset: {summary.total} filings "
-        f"({summary.by_form[FormType.TEN_K]} 10-K, "
-        f"{summary.by_form[FormType.TEN_Q]} 10-Q)"
+    form_counts = ", ".join(
+        f"{summary.by_form[form_type]} {form_type}" for form_type in FormType
     )
+    typer.echo(f"Valid dataset: {summary.total} filings ({form_counts})")
 
 
 @app.command()
@@ -139,7 +138,7 @@ def download(
                 "and contact email, as required by SEC fair-access guidance."
             )
         entries = load_manifest(manifest)
-        downloaded = download_filings(
+        summary = download_filings(
             entries,
             dataset_dir=manifest.parent,
             user_agent=user_agent,
@@ -150,7 +149,10 @@ def download(
         )
     except DatasetError as error:
         _abort(error)
-    typer.echo(f"Raw dataset ready: {downloaded} filing(s)")
+    typer.echo(
+        f"Raw dataset ready: {summary.filings} filing(s), "
+        f"{summary.artifacts} artifact(s)"
+    )
 
 
 @app.command()
@@ -188,7 +190,15 @@ def normalize(
 ) -> None:
     """Create reviewable normalized drafts for selected locked raw filings."""
     try:
-        entries = load_manifest(manifest)
+        if form == FormType.EIGHT_K:
+            raise DatasetError(
+                "8-K raw artifacts are not supported by normalization yet"
+            )
+        entries = [
+            entry
+            for entry in load_manifest(manifest)
+            if entry.form_type in {FormType.TEN_K, FormType.TEN_Q}
+        ]
         filings = _select_filings(
             entries,
             form_type=form,
@@ -200,7 +210,9 @@ def normalize(
             )
         lock = load_lock(manifest.parent / "raw.lock.jsonl")
         missing_lock_ids = [
-            filing.filing_id for filing in filings if filing.filing_id not in lock
+            filing.filing_id
+            for filing in filings
+            if (filing.filing_id, "primary") not in lock
         ]
         if missing_lock_ids:
             raise DatasetError("no raw lock entry for: " + ", ".join(missing_lock_ids))
@@ -216,7 +228,7 @@ def normalize(
         try:
             result = normalization_application.normalize(
                 filing,
-                expected_sha256=lock[filing.filing_id].sha256,
+                expected_sha256=lock[(filing.filing_id, "primary")].sha256,
             )
             document = result.document
             normalized_path = output or (

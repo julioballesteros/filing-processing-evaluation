@@ -1,14 +1,14 @@
 {
   "$schema": "./schemas/dataset.schema.json",
   "dataset_id": "filing-processing-benchmark",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Golden-set seed dataset for evaluating financial filing normalization and extraction.",
   "manifest": "manifest.jsonl",
   "stages": ["raw", "normalized", "extractions"],
   "selection": {
     "regulators": ["sec"],
-    "form_types": ["10-K", "10-Q"],
-    "filings_per_form": 10,
-    "total_filings": 20
+    "form_types": ["10-K", "10-Q", "8-K"],
+    "filings_by_form": {"10-K": 10, "10-Q": 10, "8-K": 10},
+    "total_filings": 30
   }
 }

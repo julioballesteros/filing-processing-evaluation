@@ -22,21 +22,30 @@ from filing_processing_evaluation.models import FormType
 from tests.support import MANIFEST, write_manifest
 
 
-def test_committed_manifest_has_ten_paired_companies_and_forms() -> None:
+def test_committed_manifest_has_ten_companies_and_three_forms() -> None:
     entries = load_manifest(MANIFEST)
 
-    assert len(entries) == 20
+    assert len(entries) == 30
     assert all(isinstance(entry.form_type, FormType) for entry in entries)
     assert Counter(entry.form_type for entry in entries) == {
         FormType.TEN_K: 10,
         FormType.TEN_Q: 10,
+        FormType.EIGHT_K: 10,
     }
     forms_by_cik: dict[str, set[FormType]] = {}
     for entry in entries:
         forms_by_cik.setdefault(entry.cik, set()).add(entry.form_type)
     assert len(forms_by_cik) == 10
     assert all(
-        forms == {FormType.TEN_K, FormType.TEN_Q} for forms in forms_by_cik.values()
+        forms == {FormType.TEN_K, FormType.TEN_Q, FormType.EIGHT_K}
+        for forms in forms_by_cik.values()
+    )
+    earnings_filings = [
+        entry for entry in entries if entry.form_type == FormType.EIGHT_K
+    ]
+    assert all(
+        any(exhibit.artifact_id == "earnings-release" for exhibit in entry.exhibits)
+        for entry in earnings_filings
     )
 
 
@@ -52,14 +61,15 @@ def test_download_and_validate_raw_files(
         lambda request, timeout: io.BytesIO(payload),
     )
 
-    count = download_filings(
+    summary = download_filings(
         [entry], dataset_dir=tmp_path, user_agent="test test@example.com", delay=0
     )
 
-    assert count == 1
+    assert summary.filings == 1
+    assert summary.artifacts == 1
     assert (tmp_path / entry.raw_path).read_bytes() == payload
     lock = load_lock(tmp_path / "raw.lock.jsonl")
-    assert lock[entry.filing_id].size_bytes == len(payload)
+    assert lock[(entry.filing_id, "primary")].size_bytes == len(payload)
     assert validate_dataset(manifest, check_raw=True).total == 1
 
     def unexpected_download(*args: object, **kwargs: object) -> NoReturn:
@@ -68,12 +78,43 @@ def test_download_and_validate_raw_files(
     monkeypatch.setattr(
         "filing_processing_evaluation.dataset.urlopen", unexpected_download
     )
-    assert (
-        download_filings(
-            [entry], dataset_dir=tmp_path, user_agent="test@example.com", delay=0
-        )
-        == 1
+    cached = download_filings(
+        [entry], dataset_dir=tmp_path, user_agent="test@example.com", delay=0
     )
+    assert cached.filings == 1
+    assert cached.artifacts == 1
+
+
+def test_download_includes_selected_earnings_release(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    entry = next(
+        filing
+        for filing in load_manifest(MANIFEST)
+        if filing.form_type == FormType.EIGHT_K
+    )
+    manifest = tmp_path / "manifest.jsonl"
+    write_manifest(manifest, [entry])
+    payload = b"<html><body>artifact</body></html>"
+    monkeypatch.setattr(
+        "filing_processing_evaluation.dataset.urlopen",
+        lambda request, timeout: io.BytesIO(payload),
+    )
+
+    summary = download_filings(
+        [entry], dataset_dir=tmp_path, user_agent="test@example.com", delay=0
+    )
+
+    assert summary.filings == 1
+    assert summary.artifacts == 2
+    for artifact in entry.raw_artifacts:
+        assert (tmp_path / artifact.raw_path).read_bytes() == payload
+    lock = load_lock(tmp_path / "raw.lock.jsonl")
+    assert set(lock) == {
+        (entry.filing_id, "primary"),
+        (entry.filing_id, "earnings-release"),
+    }
+    assert validate_dataset(manifest, check_raw=True).total == 1
 
 
 def test_download_rejects_selection_and_integrity_errors(tmp_path: Path) -> None:
@@ -95,6 +136,7 @@ def test_download_rejects_selection_and_integrity_errors(tmp_path: Path) -> None
     destination.parent.mkdir(parents=True)
     destination.write_bytes(b"changed")
     lock = {
+        "artifact_id": "primary",
         "filing_id": entry.filing_id,
         "retrieved_at": "2026-08-27T10:00:00Z",
         "sha256": "0" * 64,
@@ -134,10 +176,27 @@ def test_manifest_rejects_bad_json_duplicates_and_fields(tmp_path: Path) -> None
         load_manifest(path)
 
 
+def test_earnings_8k_requires_named_earnings_release_exhibit(
+    tmp_path: Path,
+) -> None:
+    entry = next(
+        filing
+        for filing in load_manifest(MANIFEST)
+        if filing.form_type == FormType.EIGHT_K
+    )
+    invalid = asdict(entry)
+    invalid["exhibits"][0]["artifact_id"] = "press-release"
+    path = tmp_path / "manifest.jsonl"
+    path.write_text(json.dumps(invalid) + "\n", encoding="utf-8")
+
+    with pytest.raises(DatasetError, match="earnings-release exhibit"):
+        load_manifest(path)
+
+
 @pytest.mark.parametrize(
     ("field", "value", "message"),
     [
-        ("form_type", "8-K", "unsupported form_type"),
+        ("form_type", "6-K", "unsupported form_type"),
         ("cik", "123", "CIK must contain"),
         ("accession_number", "bad", "invalid accession"),
         ("filing_date", "yesterday", "invalid filing_date"),
@@ -164,6 +223,7 @@ def test_manifest_rejects_invalid_values(
 def test_lock_rejects_invalid_and_unknown_entries(tmp_path: Path) -> None:
     lock_path = tmp_path / "raw.lock.jsonl"
     invalid = {
+        "artifact_id": "primary",
         "filing_id": "sec-id",
         "sha256": "bad",
         "size_bytes": 0,
@@ -177,11 +237,12 @@ def test_lock_rejects_invalid_and_unknown_entries(tmp_path: Path) -> None:
     manifest = tmp_path / "manifest.jsonl"
     write_manifest(manifest, [entry])
     unknown = {
+        "artifact_id": "primary",
         "filing_id": "sec-0000000000-00-000000",
         "sha256": "0" * 64,
         "size_bytes": 1,
         "retrieved_at": "2026-08-27T10:00:00Z",
     }
     lock_path.write_text(json.dumps(unknown) + "\n", encoding="utf-8")
-    with pytest.raises(DatasetError, match="unknown filing IDs"):
+    with pytest.raises(DatasetError, match="unknown artifacts"):
         validate_dataset(manifest)
