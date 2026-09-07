@@ -193,13 +193,38 @@ def test_eight_k_workflow_normalizes_earnings_release_exhibit(
     assert document["document"]["event_date"] == entry.event_date
     assert document["document"]["items"] == list(entry.items)
     assert document["document"]["source_title"] == "Example Earnings Release"
-    assert document["sections"][0]["label"] == "HIGHLIGHTS"
-    assert any(block["type"] == "table" for block in document["blocks"])
+    assert [section["label"] for section in document["sections"]] == [
+        "HIGHLIGHTS",
+        "OUTLOOK",
+    ]
+    assert sum(block["type"] == "table" for block in document["blocks"]) == 1
+    assert any(
+        block["type"] == "heading" and block.get("text") == "Guidance"
+        for block in document["blocks"]
+    )
+    assert any(
+        block["type"] == "paragraph"
+        and block.get("text") == "Revenue is expected to increase."
+        for block in document["blocks"]
+    )
     assert any(
         block.get("text") == "Revenue increased & operating income improved."
         for block in document["blocks"]
     )
     assert result.diagnostics[0].stage == "parse_sec_html"
+    projection_diagnostic = next(
+        diagnostic
+        for diagnostic in result.diagnostics
+        if diagnostic.stage == "project_visible_html"
+    )
+    assert projection_diagnostic.details["image_elements"] == 1
+    block_diagnostic = next(
+        diagnostic
+        for diagnostic in result.diagnostics
+        if diagnostic.stage == "build_blocks"
+    )
+    assert block_diagnostic.details["flattened_layout_tables"] == 1
+    assert block_diagnostic.details["flattened_layout_blocks"] == 2
 
 
 def test_repeated_page_section_headings_reuse_active_sections(tmp_path: Path) -> None:

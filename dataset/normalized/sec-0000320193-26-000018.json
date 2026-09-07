@@ -1,0 +1,6474 @@
+{
+  "schema_version": "1.2.0",
+  "filing_id": "sec-0000320193-26-000018",
+  "source_artifact": {
+    "artifact_id": "earnings-release",
+    "filename": "a8-kex991q3202606272026.htm",
+    "document_type": "EX-99.1",
+    "sha256": "070abd6a9cdb7070e546d24ffcbc41c65450d939c6f88f189cb18ec711cf5fdb"
+  },
+  "document": {
+    "title": "Apple Inc. 8-K for period ended 2026-06-27",
+    "source_title": "Document",
+    "language": "en",
+    "company_name": "Apple Inc.",
+    "form_type": "8-K",
+    "filing_date": "2026-07-30",
+    "period_end_date": "2026-06-27",
+    "event_date": "2026-07-30",
+    "items": [
+      "2.02",
+      "9.01"
+    ]
+  },
+  "page_count": 5,
+  "sections": [
+    {
+      "id": "s0001",
+      "order": 1,
+      "parent_id": null,
+      "level": 1,
+      "label": "FINANCIAL STATEMENTS",
+      "title": "CONDENSED CONSOLIDATED STATEMENTS OF OPERATIONS (Unaudited)",
+      "heading_block_id": "b0026"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "b0001",
+      "order": 1,
+      "section_id": null,
+      "type": "heading",
+      "source": {
+        "page_number": 1,
+        "path": "/html/body[1]/div[3]"
+      },
+      "level": 3,
+      "text": "Exhibit 99.1"
+    },
+    {
+      "id": "b0002",
+      "order": 2,
+      "section_id": null,
+      "type": "heading",
+      "source": {
+        "page_number": 1,
+        "path": "/html/body[1]/div[6]"
+      },
+      "level": 3,
+      "text": "Apple reports third quarter results"
+    },
+    {
+      "id": "b0003",
+      "order": 3,
+      "section_id": null,
+      "type": "heading",
+      "source": {
+        "page_number": 1,
+        "path": "/html/body[1]/div[8]"
+      },
+      "level": 3,
+      "text": "June quarter records for total company revenue and EPS"
+    },
+    {
+      "id": "b0004",
+      "order": 4,
+      "section_id": null,
+      "type": "heading",
+      "source": {
+        "page_number": 1,
+        "path": "/html/body[1]/div[10]"
+      },
+      "level": 3,
+      "text": "iPhone, Mac and Services revenue set new June quarter records"
+    },
+    {
+      "id": "b0005",
+      "order": 5,
+      "section_id": null,
+      "type": "paragraph",
+      "source": {
+        "page_number": 1,
+        "path": "/html/body[1]/div[12]"
+      },
+      "text": "CUPERTINO, CALIFORNIA — Apple® today announced financial results for its fiscal 2026 third quarter ended June 27, 2026. The Company posted quarterly revenue of $109.4 billion, up 16 percent year over year. Company gross margin was 50.1 percent, including a favorable impact of approximately 2 percentage points from tariff refunds. Diluted earnings per share was $2.02, up 29 percent year over year, and included a favorable impact of $0.11 from tariff refunds."
+    },
+    {
+      "id": "b0006",
+      "order": 6,
+      "section_id": null,
+      "type": "paragraph",
+      "source": {
+        "page_number": 1,
+        "path": "/html/body[1]/div[14]"
+      },
+      "text": "“Today, Apple is proud to report our strongest June quarter ever, with double-digit revenue growth across iPhone, Mac and Services, and in every geographic segment,” said Tim Cook, Apple’s CEO. “At WWDC26, we were thrilled to introduce the all-new Siri AI, alongside all of Apple’s latest software innovations and important new child safety features.”"
+    },
+    {
+      "id": "b0007",
+      "order": 7,
+      "section_id": null,
+      "type": "paragraph",
+      "source": {
+        "page_number": 1,
+        "path": "/html/body[1]/div[16]"
+      },
+      "text": "“We are very pleased with our record business performance during the quarter, which set new June quarter records for both EPS and operating cash flow,” said Kevan Parekh, Apple’s CFO. “Our installed base of active devices also reached a new all-time high across all major product categories and geographic segments.”"
+    },
+    {
+      "id": "b0008",
+      "order": 8,
+      "section_id": null,
+      "type": "paragraph",
+      "source": {
+        "page_number": 1,
+        "path": "/html/body[1]/div[18]"
+      },
+      "text": "Apple’s board of directors has declared a cash dividend of $0.27 per share of the Company’s common stock. The dividend is payable on August 13, 2026, to shareholders of record as of the close of business on August 10, 2026."
+    },
+    {
+      "id": "b0009",
+      "order": 9,
+      "section_id": null,
+      "type": "paragraph",
+      "source": {
+        "page_number": 1,
+        "path": "/html/body[1]/div[20]"
+      },
+      "text": "Apple will provide live streaming of its Q3 2026 financial results conference call beginning at 2:00 p.m. PT on July 30, 2026, at apple.com/investor/earnings-call. The webcast will be available for replay for approximately two weeks thereafter."
+    },
+    {
+      "id": "b0010",
+      "order": 10,
+      "section_id": null,
+      "type": "paragraph",
+      "source": {
+        "page_number": 1,
+        "path": "/html/body[1]/div[22]"
+      },
+      "text": "Apple periodically provides information for investors on its corporate website, apple.com, and its investor relations website, investor.apple.com. This includes press releases and other information about financial performance, reports filed or furnished with the SEC, information on corporate governance, and details related to its annual meeting of shareholders."
+    },
+    {
+      "id": "b0011",
+      "order": 11,
+      "section_id": null,
+      "type": "paragraph",
+      "source": {
+        "page_number": 2,
+        "path": "/html/body[1]/div[25]"
+      },
+      "text": "This press release contains forward-looking statements, within the meaning of the Private Securities Litigation Reform Act of 1995. These forward-looking statements include without limitation those about payment of the Company’s quarterly dividend and future business plans. These statements involve risks and uncertainties, and actual results may differ materially from any future results expressed or implied by the forward-looking statements. Risks and uncertainties include without limitation: effects of global and regional economic conditions, including as a result of government policies, trade and other international disputes, geopolitical tensions, conflict, terrorism, natural disasters, and public health issues; risks relating to the design, manufacture, introduction, and transition of products and services in highly competitive and rapidly changing markets, including from reliance on third parties for components, technology, manufacturing, applications, services, support, and content; risks relating to information technology system failures, network disruptions, and failure to protect, loss of, or unauthorized access to, or release of, data; and effects of unfavorable legal proceedings, government investigations, and complex and changing laws and regulations. More information on these risks and other potential factors that could affect the Company’s business, reputation, results of operations, financial condition, and stock price is included in the Company’s filings with the SEC, including in the “Risk Factors” and “Management’s Discussion and Analysis of Financial Condition and Results of Operations” sections of the Company’s most recently filed periodic reports on Form 10-K and Form 10-Q and subsequent filings. The Company assumes no obligation to update any forward-looking statements, which speak only as of the date they are made."
+    },
+    {
+      "id": "b0012",
+      "order": 12,
+      "section_id": null,
+      "type": "paragraph",
+      "source": {
+        "page_number": 2,
+        "path": "/html/body[1]/div[27]"
+      },
+      "text": "Apple revolutionized personal technology with the introduction of the Macintosh in 1984. Today, Apple leads the world in innovation with iPhone, iPad, Mac, AirPods, Apple Watch, and Apple Vision Pro. Apple’s six software platforms — iOS, iPadOS, macOS, watchOS, visionOS, and tvOS — provide seamless experiences across all Apple devices and empower people with breakthrough services including the App Store, Apple Music, Apple Pay, iCloud, and Apple TV. Apple’s more than 150,000 employees are dedicated to making the best products on earth and to leaving the world better than we found it."
+    },
+    {
+      "id": "b0013",
+      "order": 13,
+      "section_id": null,
+      "type": "heading",
+      "source": {
+        "page_number": 2,
+        "path": "/html/body[1]/div[29]"
+      },
+      "level": 3,
+      "text": "Press Contact:"
+    },
+    {
+      "id": "b0014",
+      "order": 14,
+      "section_id": null,
+      "type": "paragraph",
+      "source": {
+        "page_number": 2,
+        "path": "/html/body[1]/div[30]"
+      },
+      "text": "Josh Rosenstock"
+    },
+    {
+      "id": "b0015",
+      "order": 15,
+      "section_id": null,
+      "type": "paragraph",
+      "source": {
+        "page_number": 2,
+        "path": "/html/body[1]/div[31]"
+      },
+      "text": "Apple"
+    },
+    {
+      "id": "b0016",
+      "order": 16,
+      "section_id": null,
+      "type": "paragraph",
+      "source": {
+        "page_number": 2,
+        "path": "/html/body[1]/div[32]"
+      },
+      "text": "jrosenstock@apple.com"
+    },
+    {
+      "id": "b0017",
+      "order": 17,
+      "section_id": null,
+      "type": "paragraph",
+      "source": {
+        "page_number": 2,
+        "path": "/html/body[1]/div[33]"
+      },
+      "text": "(408) 862-1142"
+    },
+    {
+      "id": "b0018",
+      "order": 18,
+      "section_id": null,
+      "type": "heading",
+      "source": {
+        "page_number": 2,
+        "path": "/html/body[1]/div[35]"
+      },
+      "level": 3,
+      "text": "Investor Relations Contact:"
+    },
+    {
+      "id": "b0019",
+      "order": 19,
+      "section_id": null,
+      "type": "paragraph",
+      "source": {
+        "page_number": 2,
+        "path": "/html/body[1]/div[36]"
+      },
+      "text": "Suhasini Chandramouli"
+    },
+    {
+      "id": "b0020",
+      "order": 20,
+      "section_id": null,
+      "type": "paragraph",
+      "source": {
+        "page_number": 2,
+        "path": "/html/body[1]/div[37]"
+      },
+      "text": "Apple"
+    },
+    {
+      "id": "b0021",
+      "order": 21,
+      "section_id": null,
+      "type": "paragraph",
+      "source": {
+        "page_number": 2,
+        "path": "/html/body[1]/div[38]"
+      },
+      "text": "suhasini@apple.com"
+    },
+    {
+      "id": "b0022",
+      "order": 22,
+      "section_id": null,
+      "type": "paragraph",
+      "source": {
+        "page_number": 2,
+        "path": "/html/body[1]/div[39]"
+      },
+      "text": "(408) 974-3123"
+    },
+    {
+      "id": "b0023",
+      "order": 23,
+      "section_id": null,
+      "type": "paragraph",
+      "source": {
+        "page_number": 2,
+        "path": "/html/body[1]/div[42]"
+      },
+      "text": "NOTE TO EDITORS: For additional information visit Apple Newsroom (www.apple.com/newsroom), or email Apple’s Media Helpline at media.help@apple.com."
+    },
+    {
+      "id": "b0024",
+      "order": 24,
+      "section_id": null,
+      "type": "paragraph",
+      "source": {
+        "page_number": 2,
+        "path": "/html/body[1]/div[44]"
+      },
+      "text": "© 2026 Apple Inc. All rights reserved. Apple and the Apple logo are trademarks of Apple. Other company and product names may be trademarks of their respective owners."
+    },
+    {
+      "id": "b0025",
+      "order": 25,
+      "section_id": null,
+      "type": "heading",
+      "source": {
+        "page_number": 3,
+        "path": "/html/body[1]/div[48]"
+      },
+      "level": 3,
+      "text": "Apple Inc."
+    },
+    {
+      "id": "b0026",
+      "order": 26,
+      "section_id": "s0001",
+      "type": "heading",
+      "source": {
+        "page_number": 3,
+        "path": "/html/body[1]/div[49]"
+      },
+      "level": 1,
+      "text": "CONDENSED CONSOLIDATED STATEMENTS OF OPERATIONS (Unaudited)"
+    },
+    {
+      "id": "b0027",
+      "order": 27,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 3,
+        "path": "/html/body[1]/div[50]"
+      },
+      "text": "(In millions, except number of shares, which are reflected in thousands, and per-share amounts)"
+    },
+    {
+      "id": "b0028",
+      "order": 28,
+      "section_id": "s0001",
+      "type": "table",
+      "source": {
+        "page_number": 3,
+        "path": "/html/body[1]/div[51]/table[1]"
+      },
+      "caption": null,
+      "row_count": 40,
+      "column_count": 5,
+      "source_shape": {
+        "rows": 46,
+        "columns": 24
+      },
+      "cells": [
+        {
+          "row": 0,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 2,
+          "text": "Three Months Ended",
+          "source_cells": [
+            {
+              "row": 1,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 9
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 0,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 2,
+          "text": "Nine Months Ended",
+          "source_cells": [
+            {
+              "row": 1,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 9
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 1,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "June 27, 2026",
+          "source_cells": [
+            {
+              "row": 2,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 1,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "June 28, 2025",
+          "source_cells": [
+            {
+              "row": 2,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 1,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "June 27, 2026",
+          "source_cells": [
+            {
+              "row": 2,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 1,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "June 28, 2025",
+          "source_cells": [
+            {
+              "row": 2,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 2,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Net sales:",
+          "source_cells": [
+            {
+              "row": 3,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 3,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Products",
+          "source_cells": [
+            {
+              "row": 4,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 3,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$78,678",
+          "source_cells": [
+            {
+              "row": 4,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 4,
+              "column": 4,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 3,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$66,613",
+          "source_cells": [
+            {
+              "row": 4,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 4,
+              "column": 10,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 3,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$272,629",
+          "source_cells": [
+            {
+              "row": 4,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 4,
+              "column": 16,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 3,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$233,287",
+          "source_cells": [
+            {
+              "row": 4,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 4,
+              "column": 22,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 4,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Services",
+          "source_cells": [
+            {
+              "row": 5,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 4,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "30,739",
+          "source_cells": [
+            {
+              "row": 5,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 4,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "27,423",
+          "source_cells": [
+            {
+              "row": 5,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 4,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "91,728",
+          "source_cells": [
+            {
+              "row": 5,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 4,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "80,408",
+          "source_cells": [
+            {
+              "row": 5,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 5,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Total net sales (1)",
+          "source_cells": [
+            {
+              "row": 6,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 5,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "109,417",
+          "source_cells": [
+            {
+              "row": 6,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 5,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "94,036",
+          "source_cells": [
+            {
+              "row": 6,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 5,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "364,357",
+          "source_cells": [
+            {
+              "row": 6,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 5,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "313,695",
+          "source_cells": [
+            {
+              "row": 6,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 6,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Cost of sales:",
+          "source_cells": [
+            {
+              "row": 7,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 7,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Products",
+          "source_cells": [
+            {
+              "row": 8,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 7,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "47,153",
+          "source_cells": [
+            {
+              "row": 8,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 7,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "43,620",
+          "source_cells": [
+            {
+              "row": 8,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 7,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "163,810",
+          "source_cells": [
+            {
+              "row": 8,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 7,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "147,097",
+          "source_cells": [
+            {
+              "row": 8,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 8,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Services",
+          "source_cells": [
+            {
+              "row": 9,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 8,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "7,494",
+          "source_cells": [
+            {
+              "row": 9,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 8,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "6,698",
+          "source_cells": [
+            {
+              "row": 9,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 8,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "21,765",
+          "source_cells": [
+            {
+              "row": 9,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 8,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "19,738",
+          "source_cells": [
+            {
+              "row": 9,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 9,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Total cost of sales",
+          "source_cells": [
+            {
+              "row": 10,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 9,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "54,647",
+          "source_cells": [
+            {
+              "row": 10,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 9,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "50,318",
+          "source_cells": [
+            {
+              "row": 10,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 9,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "185,575",
+          "source_cells": [
+            {
+              "row": 10,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 9,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "166,835",
+          "source_cells": [
+            {
+              "row": 10,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 10,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Gross margin",
+          "source_cells": [
+            {
+              "row": 11,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 10,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "54,770",
+          "source_cells": [
+            {
+              "row": 11,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 10,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "43,718",
+          "source_cells": [
+            {
+              "row": 11,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 10,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "178,782",
+          "source_cells": [
+            {
+              "row": 11,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 10,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "146,860",
+          "source_cells": [
+            {
+              "row": 11,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 11,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Operating expenses:",
+          "source_cells": [
+            {
+              "row": 13,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 12,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Research and development",
+          "source_cells": [
+            {
+              "row": 14,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 12,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "11,729",
+          "source_cells": [
+            {
+              "row": 14,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 12,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "8,866",
+          "source_cells": [
+            {
+              "row": 14,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 12,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "34,035",
+          "source_cells": [
+            {
+              "row": 14,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 12,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "25,684",
+          "source_cells": [
+            {
+              "row": 14,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 13,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Selling, general and administrative",
+          "source_cells": [
+            {
+              "row": 15,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 13,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "7,346",
+          "source_cells": [
+            {
+              "row": 15,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 13,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "6,650",
+          "source_cells": [
+            {
+              "row": 15,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 13,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "22,315",
+          "source_cells": [
+            {
+              "row": 15,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 13,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "20,553",
+          "source_cells": [
+            {
+              "row": 15,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 14,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Total operating expenses",
+          "source_cells": [
+            {
+              "row": 16,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 14,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "19,075",
+          "source_cells": [
+            {
+              "row": 16,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 14,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "15,516",
+          "source_cells": [
+            {
+              "row": 16,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 14,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "56,350",
+          "source_cells": [
+            {
+              "row": 16,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 14,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "46,237",
+          "source_cells": [
+            {
+              "row": 16,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 15,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Operating income",
+          "source_cells": [
+            {
+              "row": 18,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 15,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "35,695",
+          "source_cells": [
+            {
+              "row": 18,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 15,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "28,202",
+          "source_cells": [
+            {
+              "row": 18,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 15,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "122,432",
+          "source_cells": [
+            {
+              "row": 18,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 15,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "100,623",
+          "source_cells": [
+            {
+              "row": 18,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 16,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Other income/(expense), net",
+          "source_cells": [
+            {
+              "row": 19,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 16,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "572",
+          "source_cells": [
+            {
+              "row": 19,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 16,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "(171)",
+          "source_cells": [
+            {
+              "row": 19,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 16,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "670",
+          "source_cells": [
+            {
+              "row": 19,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 16,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "(698)",
+          "source_cells": [
+            {
+              "row": 19,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 17,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Income before provision for income taxes",
+          "source_cells": [
+            {
+              "row": 20,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 17,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "36,267",
+          "source_cells": [
+            {
+              "row": 20,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 17,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "28,031",
+          "source_cells": [
+            {
+              "row": 20,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 17,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "123,102",
+          "source_cells": [
+            {
+              "row": 20,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 17,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "99,925",
+          "source_cells": [
+            {
+              "row": 20,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 18,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Provision for income taxes",
+          "source_cells": [
+            {
+              "row": 21,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 18,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "6,478",
+          "source_cells": [
+            {
+              "row": 21,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 18,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "4,597",
+          "source_cells": [
+            {
+              "row": 21,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 18,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "21,638",
+          "source_cells": [
+            {
+              "row": 21,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 18,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "15,381",
+          "source_cells": [
+            {
+              "row": 21,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 19,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Net income",
+          "source_cells": [
+            {
+              "row": 22,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 19,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$29,789",
+          "source_cells": [
+            {
+              "row": 22,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 22,
+              "column": 4,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 19,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$23,434",
+          "source_cells": [
+            {
+              "row": 22,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 22,
+              "column": 10,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 19,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$101,464",
+          "source_cells": [
+            {
+              "row": 22,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 22,
+              "column": 16,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 19,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$84,544",
+          "source_cells": [
+            {
+              "row": 22,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 22,
+              "column": 22,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 20,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Earnings per share:",
+          "source_cells": [
+            {
+              "row": 24,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 21,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Basic",
+          "source_cells": [
+            {
+              "row": 25,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 21,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$2.03",
+          "source_cells": [
+            {
+              "row": 25,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 25,
+              "column": 4,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 21,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$1.57",
+          "source_cells": [
+            {
+              "row": 25,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 25,
+              "column": 10,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 21,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$6.91",
+          "source_cells": [
+            {
+              "row": 25,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 25,
+              "column": 16,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 21,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$5.64",
+          "source_cells": [
+            {
+              "row": 25,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 25,
+              "column": 22,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 22,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Diluted",
+          "source_cells": [
+            {
+              "row": 26,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 22,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$2.02",
+          "source_cells": [
+            {
+              "row": 26,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 26,
+              "column": 4,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 22,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$1.57",
+          "source_cells": [
+            {
+              "row": 26,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 26,
+              "column": 10,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 22,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$6.88",
+          "source_cells": [
+            {
+              "row": 26,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 26,
+              "column": 16,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 22,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$5.62",
+          "source_cells": [
+            {
+              "row": 26,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 26,
+              "column": 22,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 23,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Shares used in computing earnings per share:",
+          "source_cells": [
+            {
+              "row": 27,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 24,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Basic",
+          "source_cells": [
+            {
+              "row": 28,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 24,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "14,656,110",
+          "source_cells": [
+            {
+              "row": 28,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 24,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "14,902,886",
+          "source_cells": [
+            {
+              "row": 28,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 24,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "14,692,515",
+          "source_cells": [
+            {
+              "row": 28,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 24,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "14,992,898",
+          "source_cells": [
+            {
+              "row": 28,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 25,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Diluted",
+          "source_cells": [
+            {
+              "row": 29,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 25,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "14,714,676",
+          "source_cells": [
+            {
+              "row": 29,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 25,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "14,948,179",
+          "source_cells": [
+            {
+              "row": 29,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 25,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "14,750,302",
+          "source_cells": [
+            {
+              "row": 29,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 25,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "15,051,726",
+          "source_cells": [
+            {
+              "row": 29,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 26,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "(1) Net sales by reportable segment:",
+          "source_cells": [
+            {
+              "row": 31,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 27,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Americas",
+          "source_cells": [
+            {
+              "row": 32,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 27,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$45,781",
+          "source_cells": [
+            {
+              "row": 32,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 32,
+              "column": 4,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 27,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$41,198",
+          "source_cells": [
+            {
+              "row": 32,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 32,
+              "column": 10,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 27,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$149,403",
+          "source_cells": [
+            {
+              "row": 32,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 32,
+              "column": 16,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 27,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$134,161",
+          "source_cells": [
+            {
+              "row": 32,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 32,
+              "column": 22,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 28,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Europe",
+          "source_cells": [
+            {
+              "row": 33,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 28,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "29,395",
+          "source_cells": [
+            {
+              "row": 33,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 28,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "24,014",
+          "source_cells": [
+            {
+              "row": 33,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 28,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "95,596",
+          "source_cells": [
+            {
+              "row": 33,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 28,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "82,329",
+          "source_cells": [
+            {
+              "row": 33,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 29,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Greater China",
+          "source_cells": [
+            {
+              "row": 34,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 29,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "18,816",
+          "source_cells": [
+            {
+              "row": 34,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 29,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "15,369",
+          "source_cells": [
+            {
+              "row": 34,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 29,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "64,839",
+          "source_cells": [
+            {
+              "row": 34,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 29,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "49,884",
+          "source_cells": [
+            {
+              "row": 34,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 30,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Japan",
+          "source_cells": [
+            {
+              "row": 35,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 30,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "6,554",
+          "source_cells": [
+            {
+              "row": 35,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 30,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "5,782",
+          "source_cells": [
+            {
+              "row": 35,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 30,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "24,368",
+          "source_cells": [
+            {
+              "row": 35,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 30,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "22,067",
+          "source_cells": [
+            {
+              "row": 35,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 31,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Rest of Asia Pacific",
+          "source_cells": [
+            {
+              "row": 36,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 31,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "8,871",
+          "source_cells": [
+            {
+              "row": 36,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 31,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "7,673",
+          "source_cells": [
+            {
+              "row": 36,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 31,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "30,151",
+          "source_cells": [
+            {
+              "row": 36,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 31,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "25,254",
+          "source_cells": [
+            {
+              "row": 36,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 32,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Total net sales",
+          "source_cells": [
+            {
+              "row": 37,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 32,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$109,417",
+          "source_cells": [
+            {
+              "row": 37,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 37,
+              "column": 4,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 32,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$94,036",
+          "source_cells": [
+            {
+              "row": 37,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 37,
+              "column": 10,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 32,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$364,357",
+          "source_cells": [
+            {
+              "row": 37,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 37,
+              "column": 16,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 32,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$313,695",
+          "source_cells": [
+            {
+              "row": 37,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 37,
+              "column": 22,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 33,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "(1) Net sales by category:",
+          "source_cells": [
+            {
+              "row": 39,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 34,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "iPhone",
+          "source_cells": [
+            {
+              "row": 40,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 34,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$54,252",
+          "source_cells": [
+            {
+              "row": 40,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 40,
+              "column": 4,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 34,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$44,582",
+          "source_cells": [
+            {
+              "row": 40,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 40,
+              "column": 10,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 34,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$196,515",
+          "source_cells": [
+            {
+              "row": 40,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 40,
+              "column": 16,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 34,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$160,561",
+          "source_cells": [
+            {
+              "row": 40,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 40,
+              "column": 22,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 35,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Mac",
+          "source_cells": [
+            {
+              "row": 41,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 35,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "10,352",
+          "source_cells": [
+            {
+              "row": 41,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 35,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "8,046",
+          "source_cells": [
+            {
+              "row": 41,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 35,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "27,137",
+          "source_cells": [
+            {
+              "row": 41,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 35,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "24,982",
+          "source_cells": [
+            {
+              "row": 41,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 36,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "iPad",
+          "source_cells": [
+            {
+              "row": 42,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 36,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "6,191",
+          "source_cells": [
+            {
+              "row": 42,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 36,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "6,581",
+          "source_cells": [
+            {
+              "row": 42,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 36,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "21,700",
+          "source_cells": [
+            {
+              "row": 42,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 36,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "21,071",
+          "source_cells": [
+            {
+              "row": 42,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 37,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Wearables, Home and Accessories",
+          "source_cells": [
+            {
+              "row": 43,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 37,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "7,883",
+          "source_cells": [
+            {
+              "row": 43,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 37,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "7,404",
+          "source_cells": [
+            {
+              "row": 43,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 37,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "27,277",
+          "source_cells": [
+            {
+              "row": 43,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 37,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "26,673",
+          "source_cells": [
+            {
+              "row": 43,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 38,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Services",
+          "source_cells": [
+            {
+              "row": 44,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 38,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "30,739",
+          "source_cells": [
+            {
+              "row": 44,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 38,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "27,423",
+          "source_cells": [
+            {
+              "row": 44,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 38,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "91,728",
+          "source_cells": [
+            {
+              "row": 44,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 38,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "80,408",
+          "source_cells": [
+            {
+              "row": 44,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 39,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Total net sales",
+          "source_cells": [
+            {
+              "row": 45,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 39,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$109,417",
+          "source_cells": [
+            {
+              "row": 45,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 45,
+              "column": 4,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 39,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$94,036",
+          "source_cells": [
+            {
+              "row": 45,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 45,
+              "column": 10,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 39,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$364,357",
+          "source_cells": [
+            {
+              "row": 45,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 45,
+              "column": 16,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 39,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$313,695",
+          "source_cells": [
+            {
+              "row": 45,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 45,
+              "column": 22,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        }
+      ]
+    },
+    {
+      "id": "b0029",
+      "order": 29,
+      "section_id": "s0001",
+      "type": "heading",
+      "source": {
+        "page_number": 4,
+        "path": "/html/body[1]/div[55]"
+      },
+      "level": 3,
+      "text": "Apple Inc."
+    },
+    {
+      "id": "b0030",
+      "order": 30,
+      "section_id": "s0001",
+      "type": "heading",
+      "source": {
+        "page_number": 4,
+        "path": "/html/body[1]/div[56]"
+      },
+      "level": 1,
+      "text": "CONDENSED CONSOLIDATED BALANCE SHEETS (Unaudited)"
+    },
+    {
+      "id": "b0031",
+      "order": 31,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 4,
+        "path": "/html/body[1]/div[57]"
+      },
+      "text": "(In millions, except number of shares, which are reflected in thousands, and par value)"
+    },
+    {
+      "id": "b0032",
+      "order": 32,
+      "section_id": "s0001",
+      "type": "table",
+      "source": {
+        "page_number": 4,
+        "path": "/html/body[1]/div[59]/table[1]"
+      },
+      "caption": null,
+      "row_count": 37,
+      "column_count": 3,
+      "source_shape": {
+        "rows": 43,
+        "columns": 12
+      },
+      "cells": [
+        {
+          "row": 0,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "June 27, 2026",
+          "source_cells": [
+            {
+              "row": 1,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 0,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "September 27, 2025",
+          "source_cells": [
+            {
+              "row": 1,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 1,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 3,
+          "text": "ASSETS:",
+          "source_cells": [
+            {
+              "row": 2,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 12
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 2,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Current assets:",
+          "source_cells": [
+            {
+              "row": 3,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 3,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Cash and cash equivalents",
+          "source_cells": [
+            {
+              "row": 4,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 3,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$39,544",
+          "source_cells": [
+            {
+              "row": 4,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 4,
+              "column": 4,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 3,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$35,934",
+          "source_cells": [
+            {
+              "row": 4,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 4,
+              "column": 10,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 4,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Marketable securities",
+          "source_cells": [
+            {
+              "row": 5,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 4,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "22,855",
+          "source_cells": [
+            {
+              "row": 5,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 4,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "18,763",
+          "source_cells": [
+            {
+              "row": 5,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 5,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Accounts receivable, net",
+          "source_cells": [
+            {
+              "row": 6,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 5,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "31,398",
+          "source_cells": [
+            {
+              "row": 6,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 5,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "39,777",
+          "source_cells": [
+            {
+              "row": 6,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 6,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Vendor non-trade receivables",
+          "source_cells": [
+            {
+              "row": 7,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 6,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "27,509",
+          "source_cells": [
+            {
+              "row": 7,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 6,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "33,180",
+          "source_cells": [
+            {
+              "row": 7,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 7,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Inventories",
+          "source_cells": [
+            {
+              "row": 8,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 7,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "11,092",
+          "source_cells": [
+            {
+              "row": 8,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 7,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "5,718",
+          "source_cells": [
+            {
+              "row": 8,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 8,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Other current assets",
+          "source_cells": [
+            {
+              "row": 9,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 8,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "17,420",
+          "source_cells": [
+            {
+              "row": 9,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 8,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "14,585",
+          "source_cells": [
+            {
+              "row": 9,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 9,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Total current assets",
+          "source_cells": [
+            {
+              "row": 10,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 9,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "149,818",
+          "source_cells": [
+            {
+              "row": 10,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 9,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "147,957",
+          "source_cells": [
+            {
+              "row": 10,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 10,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Non-current assets:",
+          "source_cells": [
+            {
+              "row": 12,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 11,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Marketable securities",
+          "source_cells": [
+            {
+              "row": 13,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 11,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "84,118",
+          "source_cells": [
+            {
+              "row": 13,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 11,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "77,723",
+          "source_cells": [
+            {
+              "row": 13,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 12,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Property, plant and equipment, net",
+          "source_cells": [
+            {
+              "row": 14,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 12,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "51,431",
+          "source_cells": [
+            {
+              "row": 14,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 12,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "49,834",
+          "source_cells": [
+            {
+              "row": 14,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 13,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Intangible assets, net",
+          "source_cells": [
+            {
+              "row": 15,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 13,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "20,342",
+          "source_cells": [
+            {
+              "row": 15,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 13,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "11,093",
+          "source_cells": [
+            {
+              "row": 15,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 14,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Other non-current assets",
+          "source_cells": [
+            {
+              "row": 16,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 14,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "77,557",
+          "source_cells": [
+            {
+              "row": 16,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 14,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "72,634",
+          "source_cells": [
+            {
+              "row": 16,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 15,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Total non-current assets",
+          "source_cells": [
+            {
+              "row": 17,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 15,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "233,448",
+          "source_cells": [
+            {
+              "row": 17,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 15,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "211,284",
+          "source_cells": [
+            {
+              "row": 17,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 16,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Total assets",
+          "source_cells": [
+            {
+              "row": 18,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 16,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$383,266",
+          "source_cells": [
+            {
+              "row": 18,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 18,
+              "column": 4,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 16,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$359,241",
+          "source_cells": [
+            {
+              "row": 18,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 18,
+              "column": 10,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 17,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 3,
+          "text": "LIABILITIES AND SHAREHOLDERS’ EQUITY:",
+          "source_cells": [
+            {
+              "row": 20,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 12
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 18,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Current liabilities:",
+          "source_cells": [
+            {
+              "row": 21,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 19,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Accounts payable",
+          "source_cells": [
+            {
+              "row": 22,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 19,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$64,525",
+          "source_cells": [
+            {
+              "row": 22,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 22,
+              "column": 4,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 19,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$69,860",
+          "source_cells": [
+            {
+              "row": 22,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 22,
+              "column": 10,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 20,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Other current liabilities",
+          "source_cells": [
+            {
+              "row": 23,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 20,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "62,259",
+          "source_cells": [
+            {
+              "row": 23,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 20,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "66,387",
+          "source_cells": [
+            {
+              "row": 23,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 21,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Deferred revenue",
+          "source_cells": [
+            {
+              "row": 24,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 21,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "9,538",
+          "source_cells": [
+            {
+              "row": 24,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 21,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "9,055",
+          "source_cells": [
+            {
+              "row": 24,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 22,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Commercial paper",
+          "source_cells": [
+            {
+              "row": 25,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 22,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "1,997",
+          "source_cells": [
+            {
+              "row": 25,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 22,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "7,979",
+          "source_cells": [
+            {
+              "row": 25,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 23,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Term debt",
+          "source_cells": [
+            {
+              "row": 26,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 23,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "11,007",
+          "source_cells": [
+            {
+              "row": 26,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 23,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "12,350",
+          "source_cells": [
+            {
+              "row": 26,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 24,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Total current liabilities",
+          "source_cells": [
+            {
+              "row": 27,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 24,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "149,326",
+          "source_cells": [
+            {
+              "row": 27,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 24,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "165,631",
+          "source_cells": [
+            {
+              "row": 27,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 25,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Non-current liabilities:",
+          "source_cells": [
+            {
+              "row": 29,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 26,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Term debt",
+          "source_cells": [
+            {
+              "row": 30,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 26,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "71,340",
+          "source_cells": [
+            {
+              "row": 30,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 26,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "78,328",
+          "source_cells": [
+            {
+              "row": 30,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 27,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Other non-current liabilities",
+          "source_cells": [
+            {
+              "row": 31,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 27,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "55,080",
+          "source_cells": [
+            {
+              "row": 31,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 27,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "41,549",
+          "source_cells": [
+            {
+              "row": 31,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 28,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Total non-current liabilities",
+          "source_cells": [
+            {
+              "row": 32,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 28,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "126,420",
+          "source_cells": [
+            {
+              "row": 32,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 28,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "119,877",
+          "source_cells": [
+            {
+              "row": 32,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 29,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Total liabilities",
+          "source_cells": [
+            {
+              "row": 33,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 29,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "275,746",
+          "source_cells": [
+            {
+              "row": 33,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 29,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "285,508",
+          "source_cells": [
+            {
+              "row": 33,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 30,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Commitments and contingencies",
+          "source_cells": [
+            {
+              "row": 35,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 31,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Shareholders’ equity:",
+          "source_cells": [
+            {
+              "row": 37,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 32,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Common stock and additional paid-in capital, $0.00001 par value: 50,400,000 shares authorized; 14,608,963 and 14,773,260 shares issued and outstanding, respectively",
+          "source_cells": [
+            {
+              "row": 38,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 32,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "100,702",
+          "source_cells": [
+            {
+              "row": 38,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 32,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "93,568",
+          "source_cells": [
+            {
+              "row": 38,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 33,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Retained earnings/(Accumulated deficit)",
+          "source_cells": [
+            {
+              "row": 39,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 33,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "11,326",
+          "source_cells": [
+            {
+              "row": 39,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 33,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "(14,264)",
+          "source_cells": [
+            {
+              "row": 39,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 34,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Accumulated other comprehensive loss",
+          "source_cells": [
+            {
+              "row": 40,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 34,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "(4,508)",
+          "source_cells": [
+            {
+              "row": 40,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 34,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "(5,571)",
+          "source_cells": [
+            {
+              "row": 40,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 35,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Total shareholders’ equity",
+          "source_cells": [
+            {
+              "row": 41,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 35,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "107,520",
+          "source_cells": [
+            {
+              "row": 41,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 35,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "73,733",
+          "source_cells": [
+            {
+              "row": 41,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 36,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Total liabilities and shareholders’ equity",
+          "source_cells": [
+            {
+              "row": 42,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 36,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$383,266",
+          "source_cells": [
+            {
+              "row": 42,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 42,
+              "column": 4,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 36,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$359,241",
+          "source_cells": [
+            {
+              "row": 42,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 42,
+              "column": 10,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        }
+      ]
+    },
+    {
+      "id": "b0033",
+      "order": 33,
+      "section_id": "s0001",
+      "type": "heading",
+      "source": {
+        "page_number": 5,
+        "path": "/html/body[1]/div[63]"
+      },
+      "level": 3,
+      "text": "Apple Inc."
+    },
+    {
+      "id": "b0034",
+      "order": 34,
+      "section_id": "s0001",
+      "type": "heading",
+      "source": {
+        "page_number": 5,
+        "path": "/html/body[1]/div[64]"
+      },
+      "level": 1,
+      "text": "CONDENSED CONSOLIDATED STATEMENTS OF CASH FLOWS (Unaudited)"
+    },
+    {
+      "id": "b0035",
+      "order": 35,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 5,
+        "path": "/html/body[1]/div[65]"
+      },
+      "text": "(In millions)"
+    },
+    {
+      "id": "b0036",
+      "order": 36,
+      "section_id": "s0001",
+      "type": "table",
+      "source": {
+        "page_number": 5,
+        "path": "/html/body[1]/div[67]/table[1]"
+      },
+      "caption": null,
+      "row_count": 37,
+      "column_count": 3,
+      "source_shape": {
+        "rows": 44,
+        "columns": 12
+      },
+      "cells": [
+        {
+          "row": 0,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 2,
+          "text": "Nine Months Ended",
+          "source_cells": [
+            {
+              "row": 1,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 9
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 1,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "June 27, 2026",
+          "source_cells": [
+            {
+              "row": 2,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 1,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "June 28, 2025",
+          "source_cells": [
+            {
+              "row": 2,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 2,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Cash, cash equivalents, and restricted cash and cash equivalents, beginning balances",
+          "source_cells": [
+            {
+              "row": 3,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 2,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$35,934",
+          "source_cells": [
+            {
+              "row": 3,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 3,
+              "column": 4,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 2,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$29,943",
+          "source_cells": [
+            {
+              "row": 3,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 3,
+              "column": 10,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 3,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Operating activities:",
+          "source_cells": [
+            {
+              "row": 5,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 4,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Net income",
+          "source_cells": [
+            {
+              "row": 6,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 4,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "101,464",
+          "source_cells": [
+            {
+              "row": 6,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 4,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "84,544",
+          "source_cells": [
+            {
+              "row": 6,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 5,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Adjustments to reconcile net income to cash generated by operating activities:",
+          "source_cells": [
+            {
+              "row": 7,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 6,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Depreciation and amortization",
+          "source_cells": [
+            {
+              "row": 8,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 6,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "9,973",
+          "source_cells": [
+            {
+              "row": 8,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 6,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "8,571",
+          "source_cells": [
+            {
+              "row": 8,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 7,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Share-based compensation expense",
+          "source_cells": [
+            {
+              "row": 9,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 7,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "10,523",
+          "source_cells": [
+            {
+              "row": 9,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 7,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "9,680",
+          "source_cells": [
+            {
+              "row": 9,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 8,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Other",
+          "source_cells": [
+            {
+              "row": 10,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 8,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "(2,037)",
+          "source_cells": [
+            {
+              "row": 10,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 8,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "(1,748)",
+          "source_cells": [
+            {
+              "row": 10,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 9,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Changes in operating assets and liabilities:",
+          "source_cells": [
+            {
+              "row": 11,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 10,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Accounts receivable, net",
+          "source_cells": [
+            {
+              "row": 12,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 10,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "8,316",
+          "source_cells": [
+            {
+              "row": 12,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 10,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "5,685",
+          "source_cells": [
+            {
+              "row": 12,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 11,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Vendor non-trade receivables",
+          "source_cells": [
+            {
+              "row": 13,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 11,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "5,671",
+          "source_cells": [
+            {
+              "row": 13,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 11,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "13,555",
+          "source_cells": [
+            {
+              "row": 13,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 12,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Inventories",
+          "source_cells": [
+            {
+              "row": 14,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 12,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "(5,461)",
+          "source_cells": [
+            {
+              "row": 14,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 12,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "1,223",
+          "source_cells": [
+            {
+              "row": 14,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 13,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Other current and non-current assets",
+          "source_cells": [
+            {
+              "row": 15,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 13,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "(16,266)",
+          "source_cells": [
+            {
+              "row": 15,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 13,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "(6,116)",
+          "source_cells": [
+            {
+              "row": 15,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 14,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Accounts payable",
+          "source_cells": [
+            {
+              "row": 16,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 14,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "(5,203)",
+          "source_cells": [
+            {
+              "row": 16,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 14,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "(18,479)",
+          "source_cells": [
+            {
+              "row": 16,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 15,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Other current and non-current liabilities",
+          "source_cells": [
+            {
+              "row": 17,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 15,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "10,016",
+          "source_cells": [
+            {
+              "row": 17,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 15,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "(15,161)",
+          "source_cells": [
+            {
+              "row": 17,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 16,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Cash generated by operating activities",
+          "source_cells": [
+            {
+              "row": 18,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 16,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "116,996",
+          "source_cells": [
+            {
+              "row": 18,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 16,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "81,754",
+          "source_cells": [
+            {
+              "row": 18,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 17,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Investing activities:",
+          "source_cells": [
+            {
+              "row": 20,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 18,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Purchases of marketable securities",
+          "source_cells": [
+            {
+              "row": 21,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 18,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "(48,752)",
+          "source_cells": [
+            {
+              "row": 21,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 18,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "(17,591)",
+          "source_cells": [
+            {
+              "row": 21,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 19,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Proceeds from maturities of marketable securities",
+          "source_cells": [
+            {
+              "row": 22,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 19,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "26,504",
+          "source_cells": [
+            {
+              "row": 22,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 19,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "35,036",
+          "source_cells": [
+            {
+              "row": 22,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 20,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Proceeds from sales of marketable securities",
+          "source_cells": [
+            {
+              "row": 23,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 20,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "12,016",
+          "source_cells": [
+            {
+              "row": 23,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 20,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "10,785",
+          "source_cells": [
+            {
+              "row": 23,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 21,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Payments for acquisition of property, plant and equipment",
+          "source_cells": [
+            {
+              "row": 24,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 21,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "(6,799)",
+          "source_cells": [
+            {
+              "row": 24,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 21,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "(9,473)",
+          "source_cells": [
+            {
+              "row": 24,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 22,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Other",
+          "source_cells": [
+            {
+              "row": 26,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 22,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "(1,780)",
+          "source_cells": [
+            {
+              "row": 26,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 22,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "(975)",
+          "source_cells": [
+            {
+              "row": 26,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 23,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Cash generated by/(used in) investing activities",
+          "source_cells": [
+            {
+              "row": 27,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 23,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "(18,811)",
+          "source_cells": [
+            {
+              "row": 27,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 23,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "17,782",
+          "source_cells": [
+            {
+              "row": 27,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 24,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Financing activities:",
+          "source_cells": [
+            {
+              "row": 29,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 25,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Payments for taxes related to net share settlement of equity awards",
+          "source_cells": [
+            {
+              "row": 30,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 25,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "(6,462)",
+          "source_cells": [
+            {
+              "row": 30,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 25,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "(5,719)",
+          "source_cells": [
+            {
+              "row": 30,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 26,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Payments for dividends and dividend equivalents",
+          "source_cells": [
+            {
+              "row": 31,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 26,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "(11,778)",
+          "source_cells": [
+            {
+              "row": 31,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 26,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "(11,559)",
+          "source_cells": [
+            {
+              "row": 31,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 27,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Repurchases of common stock",
+          "source_cells": [
+            {
+              "row": 32,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 27,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "(62,094)",
+          "source_cells": [
+            {
+              "row": 32,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 27,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "(70,579)",
+          "source_cells": [
+            {
+              "row": 32,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 28,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Proceeds from issuance of term debt, net",
+          "source_cells": [
+            {
+              "row": 33,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 28,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "—",
+          "source_cells": [
+            {
+              "row": 33,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 28,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "4,481",
+          "source_cells": [
+            {
+              "row": 33,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 29,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Repayments of term debt",
+          "source_cells": [
+            {
+              "row": 34,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 29,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "(8,146)",
+          "source_cells": [
+            {
+              "row": 34,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 29,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "(9,682)",
+          "source_cells": [
+            {
+              "row": 34,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 30,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Repayments of commercial paper, net",
+          "source_cells": [
+            {
+              "row": 35,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 30,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "(5,911)",
+          "source_cells": [
+            {
+              "row": 35,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 30,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "(65)",
+          "source_cells": [
+            {
+              "row": 35,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 31,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Other",
+          "source_cells": [
+            {
+              "row": 36,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 31,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "(184)",
+          "source_cells": [
+            {
+              "row": 36,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 31,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "(87)",
+          "source_cells": [
+            {
+              "row": 36,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 32,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Cash used in financing activities",
+          "source_cells": [
+            {
+              "row": 37,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 32,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "(94,575)",
+          "source_cells": [
+            {
+              "row": 37,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 32,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "(93,210)",
+          "source_cells": [
+            {
+              "row": 37,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 33,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Increase in cash, cash equivalents, and restricted cash and cash equivalents",
+          "source_cells": [
+            {
+              "row": 39,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 33,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "3,610",
+          "source_cells": [
+            {
+              "row": 39,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 33,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "6,326",
+          "source_cells": [
+            {
+              "row": 39,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 34,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Cash, cash equivalents, and restricted cash and cash equivalents, ending balances",
+          "source_cells": [
+            {
+              "row": 40,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 34,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$39,544",
+          "source_cells": [
+            {
+              "row": 40,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 40,
+              "column": 4,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 34,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$36,269",
+          "source_cells": [
+            {
+              "row": 40,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 40,
+              "column": 10,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 35,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Supplemental cash flow disclosure:",
+          "source_cells": [
+            {
+              "row": 42,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 36,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Cash paid for income taxes, net",
+          "source_cells": [
+            {
+              "row": 43,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 36,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$26,555",
+          "source_cells": [
+            {
+              "row": 43,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 43,
+              "column": 4,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 36,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$37,332",
+          "source_cells": [
+            {
+              "row": 43,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 43,
+              "column": 10,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        }
+      ]
+    }
+  ]
+}

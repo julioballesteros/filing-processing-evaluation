@@ -8,7 +8,7 @@ from bisect import bisect_left
 from collections import Counter, defaultdict
 from collections.abc import Mapping
 from dataclasses import dataclass
-from typing import Any
+from typing import Any, Protocol
 
 from filing_processing_evaluation.normalization.xhtml import (
     has_style,
@@ -20,6 +20,41 @@ from filing_processing_evaluation.normalization.xhtml import (
 
 FOOTNOTE_PATTERN = re.compile(r"^\([0-9A-Za-z]+\)$")
 CURRENCY_SYMBOLS = {"$", "€", "£", "¥"}
+CONTACT_LAYOUT_PATTERN = re.compile(
+    r"\b(?:investor relations|public relations|corporate communications|"
+    r"investor contact|media contact|press contact)\b|@",
+    re.IGNORECASE,
+)
+
+
+class TableSemanticsPolicy(Protocol):
+    """Decide whether a normalized HTML grid represents a semantic table."""
+
+    def is_semantic(self, table: Mapping[str, Any]) -> bool: ...
+
+
+class PreserveTablesPolicy:
+    """Keep every non-empty table for filing types with established output."""
+
+    def is_semantic(self, table: Mapping[str, Any]) -> bool:
+        return True
+
+
+class EarningsReleaseTablePolicy:
+    """Separate data grids from presentation layout in earnings releases."""
+
+    def is_semantic(self, table: Mapping[str, Any]) -> bool:
+        row_count = int(table["row_count"])
+        column_count = int(table["column_count"])
+        cells = table["cells"]
+        if row_count < 2 or column_count < 2:
+            return False
+        if len(cells) / (row_count * column_count) < 0.4:
+            return False
+        combined_text = " ".join(str(cell["text"]) for cell in cells)
+        return not (
+            row_count <= 4 and CONTACT_LAYOUT_PATTERN.search(combined_text) is not None
+        )
 
 
 def _positive_int(value: str | None, default: int = 1) -> int:
@@ -72,6 +107,30 @@ def _table_rows(table: ET.Element) -> list[ET.Element]:
 
     collect(table)
     return rows
+
+
+def layout_text_elements(table: ET.Element) -> list[ET.Element]:
+    """Return ordered leaf text containers from a presentation-only table."""
+    cells = [
+        cell
+        for row in _table_rows(table)
+        for cell in row
+        if local_name(cell.tag) in {"td", "th"} and visible_text(cell)
+    ]
+    elements: list[ET.Element] = []
+    for cell in cells:
+        leaf_containers = [
+            descendant
+            for descendant in cell.iter()
+            if local_name(descendant.tag) in {"div", "p", "li"}
+            and not any(
+                local_name(nested.tag) in {"div", "p", "li"}
+                for nested in list(descendant.iter())[1:]
+            )
+            and visible_text(descendant)
+        ]
+        elements.extend(leaf_containers or [cell])
+    return elements
 
 
 def _extract_physical_cells(

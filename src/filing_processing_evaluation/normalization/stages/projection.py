@@ -33,14 +33,17 @@ class InlineXbrlProjector:
         page_number = 1
         hidden_subtrees = 0
         page_breaks = 0
+        image_elements = 0
 
         def walk(node: ET.Element, path: str) -> None:
-            nonlocal page_number, hidden_subtrees, page_breaks
+            nonlocal page_number, hidden_subtrees, page_breaks, image_elements
             if is_hidden(node):
                 hidden_subtrees += 1
                 return
             tag = local_name(node.tag)
             source = SourceLocation(page_number=page_number, path=path)
+            if tag == "img":
+                image_elements += 1
             if tag == "table":
                 elements.append(ProjectedTable(element=node, source=source))
                 return
@@ -68,6 +71,7 @@ class InlineXbrlProjector:
                 "hidden_subtrees": hidden_subtrees,
                 "text_elements": text_elements,
                 "table_elements": table_elements,
+                "image_elements": image_elements,
                 "page_breaks": page_breaks,
             },
         )

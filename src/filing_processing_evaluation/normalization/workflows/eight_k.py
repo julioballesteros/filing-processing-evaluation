@@ -13,6 +13,9 @@ from filing_processing_evaluation.normalization.stages.parsing import SecHtmlPar
 from filing_processing_evaluation.normalization.stages.sections import (
     EarningsReleaseSectionPolicy,
 )
+from filing_processing_evaluation.normalization.stages.tables import (
+    EarningsReleaseTablePolicy,
+)
 
 
 class EightKNormalizer:
@@ -24,6 +27,7 @@ class EightKNormalizer:
         self._pipeline = HtmlDocumentPipeline(
             parser=SecHtmlParser(),
             section_policy=EarningsReleaseSectionPolicy(),
+            table_policy=EarningsReleaseTablePolicy(),
         )
 
     def normalize(self, source: NormalizationInput) -> NormalizationResult:

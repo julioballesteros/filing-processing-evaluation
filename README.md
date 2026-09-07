@@ -96,6 +96,13 @@ strict XHTML parser; SEC-wrapped exhibits use a tolerant HTML parser. Shared
 stage implementations do not make a workflow externally configurable;
 form-specific workflows can diverge as their rules evolve.
 
+The 8-K workflow recognizes a stable earnings-release section vocabulary and
+uses a form-specific table policy: financial data grids remain tables, while
+one-dimensional, sparse, and contact-layout tables are unfolded into ordered
+text blocks. Image-backed exhibits that provide only one flattened
+accessibility-text layer per page are preserved as page-level paragraphs; the
+normalizer does not invent table geometry from linked slide images.
+
 Add `--diagnostics` to inspect the counts and decisions emitted by every stage:
 
 ```bash

@@ -1,0 +1,6851 @@
+{
+  "schema_version": "1.2.0",
+  "filing_id": "sec-0001628280-26-048078",
+  "source_artifact": {
+    "artifact_id": "earnings-release",
+    "filename": "a2q26erfexhibit991narrative.htm",
+    "document_type": "EX-99.1",
+    "sha256": "cbd3405248e33b52c44251b42dcc806089aca90cf9f5c37b7eb9a273c15890ea"
+  },
+  "document": {
+    "title": "JPMorgan Chase & Co. 8-K for period ended 2026-06-30",
+    "source_title": "Document",
+    "language": "en",
+    "company_name": "JPMorgan Chase & Co.",
+    "form_type": "8-K",
+    "filing_date": "2026-07-14",
+    "period_end_date": "2026-06-30",
+    "event_date": "2026-07-14",
+    "items": [
+      "2.02",
+      "9.01"
+    ]
+  },
+  "page_count": 8,
+  "sections": [
+    {
+      "id": "s0001",
+      "order": 1,
+      "parent_id": null,
+      "level": 1,
+      "label": "RESULTS",
+      "title": "SECOND-QUARTER 2026 RESULTS 1",
+      "heading_block_id": "b0007"
+    },
+    {
+      "id": "s0002",
+      "order": 2,
+      "parent_id": null,
+      "level": 1,
+      "label": "NON-GAAP",
+      "title": "2. Notes on non-GAAP financial measures",
+      "heading_block_id": "b0094"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "b0001",
+      "order": 1,
+      "section_id": null,
+      "type": "paragraph",
+      "source": {
+        "page_number": 1,
+        "path": "/html/body[1]/div[2]/div[1]"
+      },
+      "text": "Exhibit 99.1"
+    },
+    {
+      "id": "b0002",
+      "order": 2,
+      "section_id": null,
+      "type": "paragraph",
+      "source": {
+        "page_number": 1,
+        "path": "/html/body[1]/div[2]/div[2]/table[1]"
+      },
+      "text": "JPMorgan Chase & Co."
+    },
+    {
+      "id": "b0003",
+      "order": 3,
+      "section_id": null,
+      "type": "paragraph",
+      "source": {
+        "page_number": 1,
+        "path": "/html/body[1]/div[2]/div[2]/table[1]"
+      },
+      "text": "270 Park Avenue, New York, NY 10017-2070"
+    },
+    {
+      "id": "b0004",
+      "order": 4,
+      "section_id": null,
+      "type": "paragraph",
+      "source": {
+        "page_number": 1,
+        "path": "/html/body[1]/div[2]/div[2]/table[1]"
+      },
+      "text": "NYSE symbol: JPM"
+    },
+    {
+      "id": "b0005",
+      "order": 5,
+      "section_id": null,
+      "type": "paragraph",
+      "source": {
+        "page_number": 1,
+        "path": "/html/body[1]/div[2]/div[2]/table[1]"
+      },
+      "text": "www.jpmorganchase.com"
+    },
+    {
+      "id": "b0006",
+      "order": 6,
+      "section_id": null,
+      "type": "heading",
+      "source": {
+        "page_number": 1,
+        "path": "/html/body[1]/div[3]"
+      },
+      "level": 3,
+      "text": "JPMORGANCHASE REPORTS SECOND-QUARTER 2026 NET INCOME OF $21.2 BILLION ($7.70 PER SHARE), NET INCOME EXCLUDING SIGNIFICANT ITEMS OF $16.9 BILLION ($6.14 PER SHARE)"
+    },
+    {
+      "id": "b0007",
+      "order": 7,
+      "section_id": "s0001",
+      "type": "heading",
+      "source": {
+        "page_number": 1,
+        "path": "/html/body[1]/div[5]"
+      },
+      "level": 1,
+      "text": "SECOND-QUARTER 2026 RESULTS 1"
+    },
+    {
+      "id": "b0008",
+      "order": 8,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 1,
+        "path": "/html/body[1]/div[6]/table[1]"
+      },
+      "text": "ROE 24%"
+    },
+    {
+      "id": "b0009",
+      "order": 9,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 1,
+        "path": "/html/body[1]/div[6]/table[1]"
+      },
+      "text": "ROTCE 2 29%"
+    },
+    {
+      "id": "b0010",
+      "order": 10,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 1,
+        "path": "/html/body[1]/div[6]/table[1]"
+      },
+      "text": "ROTCE ex. significant items 2 23%"
+    },
+    {
+      "id": "b0011",
+      "order": 11,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 1,
+        "path": "/html/body[1]/div[6]/table[1]"
+      },
+      "text": "CET1 Capital Ratios 3"
+    },
+    {
+      "id": "b0012",
+      "order": 12,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 1,
+        "path": "/html/body[1]/div[6]/table[1]"
+      },
+      "text": "Std. 14.1% | Adv. 14.2%"
+    },
+    {
+      "id": "b0013",
+      "order": 13,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 1,
+        "path": "/html/body[1]/div[6]/table[1]"
+      },
+      "text": "Total Loss-Absorbing Capacity 3 $590B"
+    },
+    {
+      "id": "b0014",
+      "order": 14,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 1,
+        "path": "/html/body[1]/div[6]/table[1]"
+      },
+      "text": "Std. RWA 3 $2.1T"
+    },
+    {
+      "id": "b0015",
+      "order": 15,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 1,
+        "path": "/html/body[1]/div[6]/table[1]"
+      },
+      "text": "Cash and marketable securities 4 $1.5T"
+    },
+    {
+      "id": "b0016",
+      "order": 16,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 1,
+        "path": "/html/body[1]/div[6]/table[1]"
+      },
+      "text": "Average loans $1.5T"
+    },
+    {
+      "id": "b0017",
+      "order": 17,
+      "section_id": "s0001",
+      "type": "table",
+      "source": {
+        "page_number": 1,
+        "path": "/html/body[1]/div[7]/table[1]"
+      },
+      "caption": null,
+      "row_count": 13,
+      "column_count": 3,
+      "source_shape": {
+        "rows": 17,
+        "columns": 9
+      },
+      "cells": [
+        {
+          "row": 0,
+          "column": 0,
+          "row_span": 4,
+          "column_span": 1,
+          "text": "Firmwide Metrics",
+          "source_cells": [
+            {
+              "row": 1,
+              "column": 0,
+              "row_span": 4,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 0,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "n",
+          "source_cells": [
+            {
+              "row": 1,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 0,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Reported revenue of $57.3 billion and managed revenue 2 of $58.0 billion",
+          "source_cells": [
+            {
+              "row": 1,
+              "column": 6,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 1,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "n",
+          "source_cells": [
+            {
+              "row": 2,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 1,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Expense of $27.3 billion; reported overhead ratio of 48% and managed overhead ratio 2 of 47%",
+          "source_cells": [
+            {
+              "row": 2,
+              "column": 6,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 2,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "n",
+          "source_cells": [
+            {
+              "row": 3,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 2,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Credit costs of $2.5 billion with $2.4 billion of net charge-offs and a $149 million net reserve build",
+          "source_cells": [
+            {
+              "row": 3,
+              "column": 6,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 3,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "n",
+          "source_cells": [
+            {
+              "row": 4,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 3,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Average loans up 10% YoY, up 2% QoQ; average deposits up 7% YoY, up 3% QoQ",
+          "source_cells": [
+            {
+              "row": 4,
+              "column": 6,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 4,
+          "column": 0,
+          "row_span": 4,
+          "column_span": 1,
+          "text": "CCB ROE 34%",
+          "source_cells": [
+            {
+              "row": 6,
+              "column": 0,
+              "row_span": 4,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 4,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "n",
+          "source_cells": [
+            {
+              "row": 6,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 4,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Average deposits up 3% YoY, up 2% QoQ; client investment assets up 21% YoY",
+          "source_cells": [
+            {
+              "row": 6,
+              "column": 6,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 5,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "n",
+          "source_cells": [
+            {
+              "row": 7,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 5,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Average loans up 2% YoY, up 1% QoQ; Card Services net charge-off rate of 3.34%",
+          "source_cells": [
+            {
+              "row": 7,
+              "column": 6,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 6,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "n",
+          "source_cells": [
+            {
+              "row": 8,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 6,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Debit and credit card sales volume 5 up 10% YoY",
+          "source_cells": [
+            {
+              "row": 8,
+              "column": 6,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 7,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "n",
+          "source_cells": [
+            {
+              "row": 9,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 7,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Active mobile customers 6 up 6% YoY",
+          "source_cells": [
+            {
+              "row": 9,
+              "column": 6,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 8,
+          "column": 0,
+          "row_span": 3,
+          "column_span": 1,
+          "text": "CIB ROE 22%",
+          "source_cells": [
+            {
+              "row": 11,
+              "column": 0,
+              "row_span": 3,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 8,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "n",
+          "source_cells": [
+            {
+              "row": 11,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 8,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Investment Banking fees up 30% YoY, up 14% QoQ; #1 ranking for Global Investment Banking fees with 9.3% wallet share YTD 7",
+          "source_cells": [
+            {
+              "row": 11,
+              "column": 6,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 9,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "n",
+          "source_cells": [
+            {
+              "row": 12,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 9,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Markets revenue up 35% YoY, with Fixed Income Markets up 6% and Equity Markets up 86%",
+          "source_cells": [
+            {
+              "row": 12,
+              "column": 6,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 10,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "n",
+          "source_cells": [
+            {
+              "row": 13,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 10,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Average Banking & Payments loans up 13% YoY, up 5% QoQ; average client deposits 8 up 11% YoY, up 3% QoQ",
+          "source_cells": [
+            {
+              "row": 13,
+              "column": 6,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 11,
+          "column": 0,
+          "row_span": 2,
+          "column_span": 1,
+          "text": "AWM ROE 48%",
+          "source_cells": [
+            {
+              "row": 15,
+              "column": 0,
+              "row_span": 2,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 11,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "n",
+          "source_cells": [
+            {
+              "row": 15,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 11,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "AUM 9 of $5.1 trillion, up 18% YoY",
+          "source_cells": [
+            {
+              "row": 15,
+              "column": 6,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 12,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "n",
+          "source_cells": [
+            {
+              "row": 16,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 12,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Average loans up 18% YoY, up 6% QoQ; average deposits up 5% YoY, up 3% QoQ",
+          "source_cells": [
+            {
+              "row": 16,
+              "column": 6,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "data"
+        }
+      ]
+    },
+    {
+      "id": "b0018",
+      "order": 18,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 1,
+        "path": "/html/body[1]/div[7]/table[2]"
+      },
+      "text": "Jamie Dimon, Chairman and CEO, commented on the financial results: “The Firm reported very strong results in the quarter, generating net income o f $16.9 billion and an ROTCE of 23%, excluding gains related to Visa and certain equity investments. These results were the product of a particularly favorable environment with an elevated level of market activity, as well as rigorous execution, years of consistent investment and thoughtful capital deployment.”"
+    },
+    {
+      "id": "b0019",
+      "order": 19,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 1,
+        "path": "/html/body[1]/div[7]/table[2]"
+      },
+      "text": "Dimon continued: “Performance was strong across the Firm, and revenue in each line of business hit a new record. In the CIB, revenue grew 27% and outperformed our expectations, with Markets revenue growing 35% due to elevated client activity, strong trading performance and continued demand for financing in Equities. IB activity also accelerated, with IB fees jumping 30% to the highest level since 2021, and market sentiment remains constructive for continued activity. Additionally, Payments and Securities Services each posted double-digit revenue growth led by ongoing deposit and fee growth. In CCB, revenue rose 8%, and we continued to add customers at a sustained pace across the franchise. In wealth management, first-time investors of nearly 44,000 set a new record. Additionally, Card annual fees grew more than 30%, reflecting healthy retention levels after recent product refreshes as well as demand for our premium products. Finally, in AWM, revenue increased 19%, and flows remained robust with $50 billion of long-term AUM net inflows, helping to drive AUM to over $5 trillion.”"
+    },
+    {
+      "id": "b0020",
+      "order": 20,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 1,
+        "path": "/html/body[1]/div[7]/table[2]"
+      },
+      "text": "Dimon added: “The U.S. economy has demonstrated notable resiliency this year, with stronger business investment and hiring. This strength is being supported by several tailwinds, including AI-driven capital investment, fiscal stimulus and the benefits of more efficient regulation. However, several risks are shifting below the surface like tectonic plates, including geopolitical tensions and wars, sticky inflation, large global fiscal deficits and elevated asset prices. We cannot predict how these forces will ultimately play out. They may remain manageable, but they could also cause meaningful disruptions when they shift or collide. We carefully monitor these risks and prepare the Firm for a wide range of scenarios to ensure that we can serve our customers and clients consistently in all environments.”"
+    },
+    {
+      "id": "b0021",
+      "order": 21,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 1,
+        "path": "/html/body[1]/div[7]/table[2]"
+      },
+      "text": "Dimon concluded: “I want to express my deep gratitude to our employees across the globe for how they work to support our customers and communities every single day.”"
+    },
+    {
+      "id": "b0022",
+      "order": 22,
+      "section_id": "s0001",
+      "type": "heading",
+      "source": {
+        "page_number": 1,
+        "path": "/html/body[1]/div[9]/div[1]/div[1]"
+      },
+      "level": 3,
+      "text": "SIGNIFICANT ITEMS IN 2Q26 RESULTS"
+    },
+    {
+      "id": "b0023",
+      "order": 23,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 1,
+        "path": "/html/body[1]/div[9]/div[1]/div[2]"
+      },
+      "text": "n $4.6 billion net gain related to Visa shares 10 ($1.27 increase in EPS 11)"
+    },
+    {
+      "id": "b0024",
+      "order": 24,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 1,
+        "path": "/html/body[1]/div[9]/div[1]/div[3]"
+      },
+      "text": "n $1.0 billion of gains on certain equity investments 12 ($0.29 increase in EPS)"
+    },
+    {
+      "id": "b0025",
+      "order": 25,
+      "section_id": "s0001",
+      "type": "heading",
+      "source": {
+        "page_number": 1,
+        "path": "/html/body[1]/div[9]/div[1]/div[4]"
+      },
+      "level": 3,
+      "text": "CAPITAL DISTRIBUTIONS"
+    },
+    {
+      "id": "b0026",
+      "order": 26,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 1,
+        "path": "/html/body[1]/div[9]/div[1]/div[5]"
+      },
+      "text": "n Common dividend of $4.0 billion or $1.50 per share"
+    },
+    {
+      "id": "b0027",
+      "order": 27,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 1,
+        "path": "/html/body[1]/div[9]/div[1]/div[6]"
+      },
+      "text": "n $6.2 billion of common stock net repurchases 13"
+    },
+    {
+      "id": "b0028",
+      "order": 28,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 1,
+        "path": "/html/body[1]/div[9]/div[1]/div[7]"
+      },
+      "text": "n Net payout LTM 13,14 of 73%"
+    },
+    {
+      "id": "b0029",
+      "order": 29,
+      "section_id": "s0001",
+      "type": "heading",
+      "source": {
+        "page_number": 1,
+        "path": "/html/body[1]/div[9]/div[1]/div[8]"
+      },
+      "level": 3,
+      "text": "FORTRESS PRINCIPLES"
+    },
+    {
+      "id": "b0030",
+      "order": 30,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 1,
+        "path": "/html/body[1]/div[9]/div[1]/div[9]"
+      },
+      "text": "n Book value per share of $133.01, up 9% YoY; tangible book value per share 2 of $113.35, up 10% YoY"
+    },
+    {
+      "id": "b0031",
+      "order": 31,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 1,
+        "path": "/html/body[1]/div[9]/div[3]/div[1]"
+      },
+      "text": "n Basel III common equity Tier 1 capital 3 of $303 billion, Standardized ratio 3 of 14.1% and Advanced ratio 3 of 14.2%"
+    },
+    {
+      "id": "b0032",
+      "order": 32,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 1,
+        "path": "/html/body[1]/div[9]/div[3]/div[2]"
+      },
+      "text": "n Firm supplementary leverage ratio of 5.5%"
+    },
+    {
+      "id": "b0033",
+      "order": 33,
+      "section_id": "s0001",
+      "type": "heading",
+      "source": {
+        "page_number": 1,
+        "path": "/html/body[1]/div[9]/div[3]/div[3]"
+      },
+      "level": 3,
+      "text": "SUPPORTED CONSUMERS, BUSINESSES & COMMUNITIES"
+    },
+    {
+      "id": "b0034",
+      "order": 34,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 1,
+        "path": "/html/body[1]/div[9]/div[3]/div[4]"
+      },
+      "text": "n Approximately $1.9 trillion of credit and capital 15 raised YTD:"
+    },
+    {
+      "id": "b0035",
+      "order": 35,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 1,
+        "path": "/html/body[1]/div[9]/div[3]/div[5]"
+      },
+      "text": "n $160 billion of credit for consumers"
+    },
+    {
+      "id": "b0036",
+      "order": 36,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 1,
+        "path": "/html/body[1]/div[9]/div[3]/div[6]"
+      },
+      "text": "n $17 billion of credit for U.S. small businesses"
+    },
+    {
+      "id": "b0037",
+      "order": 37,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 1,
+        "path": "/html/body[1]/div[9]/div[3]/div[7]"
+      },
+      "text": "n $1.7 trillion of credit and capital for corporations and non-U.S. government entities"
+    },
+    {
+      "id": "b0038",
+      "order": 38,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 1,
+        "path": "/html/body[1]/div[9]/div[3]/div[8]"
+      },
+      "text": "n $52 billion of credit and capital for nonprofit and U.S. government entities, including states, municipalities, hospitals and universities"
+    },
+    {
+      "id": "b0039",
+      "order": 39,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 1,
+        "path": "/html/body[1]/div[10]/div[1]/div[1]/table[1]"
+      },
+      "text": "Investor Contact: Mikael Grubb (212) 270-2479"
+    },
+    {
+      "id": "b0040",
+      "order": 40,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 1,
+        "path": "/html/body[1]/div[10]/div[1]/div[1]/table[1]"
+      },
+      "text": "Media Contact: Joseph Evangelisti (212) 270-7438"
+    },
+    {
+      "id": "b0041",
+      "order": 41,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 1,
+        "path": "/html/body[1]/div[10]/div[1]/div[1]/table[1]"
+      },
+      "text": "Note: Totals may not sum due to rounding."
+    },
+    {
+      "id": "b0042",
+      "order": 42,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 1,
+        "path": "/html/body[1]/div[10]/div[1]/div[1]/table[1]"
+      },
+      "text": "1 Percentage comparisons are for the second quarter of 2026 versus the prior-year second quarter, unless otherwise specified."
+    },
+    {
+      "id": "b0043",
+      "order": 43,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 1,
+        "path": "/html/body[1]/div[10]/div[1]/div[1]/table[1]"
+      },
+      "text": "2 For notes on non-GAAP financial measures, including managed basis reporting, see page 6."
+    },
+    {
+      "id": "b0044",
+      "order": 44,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 1,
+        "path": "/html/body[1]/div[10]/div[1]/div[1]/table[1]"
+      },
+      "text": "For additional notes, see page 7."
+    },
+    {
+      "id": "b0045",
+      "order": 45,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 2,
+        "path": "/html/body[1]/div[12]/div[1]"
+      },
+      "text": "JPMorgan Chase & Co."
+    },
+    {
+      "id": "b0046",
+      "order": 46,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 2,
+        "path": "/html/body[1]/div[12]/div[2]"
+      },
+      "text": "News Release"
+    },
+    {
+      "id": "b0047",
+      "order": 47,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 2,
+        "path": "/html/body[1]/div[13]"
+      },
+      "text": "In the discussion below of Firmwide results of JPMorgan Chase & Co. (“JPMorganChase” or the “Firm”), information is presented on a managed basis, which is a non-GAAP financial measure, unless otherwise specified. The discussion below of the Firm’s business segments and Corporate is also presented on a managed basis. For more information about managed basis and non-GAAP financial measures used by management to evaluate the performance of each line of business, refer to page 6."
+    },
+    {
+      "id": "b0048",
+      "order": 48,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 2,
+        "path": "/html/body[1]/div[14]"
+      },
+      "text": "Comparisons noted in the sections below are for the second quarter of 2026 versus the prior-year second quarter, unless otherwise specified."
+    },
+    {
+      "id": "b0049",
+      "order": 49,
+      "section_id": "s0001",
+      "type": "heading",
+      "source": {
+        "page_number": 2,
+        "path": "/html/body[1]/div[15]/table[1]"
+      },
+      "level": 3,
+      "text": "JPMORGANCHASE (JPM)"
+    },
+    {
+      "id": "b0050",
+      "order": 50,
+      "section_id": "s0001",
+      "type": "table",
+      "source": {
+        "page_number": 2,
+        "path": "/html/body[1]/div[16]/table[1]"
+      },
+      "caption": null,
+      "row_count": 10,
+      "column_count": 8,
+      "source_shape": {
+        "rows": 12,
+        "columns": 36
+      },
+      "cells": [
+        {
+          "row": 0,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Results for JPM",
+          "source_cells": [
+            {
+              "row": 1,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 0,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 2,
+          "text": "1Q26",
+          "source_cells": [
+            {
+              "row": 1,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 6
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 0,
+          "column": 6,
+          "row_span": 1,
+          "column_span": 2,
+          "text": "2Q25",
+          "source_cells": [
+            {
+              "row": 1,
+              "column": 30,
+              "row_span": 1,
+              "column_span": 6
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 1,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "($ millions, except per share data)",
+          "source_cells": [
+            {
+              "row": 2,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 1,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "2Q26",
+          "source_cells": [
+            {
+              "row": 2,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 1,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "1Q26",
+          "source_cells": [
+            {
+              "row": 2,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 1,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "2Q25",
+          "source_cells": [
+            {
+              "row": 2,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 1,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$ O/(U)",
+          "source_cells": [
+            {
+              "row": 2,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 1,
+          "column": 5,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "O/(U) %",
+          "source_cells": [
+            {
+              "row": 2,
+              "column": 24,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 1,
+          "column": 6,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$ O/(U)",
+          "source_cells": [
+            {
+              "row": 2,
+              "column": 30,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 1,
+          "column": 7,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "O/(U) %",
+          "source_cells": [
+            {
+              "row": 2,
+              "column": 33,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 2,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Net revenue - reported",
+          "source_cells": [
+            {
+              "row": 4,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 2,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$57,347",
+          "source_cells": [
+            {
+              "row": 4,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 4,
+              "column": 4,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 2,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$49,836",
+          "source_cells": [
+            {
+              "row": 4,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 4,
+              "column": 10,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 2,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$44,912",
+          "source_cells": [
+            {
+              "row": 4,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 4,
+              "column": 16,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 2,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$7,511",
+          "source_cells": [
+            {
+              "row": 4,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 4,
+              "column": 22,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 2,
+          "column": 5,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "15%",
+          "source_cells": [
+            {
+              "row": 4,
+              "column": 24,
+              "row_span": 1,
+              "column_span": 2
+            },
+            {
+              "row": 4,
+              "column": 26,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 2,
+          "column": 6,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$12,435",
+          "source_cells": [
+            {
+              "row": 4,
+              "column": 30,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 4,
+              "column": 31,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 2,
+          "column": 7,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "28%",
+          "source_cells": [
+            {
+              "row": 4,
+              "column": 33,
+              "row_span": 1,
+              "column_span": 2
+            },
+            {
+              "row": 4,
+              "column": 35,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 3,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Net revenue - managed",
+          "source_cells": [
+            {
+              "row": 5,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 3,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "58,022",
+          "source_cells": [
+            {
+              "row": 5,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 3,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "50,536",
+          "source_cells": [
+            {
+              "row": 5,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 3,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "45,680",
+          "source_cells": [
+            {
+              "row": 5,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 3,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "7,486",
+          "source_cells": [
+            {
+              "row": 5,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 3,
+          "column": 5,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "15",
+          "source_cells": [
+            {
+              "row": 5,
+              "column": 24,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 3,
+          "column": 6,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "12,342",
+          "source_cells": [
+            {
+              "row": 5,
+              "column": 30,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 3,
+          "column": 7,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "27",
+          "source_cells": [
+            {
+              "row": 5,
+              "column": 33,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 4,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Noninterest expense",
+          "source_cells": [
+            {
+              "row": 6,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 4,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "27,316",
+          "source_cells": [
+            {
+              "row": 6,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 4,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "26,850",
+          "source_cells": [
+            {
+              "row": 6,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 4,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "23,779",
+          "source_cells": [
+            {
+              "row": 6,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 4,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "466",
+          "source_cells": [
+            {
+              "row": 6,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 4,
+          "column": 5,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "2",
+          "source_cells": [
+            {
+              "row": 6,
+              "column": 24,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 4,
+          "column": 6,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "3,537",
+          "source_cells": [
+            {
+              "row": 6,
+              "column": 30,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 4,
+          "column": 7,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "15",
+          "source_cells": [
+            {
+              "row": 6,
+              "column": 33,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 5,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Provision for credit losses",
+          "source_cells": [
+            {
+              "row": 7,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 5,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "2,515",
+          "source_cells": [
+            {
+              "row": 7,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 5,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "2,507",
+          "source_cells": [
+            {
+              "row": 7,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 5,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "2,849",
+          "source_cells": [
+            {
+              "row": 7,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 5,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "8",
+          "source_cells": [
+            {
+              "row": 7,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 5,
+          "column": 5,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "—",
+          "source_cells": [
+            {
+              "row": 7,
+              "column": 24,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 5,
+          "column": 6,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "(334)",
+          "source_cells": [
+            {
+              "row": 7,
+              "column": 30,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 5,
+          "column": 7,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "(12)",
+          "source_cells": [
+            {
+              "row": 7,
+              "column": 33,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 6,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Net income",
+          "source_cells": [
+            {
+              "row": 8,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 6,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$21,155",
+          "source_cells": [
+            {
+              "row": 8,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 8,
+              "column": 4,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 6,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$16,494",
+          "source_cells": [
+            {
+              "row": 8,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 8,
+              "column": 10,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 6,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$14,987",
+          "source_cells": [
+            {
+              "row": 8,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 8,
+              "column": 16,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 6,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$4,661",
+          "source_cells": [
+            {
+              "row": 8,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 8,
+              "column": 22,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 6,
+          "column": 5,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "28%",
+          "source_cells": [
+            {
+              "row": 8,
+              "column": 24,
+              "row_span": 1,
+              "column_span": 2
+            },
+            {
+              "row": 8,
+              "column": 26,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 6,
+          "column": 6,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$6,168",
+          "source_cells": [
+            {
+              "row": 8,
+              "column": 30,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 8,
+              "column": 31,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 6,
+          "column": 7,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "41%",
+          "source_cells": [
+            {
+              "row": 8,
+              "column": 33,
+              "row_span": 1,
+              "column_span": 2
+            },
+            {
+              "row": 8,
+              "column": 35,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 7,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Earnings per share - diluted",
+          "source_cells": [
+            {
+              "row": 9,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 7,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$7.70",
+          "source_cells": [
+            {
+              "row": 9,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 9,
+              "column": 4,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 7,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$5.94",
+          "source_cells": [
+            {
+              "row": 9,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 9,
+              "column": 10,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 7,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$5.24",
+          "source_cells": [
+            {
+              "row": 9,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 9,
+              "column": 16,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 7,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$1.76",
+          "source_cells": [
+            {
+              "row": 9,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 9,
+              "column": 22,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 7,
+          "column": 5,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "30%",
+          "source_cells": [
+            {
+              "row": 9,
+              "column": 24,
+              "row_span": 1,
+              "column_span": 2
+            },
+            {
+              "row": 9,
+              "column": 26,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 7,
+          "column": 6,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$2.46",
+          "source_cells": [
+            {
+              "row": 9,
+              "column": 30,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 9,
+              "column": 31,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 7,
+          "column": 7,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "47%",
+          "source_cells": [
+            {
+              "row": 9,
+              "column": 33,
+              "row_span": 1,
+              "column_span": 2
+            },
+            {
+              "row": 9,
+              "column": 35,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 8,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Return on common equity",
+          "source_cells": [
+            {
+              "row": 10,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 8,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "24%",
+          "source_cells": [
+            {
+              "row": 10,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            },
+            {
+              "row": 10,
+              "column": 5,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 8,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "19%",
+          "source_cells": [
+            {
+              "row": 10,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            },
+            {
+              "row": 10,
+              "column": 11,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 8,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "18%",
+          "source_cells": [
+            {
+              "row": 10,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 2
+            },
+            {
+              "row": 10,
+              "column": 17,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 9,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Return on tangible common equity",
+          "source_cells": [
+            {
+              "row": 11,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 9,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "29",
+          "source_cells": [
+            {
+              "row": 11,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 9,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "23",
+          "source_cells": [
+            {
+              "row": 11,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 9,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "21",
+          "source_cells": [
+            {
+              "row": 11,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        }
+      ]
+    },
+    {
+      "id": "b0051",
+      "order": 51,
+      "section_id": "s0001",
+      "type": "heading",
+      "source": {
+        "page_number": 2,
+        "path": "/html/body[1]/div[18]"
+      },
+      "level": 3,
+      "text": "Discussion of Results:"
+    },
+    {
+      "id": "b0052",
+      "order": 52,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 2,
+        "path": "/html/body[1]/div[19]"
+      },
+      "text": "Net income was $21.2 billion, up 41%, or up 13% excluding significant items.2 The significant items, each in the current quarter, consisted of a $4.6 billion net gain related to Visa shares in Corporate as well as $1.0 billion of gains on certain equity investments, of which $763 million was in Corporate and $263 million was in CIB."
+    },
+    {
+      "id": "b0053",
+      "order": 53,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 2,
+        "path": "/html/body[1]/div[20]"
+      },
+      "text": "Net revenue was $58.0 billion, up 27%, or up 15% excluding significant items. Net interest income was $25.6 billion, up 10%. Noninterest revenue was $32.4 billion, up 45%, or up 20% excluding significant items."
+    },
+    {
+      "id": "b0054",
+      "order": 54,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 2,
+        "path": "/html/body[1]/div[21]"
+      },
+      "text": "Net interest income excluding Markets 2 was $23.7 billion, up 4%, driven by higher deposit balances, higher revolving balances in Card Services and higher wholesale loan balances, largely offset by the impact of lower rates. Noninterest revenue excluding Markets 2 was $22.3 billion, up 59%, or up 19% also excluding significant items, largely driven by higher asset management fees in AWM and CCB, higher Investment Banking revenue and higher auto operating lease income, partially offset by higher net investment securities losses. Markets revenue was $12.1 billion, up 35%, predominantly driven by higher Equity Markets revenue."
+    },
+    {
+      "id": "b0055",
+      "order": 55,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 2,
+        "path": "/html/body[1]/div[22]"
+      },
+      "text": "Noninterest expense was $27.3 billion, up 15%, predominantly driven by higher compensation, including higher revenue-related compensation and growth in the number of front office employees, as well as higher brokerage expense and distribution fees, higher marketing expense, higher technology expense and higher occupancy expense."
+    },
+    {
+      "id": "b0056",
+      "order": 56,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 2,
+        "path": "/html/body[1]/div[23]"
+      },
+      "text": "The provision for credit losses was $2.5 billion. Net charge-offs were $2.4 billion, down $44 million. The net reserve build was $149 million, primarily in Wholesale. In the prior year, the provision was $2.8 billion, net charge-offs were $2.4 billion and the net reserve build was $439 million."
+    },
+    {
+      "id": "b0057",
+      "order": 57,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 2,
+        "path": "/html/body[1]/div[24]"
+      },
+      "text": "The prior year included a $774 million income tax benefit in Corporate."
+    },
+    {
+      "id": "b0058",
+      "order": 58,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 3,
+        "path": "/html/body[1]/div[28]/div[1]"
+      },
+      "text": "JPMorgan Chase & Co."
+    },
+    {
+      "id": "b0059",
+      "order": 59,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 3,
+        "path": "/html/body[1]/div[28]/div[2]"
+      },
+      "text": "News Release"
+    },
+    {
+      "id": "b0060",
+      "order": 60,
+      "section_id": "s0001",
+      "type": "heading",
+      "source": {
+        "page_number": 3,
+        "path": "/html/body[1]/div[29]/table[1]"
+      },
+      "level": 3,
+      "text": "CONSUMER & COMMUNITY BANKING (CCB)"
+    },
+    {
+      "id": "b0061",
+      "order": 61,
+      "section_id": "s0001",
+      "type": "table",
+      "source": {
+        "page_number": 3,
+        "path": "/html/body[1]/div[30]/table[1]"
+      },
+      "caption": null,
+      "row_count": 9,
+      "column_count": 8,
+      "source_shape": {
+        "rows": 10,
+        "columns": 36
+      },
+      "cells": [
+        {
+          "row": 0,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Results for CCB",
+          "source_cells": [
+            {
+              "row": 1,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 0,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 2,
+          "text": "1Q26",
+          "source_cells": [
+            {
+              "row": 1,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 6
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 0,
+          "column": 6,
+          "row_span": 1,
+          "column_span": 2,
+          "text": "2Q25",
+          "source_cells": [
+            {
+              "row": 1,
+              "column": 30,
+              "row_span": 1,
+              "column_span": 6
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 1,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "($ millions)",
+          "source_cells": [
+            {
+              "row": 2,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 1,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "2Q26",
+          "source_cells": [
+            {
+              "row": 2,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 1,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "1Q26",
+          "source_cells": [
+            {
+              "row": 2,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 1,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "2Q25",
+          "source_cells": [
+            {
+              "row": 2,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 1,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$ O/(U)",
+          "source_cells": [
+            {
+              "row": 2,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 1,
+          "column": 5,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "O/(U) %",
+          "source_cells": [
+            {
+              "row": 2,
+              "column": 24,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 1,
+          "column": 6,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$ O/(U)",
+          "source_cells": [
+            {
+              "row": 2,
+              "column": 30,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 1,
+          "column": 7,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "O/(U) %",
+          "source_cells": [
+            {
+              "row": 2,
+              "column": 33,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 2,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Net revenue",
+          "source_cells": [
+            {
+              "row": 3,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 2,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$20,272",
+          "source_cells": [
+            {
+              "row": 3,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 3,
+              "column": 4,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 2,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$19,568",
+          "source_cells": [
+            {
+              "row": 3,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 3,
+              "column": 10,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 2,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$18,847",
+          "source_cells": [
+            {
+              "row": 3,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 3,
+              "column": 16,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 2,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$704",
+          "source_cells": [
+            {
+              "row": 3,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 3,
+              "column": 22,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 2,
+          "column": 5,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "4%",
+          "source_cells": [
+            {
+              "row": 3,
+              "column": 24,
+              "row_span": 1,
+              "column_span": 2
+            },
+            {
+              "row": 3,
+              "column": 26,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 2,
+          "column": 6,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$1,425",
+          "source_cells": [
+            {
+              "row": 3,
+              "column": 30,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 3,
+              "column": 31,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 2,
+          "column": 7,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "8%",
+          "source_cells": [
+            {
+              "row": 3,
+              "column": 33,
+              "row_span": 1,
+              "column_span": 2
+            },
+            {
+              "row": 3,
+              "column": 35,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 3,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Banking & Wealth Management",
+          "source_cells": [
+            {
+              "row": 4,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 3,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "11,229",
+          "source_cells": [
+            {
+              "row": 4,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 3,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "10,577",
+          "source_cells": [
+            {
+              "row": 4,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 3,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "10,698",
+          "source_cells": [
+            {
+              "row": 4,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 3,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "652",
+          "source_cells": [
+            {
+              "row": 4,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 3,
+          "column": 5,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "6",
+          "source_cells": [
+            {
+              "row": 4,
+              "column": 24,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 3,
+          "column": 6,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "531",
+          "source_cells": [
+            {
+              "row": 4,
+              "column": 30,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 3,
+          "column": 7,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "5",
+          "source_cells": [
+            {
+              "row": 4,
+              "column": 33,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 4,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Home Lending",
+          "source_cells": [
+            {
+              "row": 5,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 4,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "1,285",
+          "source_cells": [
+            {
+              "row": 5,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 4,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "1,232",
+          "source_cells": [
+            {
+              "row": 5,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 4,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "1,250",
+          "source_cells": [
+            {
+              "row": 5,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 4,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "53",
+          "source_cells": [
+            {
+              "row": 5,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 4,
+          "column": 5,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "4",
+          "source_cells": [
+            {
+              "row": 5,
+              "column": 24,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 4,
+          "column": 6,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "35",
+          "source_cells": [
+            {
+              "row": 5,
+              "column": 30,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 4,
+          "column": 7,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "3",
+          "source_cells": [
+            {
+              "row": 5,
+              "column": 33,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 5,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Card Services & Auto",
+          "source_cells": [
+            {
+              "row": 6,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 5,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "7,758",
+          "source_cells": [
+            {
+              "row": 6,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 5,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "7,759",
+          "source_cells": [
+            {
+              "row": 6,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 5,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "6,899",
+          "source_cells": [
+            {
+              "row": 6,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 5,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "(1)",
+          "source_cells": [
+            {
+              "row": 6,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 5,
+          "column": 5,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "—",
+          "source_cells": [
+            {
+              "row": 6,
+              "column": 24,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 5,
+          "column": 6,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "859",
+          "source_cells": [
+            {
+              "row": 6,
+              "column": 30,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 5,
+          "column": 7,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "12",
+          "source_cells": [
+            {
+              "row": 6,
+              "column": 33,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 6,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Noninterest expense",
+          "source_cells": [
+            {
+              "row": 7,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 6,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "11,108",
+          "source_cells": [
+            {
+              "row": 7,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 6,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "10,979",
+          "source_cells": [
+            {
+              "row": 7,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 6,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "9,858",
+          "source_cells": [
+            {
+              "row": 7,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 6,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "129",
+          "source_cells": [
+            {
+              "row": 7,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 6,
+          "column": 5,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "1",
+          "source_cells": [
+            {
+              "row": 7,
+              "column": 24,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 6,
+          "column": 6,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "1,250",
+          "source_cells": [
+            {
+              "row": 7,
+              "column": 30,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 6,
+          "column": 7,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "13",
+          "source_cells": [
+            {
+              "row": 7,
+              "column": 33,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 7,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Provision for credit losses",
+          "source_cells": [
+            {
+              "row": 8,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 7,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "2,156",
+          "source_cells": [
+            {
+              "row": 8,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 7,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "2,050",
+          "source_cells": [
+            {
+              "row": 8,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 7,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "2,082",
+          "source_cells": [
+            {
+              "row": 8,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 7,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "106",
+          "source_cells": [
+            {
+              "row": 8,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 7,
+          "column": 5,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "5",
+          "source_cells": [
+            {
+              "row": 8,
+              "column": 24,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 7,
+          "column": 6,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "74",
+          "source_cells": [
+            {
+              "row": 8,
+              "column": 30,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 7,
+          "column": 7,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "4",
+          "source_cells": [
+            {
+              "row": 8,
+              "column": 33,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 8,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Net income",
+          "source_cells": [
+            {
+              "row": 9,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 8,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$5,311",
+          "source_cells": [
+            {
+              "row": 9,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 9,
+              "column": 4,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 8,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$4,976",
+          "source_cells": [
+            {
+              "row": 9,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 9,
+              "column": 10,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 8,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$5,169",
+          "source_cells": [
+            {
+              "row": 9,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 9,
+              "column": 16,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 8,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$335",
+          "source_cells": [
+            {
+              "row": 9,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 9,
+              "column": 22,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 8,
+          "column": 5,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "7%",
+          "source_cells": [
+            {
+              "row": 9,
+              "column": 24,
+              "row_span": 1,
+              "column_span": 2
+            },
+            {
+              "row": 9,
+              "column": 26,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 8,
+          "column": 6,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$142",
+          "source_cells": [
+            {
+              "row": 9,
+              "column": 30,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 9,
+              "column": 31,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 8,
+          "column": 7,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "3%",
+          "source_cells": [
+            {
+              "row": 9,
+              "column": 33,
+              "row_span": 1,
+              "column_span": 2
+            },
+            {
+              "row": 9,
+              "column": 35,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        }
+      ]
+    },
+    {
+      "id": "b0062",
+      "order": 62,
+      "section_id": "s0001",
+      "type": "heading",
+      "source": {
+        "page_number": 3,
+        "path": "/html/body[1]/div[32]"
+      },
+      "level": 3,
+      "text": "Discussion of Results:"
+    },
+    {
+      "id": "b0063",
+      "order": 63,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 3,
+        "path": "/html/body[1]/div[33]"
+      },
+      "text": "Net income was $5.3 billion, up 3%."
+    },
+    {
+      "id": "b0064",
+      "order": 64,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 3,
+        "path": "/html/body[1]/div[34]"
+      },
+      "text": "Net revenue was $20.3 billion, up 8%. Banking & Wealth Management net revenue was $11.2 billion, up 5%, largely driven by higher asset management fees in J.P. Morgan Wealth Management and higher deposit-related fees. Home Lending net revenue was $1.3 billion, up 3%, driven by higher net interest income. Card Services & Auto net revenue was $7.8 billion, up 12%, predominantly driven by higher Card Services net interest income, largely on higher revolving balances, as well as higher auto operating lease income."
+    },
+    {
+      "id": "b0065",
+      "order": 65,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 3,
+        "path": "/html/body[1]/div[35]"
+      },
+      "text": "Noninterest expense was $11.1 billion, up 13%, predominantly driven by higher marketing expense, higher compensation for advisors and bankers, higher technology expense and higher auto lease depreciation."
+    },
+    {
+      "id": "b0066",
+      "order": 66,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 3,
+        "path": "/html/body[1]/div[36]"
+      },
+      "text": "The provision for credit losses was $2.2 billion. Net charge-offs were $2.2 billion, up $70 million, predominantly driven by Card Services. Reserves were flat. In the prior year, the provision was $2.1 billion, net charge-offs were $2.1 billion and reserves were relatively flat."
+    },
+    {
+      "id": "b0067",
+      "order": 67,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 4,
+        "path": "/html/body[1]/div[40]/div[1]"
+      },
+      "text": "JPMorgan Chase & Co."
+    },
+    {
+      "id": "b0068",
+      "order": 68,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 4,
+        "path": "/html/body[1]/div[40]/div[2]"
+      },
+      "text": "News Release"
+    },
+    {
+      "id": "b0069",
+      "order": 69,
+      "section_id": "s0001",
+      "type": "heading",
+      "source": {
+        "page_number": 4,
+        "path": "/html/body[1]/div[41]/table[1]"
+      },
+      "level": 3,
+      "text": "COMMERCIAL & INVESTMENT BANK (CIB)"
+    },
+    {
+      "id": "b0070",
+      "order": 70,
+      "section_id": "s0001",
+      "type": "table",
+      "source": {
+        "page_number": 4,
+        "path": "/html/body[1]/div[42]/table[1]"
+      },
+      "caption": null,
+      "row_count": 8,
+      "column_count": 8,
+      "source_shape": {
+        "rows": 9,
+        "columns": 36
+      },
+      "cells": [
+        {
+          "row": 0,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Results for CIB",
+          "source_cells": [
+            {
+              "row": 1,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 0,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 2,
+          "text": "1Q26",
+          "source_cells": [
+            {
+              "row": 1,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 6
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 0,
+          "column": 6,
+          "row_span": 1,
+          "column_span": 2,
+          "text": "2Q25",
+          "source_cells": [
+            {
+              "row": 1,
+              "column": 30,
+              "row_span": 1,
+              "column_span": 6
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 1,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "($ millions)",
+          "source_cells": [
+            {
+              "row": 2,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 1,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "2Q26",
+          "source_cells": [
+            {
+              "row": 2,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 1,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "1Q26",
+          "source_cells": [
+            {
+              "row": 2,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 1,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "2Q25",
+          "source_cells": [
+            {
+              "row": 2,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 1,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$ O/(U)",
+          "source_cells": [
+            {
+              "row": 2,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 1,
+          "column": 5,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "O/(U) %",
+          "source_cells": [
+            {
+              "row": 2,
+              "column": 24,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 1,
+          "column": 6,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$ O/(U)",
+          "source_cells": [
+            {
+              "row": 2,
+              "column": 30,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 1,
+          "column": 7,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "O/(U) %",
+          "source_cells": [
+            {
+              "row": 2,
+              "column": 33,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 2,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Net revenue",
+          "source_cells": [
+            {
+              "row": 3,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 2,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$24,853",
+          "source_cells": [
+            {
+              "row": 3,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 3,
+              "column": 4,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 2,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$23,379",
+          "source_cells": [
+            {
+              "row": 3,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 3,
+              "column": 10,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 2,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$19,535",
+          "source_cells": [
+            {
+              "row": 3,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 3,
+              "column": 16,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 2,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$1,474",
+          "source_cells": [
+            {
+              "row": 3,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 3,
+              "column": 22,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 2,
+          "column": 5,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "6%",
+          "source_cells": [
+            {
+              "row": 3,
+              "column": 24,
+              "row_span": 1,
+              "column_span": 2
+            },
+            {
+              "row": 3,
+              "column": 26,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 2,
+          "column": 6,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$5,318",
+          "source_cells": [
+            {
+              "row": 3,
+              "column": 30,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 3,
+              "column": 31,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 2,
+          "column": 7,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "27%",
+          "source_cells": [
+            {
+              "row": 3,
+              "column": 33,
+              "row_span": 1,
+              "column_span": 2
+            },
+            {
+              "row": 3,
+              "column": 35,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 3,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Banking & Payments",
+          "source_cells": [
+            {
+              "row": 4,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 3,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "11,162",
+          "source_cells": [
+            {
+              "row": 4,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 3,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "10,425",
+          "source_cells": [
+            {
+              "row": 4,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 3,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "9,248",
+          "source_cells": [
+            {
+              "row": 4,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 3,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "737",
+          "source_cells": [
+            {
+              "row": 4,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 3,
+          "column": 5,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "7",
+          "source_cells": [
+            {
+              "row": 4,
+              "column": 24,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 3,
+          "column": 6,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "1,914",
+          "source_cells": [
+            {
+              "row": 4,
+              "column": 30,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 3,
+          "column": 7,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "21",
+          "source_cells": [
+            {
+              "row": 4,
+              "column": 33,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 4,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Markets & Securities Services",
+          "source_cells": [
+            {
+              "row": 5,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 4,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "13,691",
+          "source_cells": [
+            {
+              "row": 5,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 4,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "12,954",
+          "source_cells": [
+            {
+              "row": 5,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 4,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "10,287",
+          "source_cells": [
+            {
+              "row": 5,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 4,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "737",
+          "source_cells": [
+            {
+              "row": 5,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 4,
+          "column": 5,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "6",
+          "source_cells": [
+            {
+              "row": 5,
+              "column": 24,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 4,
+          "column": 6,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "3,404",
+          "source_cells": [
+            {
+              "row": 5,
+              "column": 30,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 4,
+          "column": 7,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "33",
+          "source_cells": [
+            {
+              "row": 5,
+              "column": 33,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 5,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Noninterest expense",
+          "source_cells": [
+            {
+              "row": 6,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 5,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "11,390",
+          "source_cells": [
+            {
+              "row": 6,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 5,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "11,136",
+          "source_cells": [
+            {
+              "row": 6,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 5,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "9,641",
+          "source_cells": [
+            {
+              "row": 6,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 5,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "254",
+          "source_cells": [
+            {
+              "row": 6,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 5,
+          "column": 5,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "2",
+          "source_cells": [
+            {
+              "row": 6,
+              "column": 24,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 5,
+          "column": 6,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "1,749",
+          "source_cells": [
+            {
+              "row": 6,
+              "column": 30,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 5,
+          "column": 7,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "18",
+          "source_cells": [
+            {
+              "row": 6,
+              "column": 33,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 6,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Provision for credit losses",
+          "source_cells": [
+            {
+              "row": 7,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 6,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "356",
+          "source_cells": [
+            {
+              "row": 7,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 6,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "482",
+          "source_cells": [
+            {
+              "row": 7,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 6,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "696",
+          "source_cells": [
+            {
+              "row": 7,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 6,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "(126)",
+          "source_cells": [
+            {
+              "row": 7,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 6,
+          "column": 5,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "(26)",
+          "source_cells": [
+            {
+              "row": 7,
+              "column": 24,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 6,
+          "column": 6,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "(340)",
+          "source_cells": [
+            {
+              "row": 7,
+              "column": 30,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 6,
+          "column": 7,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "(49)",
+          "source_cells": [
+            {
+              "row": 7,
+              "column": 33,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 7,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Net income",
+          "source_cells": [
+            {
+              "row": 8,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 7,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$9,678",
+          "source_cells": [
+            {
+              "row": 8,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 8,
+              "column": 4,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 7,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$9,044",
+          "source_cells": [
+            {
+              "row": 8,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 8,
+              "column": 10,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 7,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$6,650",
+          "source_cells": [
+            {
+              "row": 8,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 8,
+              "column": 16,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 7,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$634",
+          "source_cells": [
+            {
+              "row": 8,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 8,
+              "column": 22,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 7,
+          "column": 5,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "7%",
+          "source_cells": [
+            {
+              "row": 8,
+              "column": 24,
+              "row_span": 1,
+              "column_span": 2
+            },
+            {
+              "row": 8,
+              "column": 26,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 7,
+          "column": 6,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$3,028",
+          "source_cells": [
+            {
+              "row": 8,
+              "column": 30,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 8,
+              "column": 31,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 7,
+          "column": 7,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "46%",
+          "source_cells": [
+            {
+              "row": 8,
+              "column": 33,
+              "row_span": 1,
+              "column_span": 2
+            },
+            {
+              "row": 8,
+              "column": 35,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        }
+      ]
+    },
+    {
+      "id": "b0071",
+      "order": 71,
+      "section_id": "s0001",
+      "type": "heading",
+      "source": {
+        "page_number": 4,
+        "path": "/html/body[1]/div[44]"
+      },
+      "level": 3,
+      "text": "Discussion of Results:"
+    },
+    {
+      "id": "b0072",
+      "order": 72,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 4,
+        "path": "/html/body[1]/div[45]"
+      },
+      "text": "Net income was $9.7 billion, up 46%."
+    },
+    {
+      "id": "b0073",
+      "order": 73,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 4,
+        "path": "/html/body[1]/div[46]"
+      },
+      "text": "Net revenue was $24.9 billion, up 27%. Banking & Payments revenue was $11.2 billion, up 21%. Investment Banking revenue was $3.9 billion, up 45%, predominantly driven by higher Investment Banking fees and net gains on equity investments. Investment Banking fees were $3.3 billion, up 30%, driven by higher fees across all products, with particularly strong performance in equity underwriting fees. Payments revenue was $5.3 billion, up 12%, predominantly driven by higher deposit balances and fee growth. Lending revenue was $2.0 billion, up 7%, largely driven by higher loan balances."
+    },
+    {
+      "id": "b0074",
+      "order": 74,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 4,
+        "path": "/html/body[1]/div[47]"
+      },
+      "text": "Markets & Securities Services revenue was $13.7 billion, up 33%. Markets revenue was $12.1 billion, up 35%. Fixed Income Markets revenue was $6.1 billion, up 6%, driven by higher revenue in Credit, Currencies & Emerging Markets and Rates, partially offset by lower revenue in Commodities. Equity Markets revenue was $6.0 billion, up 86%, driven by strong performance across products and regions. Securities Services revenue was $1.7 billion, up 17%, predominantly driven by fee growth on higher market levels and client activity, as well as higher deposit balances."
+    },
+    {
+      "id": "b0075",
+      "order": 75,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 4,
+        "path": "/html/body[1]/div[48]"
+      },
+      "text": "Noninterest expense was $11.4 billion, up 18%, predominantly driven by higher compensation, including higher revenue-related compensation, as well as higher brokerage expense."
+    },
+    {
+      "id": "b0076",
+      "order": 76,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 4,
+        "path": "/html/body[1]/div[49]"
+      },
+      "text": "The provision for credit losses was $356 million, driven by net lending activity and changes in the credit quality of certain exposures, partially offset by a reserve release for certain accounts receivable and an update to loss assumptions on certain loans in Markets. Net charge-offs were $207 million, and the net reserve build was $149 million. In the prior year, the provision was $696 million, the net reserve build was $371 million and net charge-offs were $325 million."
+    },
+    {
+      "id": "b0077",
+      "order": 77,
+      "section_id": "s0001",
+      "type": "heading",
+      "source": {
+        "page_number": 4,
+        "path": "/html/body[1]/div[52]/table[1]"
+      },
+      "level": 3,
+      "text": "ASSET & WEALTH MANAGEMENT (AWM)"
+    },
+    {
+      "id": "b0078",
+      "order": 78,
+      "section_id": "s0001",
+      "type": "table",
+      "source": {
+        "page_number": 4,
+        "path": "/html/body[1]/div[53]/table[1]"
+      },
+      "caption": null,
+      "row_count": 6,
+      "column_count": 8,
+      "source_shape": {
+        "rows": 7,
+        "columns": 36
+      },
+      "cells": [
+        {
+          "row": 0,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Results for AWM",
+          "source_cells": [
+            {
+              "row": 1,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 0,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 2,
+          "text": "1Q26",
+          "source_cells": [
+            {
+              "row": 1,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 6
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 0,
+          "column": 6,
+          "row_span": 1,
+          "column_span": 2,
+          "text": "2Q25",
+          "source_cells": [
+            {
+              "row": 1,
+              "column": 30,
+              "row_span": 1,
+              "column_span": 6
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 1,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "($ millions)",
+          "source_cells": [
+            {
+              "row": 2,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 1,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "2Q26",
+          "source_cells": [
+            {
+              "row": 2,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 1,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "1Q26",
+          "source_cells": [
+            {
+              "row": 2,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 1,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "2Q25",
+          "source_cells": [
+            {
+              "row": 2,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 1,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$ O/(U)",
+          "source_cells": [
+            {
+              "row": 2,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 1,
+          "column": 5,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "O/(U) %",
+          "source_cells": [
+            {
+              "row": 2,
+              "column": 24,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 1,
+          "column": 6,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$ O/(U)",
+          "source_cells": [
+            {
+              "row": 2,
+              "column": 30,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 1,
+          "column": 7,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "O/(U) %",
+          "source_cells": [
+            {
+              "row": 2,
+              "column": 33,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 2,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Net revenue",
+          "source_cells": [
+            {
+              "row": 3,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 2,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$6,851",
+          "source_cells": [
+            {
+              "row": 3,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 3,
+              "column": 4,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 2,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$6,374",
+          "source_cells": [
+            {
+              "row": 3,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 3,
+              "column": 10,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 2,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$5,760",
+          "source_cells": [
+            {
+              "row": 3,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 3,
+              "column": 16,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 2,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$477",
+          "source_cells": [
+            {
+              "row": 3,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 3,
+              "column": 22,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 2,
+          "column": 5,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "7%",
+          "source_cells": [
+            {
+              "row": 3,
+              "column": 24,
+              "row_span": 1,
+              "column_span": 2
+            },
+            {
+              "row": 3,
+              "column": 26,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 2,
+          "column": 6,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$1,091",
+          "source_cells": [
+            {
+              "row": 3,
+              "column": 30,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 3,
+              "column": 31,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 2,
+          "column": 7,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "19%",
+          "source_cells": [
+            {
+              "row": 3,
+              "column": 33,
+              "row_span": 1,
+              "column_span": 2
+            },
+            {
+              "row": 3,
+              "column": 35,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 3,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Noninterest expense",
+          "source_cells": [
+            {
+              "row": 4,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 3,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "4,207",
+          "source_cells": [
+            {
+              "row": 4,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 3,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "4,167",
+          "source_cells": [
+            {
+              "row": 4,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 3,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "3,733",
+          "source_cells": [
+            {
+              "row": 4,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 3,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "40",
+          "source_cells": [
+            {
+              "row": 4,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 3,
+          "column": 5,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "1",
+          "source_cells": [
+            {
+              "row": 4,
+              "column": 24,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 3,
+          "column": 6,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "474",
+          "source_cells": [
+            {
+              "row": 4,
+              "column": 30,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 3,
+          "column": 7,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "13",
+          "source_cells": [
+            {
+              "row": 4,
+              "column": 33,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 4,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Provision for credit losses",
+          "source_cells": [
+            {
+              "row": 5,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 4,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "13",
+          "source_cells": [
+            {
+              "row": 5,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 4,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "(24)",
+          "source_cells": [
+            {
+              "row": 5,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 4,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "46",
+          "source_cells": [
+            {
+              "row": 5,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 4,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "37",
+          "source_cells": [
+            {
+              "row": 5,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 4,
+          "column": 5,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "NM",
+          "source_cells": [
+            {
+              "row": 5,
+              "column": 24,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 4,
+          "column": 6,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "(33)",
+          "source_cells": [
+            {
+              "row": 5,
+              "column": 30,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 4,
+          "column": 7,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "(72)",
+          "source_cells": [
+            {
+              "row": 5,
+              "column": 33,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 5,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Net income",
+          "source_cells": [
+            {
+              "row": 6,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 5,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$1,957",
+          "source_cells": [
+            {
+              "row": 6,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 6,
+              "column": 4,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 5,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$1,775",
+          "source_cells": [
+            {
+              "row": 6,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 6,
+              "column": 10,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 5,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$1,473",
+          "source_cells": [
+            {
+              "row": 6,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 6,
+              "column": 16,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 5,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$182",
+          "source_cells": [
+            {
+              "row": 6,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 6,
+              "column": 22,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 5,
+          "column": 5,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "10%",
+          "source_cells": [
+            {
+              "row": 6,
+              "column": 24,
+              "row_span": 1,
+              "column_span": 2
+            },
+            {
+              "row": 6,
+              "column": 26,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 5,
+          "column": 6,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$484",
+          "source_cells": [
+            {
+              "row": 6,
+              "column": 30,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 6,
+              "column": 31,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 5,
+          "column": 7,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "33%",
+          "source_cells": [
+            {
+              "row": 6,
+              "column": 33,
+              "row_span": 1,
+              "column_span": 2
+            },
+            {
+              "row": 6,
+              "column": 35,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        }
+      ]
+    },
+    {
+      "id": "b0079",
+      "order": 79,
+      "section_id": "s0001",
+      "type": "heading",
+      "source": {
+        "page_number": 4,
+        "path": "/html/body[1]/div[55]"
+      },
+      "level": 3,
+      "text": "Discussion of Results:"
+    },
+    {
+      "id": "b0080",
+      "order": 80,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 4,
+        "path": "/html/body[1]/div[56]"
+      },
+      "text": "Net income was $2.0 billion, up 33%."
+    },
+    {
+      "id": "b0081",
+      "order": 81,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 4,
+        "path": "/html/body[1]/div[57]"
+      },
+      "text": "Net revenue was $6.9 billion, up 19%, driven by growth in management fees on higher average market levels and strong net inflows, as well as investment valuation gains, higher loan balances and higher brokerage activity."
+    },
+    {
+      "id": "b0082",
+      "order": 82,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 4,
+        "path": "/html/body[1]/div[58]"
+      },
+      "text": "Noninterest expense was $4.2 billion, up 13%, largely driven by higher compensation, primarily due to higher revenue-related compensation and continued growth in private banking advisor teams, as well as higher distribution fees."
+    },
+    {
+      "id": "b0083",
+      "order": 83,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 4,
+        "path": "/html/body[1]/div[59]"
+      },
+      "text": "Assets under management were $5.1 trillion, up 18%, and client assets were $7.7 trillion, up 19%, driven by higher market levels and continued net inflows."
+    },
+    {
+      "id": "b0084",
+      "order": 84,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 5,
+        "path": "/html/body[1]/div[63]/div[1]"
+      },
+      "text": "JPMorgan Chase & Co."
+    },
+    {
+      "id": "b0085",
+      "order": 85,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 5,
+        "path": "/html/body[1]/div[63]/div[2]"
+      },
+      "text": "News Release"
+    },
+    {
+      "id": "b0086",
+      "order": 86,
+      "section_id": "s0001",
+      "type": "heading",
+      "source": {
+        "page_number": 5,
+        "path": "/html/body[1]/div[64]/table[1]"
+      },
+      "level": 3,
+      "text": "CORPORATE"
+    },
+    {
+      "id": "b0087",
+      "order": 87,
+      "section_id": "s0001",
+      "type": "table",
+      "source": {
+        "page_number": 5,
+        "path": "/html/body[1]/div[65]/table[1]"
+      },
+      "caption": null,
+      "row_count": 6,
+      "column_count": 8,
+      "source_shape": {
+        "rows": 7,
+        "columns": 36
+      },
+      "cells": [
+        {
+          "row": 0,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Results for Corporate",
+          "source_cells": [
+            {
+              "row": 1,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 0,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 2,
+          "text": "1Q26",
+          "source_cells": [
+            {
+              "row": 1,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 6
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 0,
+          "column": 6,
+          "row_span": 1,
+          "column_span": 2,
+          "text": "2Q25",
+          "source_cells": [
+            {
+              "row": 1,
+              "column": 30,
+              "row_span": 1,
+              "column_span": 6
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 1,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "($ millions)",
+          "source_cells": [
+            {
+              "row": 2,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 1,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "2Q26",
+          "source_cells": [
+            {
+              "row": 2,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 1,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "1Q26",
+          "source_cells": [
+            {
+              "row": 2,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 1,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "2Q25",
+          "source_cells": [
+            {
+              "row": 2,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 1,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$ O/(U)",
+          "source_cells": [
+            {
+              "row": 2,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 1,
+          "column": 5,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "O/(U) %",
+          "source_cells": [
+            {
+              "row": 2,
+              "column": 24,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 1,
+          "column": 6,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$ O/(U)",
+          "source_cells": [
+            {
+              "row": 2,
+              "column": 30,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 1,
+          "column": 7,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "O/(U) %",
+          "source_cells": [
+            {
+              "row": 2,
+              "column": 33,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "header"
+        },
+        {
+          "row": 2,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Net revenue",
+          "source_cells": [
+            {
+              "row": 3,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 2,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$6,046",
+          "source_cells": [
+            {
+              "row": 3,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 3,
+              "column": 4,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 2,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$1,215",
+          "source_cells": [
+            {
+              "row": 3,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 3,
+              "column": 10,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 2,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$1,538",
+          "source_cells": [
+            {
+              "row": 3,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 3,
+              "column": 16,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 2,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$4,831",
+          "source_cells": [
+            {
+              "row": 3,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 3,
+              "column": 22,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 2,
+          "column": 5,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "398%",
+          "source_cells": [
+            {
+              "row": 3,
+              "column": 24,
+              "row_span": 1,
+              "column_span": 2
+            },
+            {
+              "row": 3,
+              "column": 26,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 2,
+          "column": 6,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$4,508",
+          "source_cells": [
+            {
+              "row": 3,
+              "column": 30,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 3,
+              "column": 31,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 2,
+          "column": 7,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "293%",
+          "source_cells": [
+            {
+              "row": 3,
+              "column": 33,
+              "row_span": 1,
+              "column_span": 2
+            },
+            {
+              "row": 3,
+              "column": 35,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 3,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Noninterest expense",
+          "source_cells": [
+            {
+              "row": 4,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 3,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "611",
+          "source_cells": [
+            {
+              "row": 4,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 3,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "568",
+          "source_cells": [
+            {
+              "row": 4,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 3,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "547",
+          "source_cells": [
+            {
+              "row": 4,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 3,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "43",
+          "source_cells": [
+            {
+              "row": 4,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 3,
+          "column": 5,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "8",
+          "source_cells": [
+            {
+              "row": 4,
+              "column": 24,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 3,
+          "column": 6,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "64",
+          "source_cells": [
+            {
+              "row": 4,
+              "column": 30,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 3,
+          "column": 7,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "12",
+          "source_cells": [
+            {
+              "row": 4,
+              "column": 33,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 4,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Provision for credit losses",
+          "source_cells": [
+            {
+              "row": 5,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 4,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "(10)",
+          "source_cells": [
+            {
+              "row": 5,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 4,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "(1)",
+          "source_cells": [
+            {
+              "row": 5,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 4,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "25",
+          "source_cells": [
+            {
+              "row": 5,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 4,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "(9)",
+          "source_cells": [
+            {
+              "row": 5,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 4,
+          "column": 5,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "NM",
+          "source_cells": [
+            {
+              "row": 5,
+              "column": 24,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 4,
+          "column": 6,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "(35)",
+          "source_cells": [
+            {
+              "row": 5,
+              "column": 30,
+              "row_span": 1,
+              "column_span": 2
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 4,
+          "column": 7,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "NM",
+          "source_cells": [
+            {
+              "row": 5,
+              "column": 33,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 5,
+          "column": 0,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "Net income",
+          "source_cells": [
+            {
+              "row": 6,
+              "column": 0,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "row_header"
+        },
+        {
+          "row": 5,
+          "column": 1,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$4,209",
+          "source_cells": [
+            {
+              "row": 6,
+              "column": 3,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 6,
+              "column": 4,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 5,
+          "column": 2,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$699",
+          "source_cells": [
+            {
+              "row": 6,
+              "column": 9,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 6,
+              "column": 10,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 5,
+          "column": 3,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$1,695",
+          "source_cells": [
+            {
+              "row": 6,
+              "column": 15,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 6,
+              "column": 16,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 5,
+          "column": 4,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$3,510",
+          "source_cells": [
+            {
+              "row": 6,
+              "column": 21,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 6,
+              "column": 22,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 5,
+          "column": 5,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "NM",
+          "source_cells": [
+            {
+              "row": 6,
+              "column": 24,
+              "row_span": 1,
+              "column_span": 3
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 5,
+          "column": 6,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "$2,514",
+          "source_cells": [
+            {
+              "row": 6,
+              "column": 30,
+              "row_span": 1,
+              "column_span": 1
+            },
+            {
+              "row": 6,
+              "column": 31,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        },
+        {
+          "row": 5,
+          "column": 7,
+          "row_span": 1,
+          "column_span": 1,
+          "text": "148%",
+          "source_cells": [
+            {
+              "row": 6,
+              "column": 33,
+              "row_span": 1,
+              "column_span": 2
+            },
+            {
+              "row": 6,
+              "column": 35,
+              "row_span": 1,
+              "column_span": 1
+            }
+          ],
+          "role": "data"
+        }
+      ]
+    },
+    {
+      "id": "b0088",
+      "order": 88,
+      "section_id": "s0001",
+      "type": "heading",
+      "source": {
+        "page_number": 5,
+        "path": "/html/body[1]/div[67]"
+      },
+      "level": 3,
+      "text": "Discussion of Results:"
+    },
+    {
+      "id": "b0089",
+      "order": 89,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 5,
+        "path": "/html/body[1]/div[68]"
+      },
+      "text": "Net income was $4.2 billion, up $2.5 billion, or down $1.5 billion excluding significant items, driven by lower net interest income and reflecting the absence of a $774 million income tax benefit in the prior year."
+    },
+    {
+      "id": "b0090",
+      "order": 90,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 5,
+        "path": "/html/body[1]/div[69]"
+      },
+      "text": "Net revenue was $6.0 billion, up $4.5 billion, or down $805 million excluding significant items. Net interest income was $822 million, down $667 million, predominantly driven by the impact of lower rates. Noninterest revenue was $5.2 billion, up $5.2 billion, or down $138 million excluding significant items. The decrease includes the impact of higher net investment securities losses."
+    },
+    {
+      "id": "b0091",
+      "order": 91,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 5,
+        "path": "/html/body[1]/div[70]"
+      },
+      "text": "Noninterest expense was $611 million, up $64 million."
+    },
+    {
+      "id": "b0092",
+      "order": 92,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 6,
+        "path": "/html/body[1]/div[76]/div[1]"
+      },
+      "text": "JPMorgan Chase & Co."
+    },
+    {
+      "id": "b0093",
+      "order": 93,
+      "section_id": "s0001",
+      "type": "paragraph",
+      "source": {
+        "page_number": 6,
+        "path": "/html/body[1]/div[76]/div[2]"
+      },
+      "text": "News Release"
+    },
+    {
+      "id": "b0094",
+      "order": 94,
+      "section_id": "s0002",
+      "type": "heading",
+      "source": {
+        "page_number": 6,
+        "path": "/html/body[1]/div[77]"
+      },
+      "level": 1,
+      "text": "2. Notes on non-GAAP financial measures:"
+    },
+    {
+      "id": "b0095",
+      "order": 95,
+      "section_id": "s0002",
+      "type": "paragraph",
+      "source": {
+        "page_number": 6,
+        "path": "/html/body[1]/div[79]"
+      },
+      "text": "a.The Firm prepares its Consolidated Financial Statements in accordance with accounting principles generally accepted in the U.S. (“U.S. GAAP”). That presentation, which is referred to as “reported” basis, provides the reader with an understanding of the Firm’s results that can be tracked consistently from year-to-year and enables a comparison of the Firm’s performance with the U.S. GAAP financial statements of other companies. In addition to analyzing the Firm’s results on a reported basis, management reviews Firmwide results, including the overhead ratio, on a “managed” basis; these Firmwide managed basis results are non-GAAP financial measures. The Firm also reviews the results of the lines of business on a managed basis. The Firm’s definition of managed basis starts, in each case, with the reported U.S. GAAP results and includes certain reclassifications to present total net revenue for the Firm as a whole and for each of the reportable business segments and Corporate on a fully taxable-equivalent basis. Accordingly, revenue from investments that receive tax credits and tax-exempt securities is presented in the managed results on a basis comparable to taxable investments and securities. These financial measures allow management to assess the comparability of revenue from year-to-year arising from both taxable and tax-exempt sources. The corresponding income tax impact related to tax-exempt items is recorded within income tax expense. These adjustments have no impact on net income as reported by the Firm as a whole or by each of the lines of business and Corporate. For a reconciliation of the Firm’s results from a reported to managed basis, refer to page 7 of the Earnings Release Financial Supplement."
+    },
+    {
+      "id": "b0096",
+      "order": 96,
+      "section_id": "s0002",
+      "type": "paragraph",
+      "source": {
+        "page_number": 6,
+        "path": "/html/body[1]/div[81]"
+      },
+      "text": "b.Tangible common equity (“TCE”), return on tangible common equity (“ROTCE”) and tangible book value per share (“TBVPS”) are each non-GAAP financial measures. TCE represents the Firm’s common stockholders’ equity (i.e., total stockholders’ equity less preferred stock) less goodwill and identifiable intangible assets (other than mortgage servicing rights), net of related deferred tax liabilities. For a reconciliation from common stockholders’ equity to TCE, refer to page 10 of the Earnings Release Financial Supplement. ROTCE measures the Firm’s net income applicable to common equity as a percentage of average TCE. TBVPS represents the Firm’s TCE at period-end divided by common shares at period-end. Book value per share was $133.01, $128.38 and $122.51 at June 30, 2026, March 31, 2026 and June 30, 2025, respectively. TCE, ROTCE and TBVPS are utilized by the Firm, as well as investors and analysts, in assessing the Firm’s use of equity."
+    },
+    {
+      "id": "b0097",
+      "order": 97,
+      "section_id": "s0002",
+      "type": "paragraph",
+      "source": {
+        "page_number": 6,
+        "path": "/html/body[1]/div[83]"
+      },
+      "text": "c.In addition to reviewing net interest income (“NII”) and noninterest revenue (“NIR”) on a managed basis, management also reviews these metrics excluding Markets, which is composed of Fixed Income Markets and Equity Markets. Markets revenue consists of principal transactions, fees, commissions and other income, as well as net interest income. These metrics, which exclude Markets, are non-GAAP financial measures. Management reviews these metrics to assess the performance of the Firm’s lending, investing (including asset-liability management) and deposit-raising activities, apart from any volatility associated with Markets activities. In addition, management also assesses Markets business performance on a total revenue basis as offsets may occur across revenue lines. For example, securities that generate net interest income may be risk-managed by derivatives that are reflected at fair value in principal transactions revenue. Management believes these measures provide investors and analysts with alternative measures to analyze the revenue trends of the Firm. For a reconciliation of NII and NIR from reported to excluding Markets, refer to page 28 of the Earnings Release Financial Supplement. For additional information on Markets revenue, refer to pages 73-74 of the Firm’s 2025 Form 10-K."
+    },
+    {
+      "id": "b0098",
+      "order": 98,
+      "section_id": "s0002",
+      "type": "paragraph",
+      "source": {
+        "page_number": 6,
+        "path": "/html/body[1]/div[85]"
+      },
+      "text": "d.The significant items, each in the current quarter, collectively refer to a $4.6 billion net gain related to Visa shares in Corporate as well as $1.0 billion of gains on certain equity investments, of which $763 million was in Corporate and $263 million was in CIB. Results excluding significant items are non-GAAP financial measures. Excluding these items from second-quarter 2026 net income, earnings per share and ROTCE resulted in a decrease of $4.2 billion (after tax) to reported net income from $21.2 billion to $16.9 billion, a decrease of $1.56 per share to reported EPS from $7.70 to $6.14 and a decrease of 6 percentage points to reported ROTCE from 29% to 23%. Management believes these measures provide useful information to investors and analysts in assessing the Firm’s results."
+    },
+    {
+      "id": "b0099",
+      "order": 99,
+      "section_id": "s0002",
+      "type": "paragraph",
+      "source": {
+        "page_number": 7,
+        "path": "/html/body[1]/div[98]/div[1]"
+      },
+      "text": "JPMorgan Chase & Co."
+    },
+    {
+      "id": "b0100",
+      "order": 100,
+      "section_id": "s0002",
+      "type": "paragraph",
+      "source": {
+        "page_number": 7,
+        "path": "/html/body[1]/div[98]/div[2]"
+      },
+      "text": "News Release"
+    },
+    {
+      "id": "b0101",
+      "order": 101,
+      "section_id": "s0002",
+      "type": "heading",
+      "source": {
+        "page_number": 7,
+        "path": "/html/body[1]/div[99]"
+      },
+      "level": 3,
+      "text": "Additional notes:"
+    },
+    {
+      "id": "b0102",
+      "order": 102,
+      "section_id": "s0002",
+      "type": "paragraph",
+      "source": {
+        "page_number": 7,
+        "path": "/html/body[1]/div[101]"
+      },
+      "text": "3.Estimated."
+    },
+    {
+      "id": "b0103",
+      "order": 103,
+      "section_id": "s0002",
+      "type": "paragraph",
+      "source": {
+        "page_number": 7,
+        "path": "/html/body[1]/div[102]"
+      },
+      "text": "4.Estimated. Cash and marketable securities include end-of-period eligible high-quality liquid assets (“HQLA”), excluding regulatory prescribed haircuts under the liquidity coverage ratio (“LCR”) rule where applicable, for both the Firm and the excess HQLA-eligible securities included as part of the excess liquidity at JPMorgan Chase Bank, N.A., which are not transferable to non-bank affiliates and thus excluded from the Firm’s LCR. Also include other end-of-period unencumbered marketable securities, such as equity and debt securities. Does not include borrowing capacity at Federal Home Loan Banks and the discount window at the Federal Reserve Bank. Refer to Liquidity Risk Management on pages 41-47 of the Firm’s Quarterly Report on Form 10-Q for the quarterly period ended March 31, 2026 and pages 100-107 of the Firm’s 2025 Form 10-K for additional information."
+    },
+    {
+      "id": "b0104",
+      "order": 104,
+      "section_id": "s0002",
+      "type": "paragraph",
+      "source": {
+        "page_number": 7,
+        "path": "/html/body[1]/div[103]"
+      },
+      "text": "5.Excludes Commercial Card."
+    },
+    {
+      "id": "b0105",
+      "order": 105,
+      "section_id": "s0002",
+      "type": "paragraph",
+      "source": {
+        "page_number": 7,
+        "path": "/html/body[1]/div[104]"
+      },
+      "text": "6.Users of all mobile platforms who have logged in within the past 90 days."
+    },
+    {
+      "id": "b0106",
+      "order": 106,
+      "section_id": "s0002",
+      "type": "paragraph",
+      "source": {
+        "page_number": 7,
+        "path": "/html/body[1]/div[105]"
+      },
+      "text": "7.According to Dealogic as of July 1, 2026."
+    },
+    {
+      "id": "b0107",
+      "order": 107,
+      "section_id": "s0002",
+      "type": "paragraph",
+      "source": {
+        "page_number": 7,
+        "path": "/html/body[1]/div[106]"
+      },
+      "text": "8.Client deposits and other third party liabilities (“client deposits”) pertain to the Payments and Securities Services businesses."
+    },
+    {
+      "id": "b0108",
+      "order": 108,
+      "section_id": "s0002",
+      "type": "paragraph",
+      "source": {
+        "page_number": 7,
+        "path": "/html/body[1]/div[107]"
+      },
+      "text": "9.Assets under management (“AUM”)."
+    },
+    {
+      "id": "b0109",
+      "order": 109,
+      "section_id": "s0002",
+      "type": "paragraph",
+      "source": {
+        "page_number": 7,
+        "path": "/html/body[1]/div[108]"
+      },
+      "text": "10.On April 13, 2026, Visa Inc. commenced an exchange offer for Visa Class B-2 common stock. On May 11, 2026, Visa accepted the Firm’s tender of its 18.6 million Visa Class B-2 common stock in exchange for a combination of Visa Class B-3 common stock and Visa Class C common stock. Visa’s acceptance resulted in a gain for the Firm relating to the Visa Class C common stock, which is held at fair value."
+    },
+    {
+      "id": "b0110",
+      "order": 110,
+      "section_id": "s0002",
+      "type": "paragraph",
+      "source": {
+        "page_number": 7,
+        "path": "/html/body[1]/div[109]"
+      },
+      "text": "11.Earnings Per Share (“EPS”)."
+    },
+    {
+      "id": "b0111",
+      "order": 111,
+      "section_id": "s0002",
+      "type": "paragraph",
+      "source": {
+        "page_number": 7,
+        "path": "/html/body[1]/div[110]"
+      },
+      "text": "12.Represented a measurement alternative markup on an equity investment and initial gains on transition from measurement alternative to recurring fair value on certain other equity investments."
+    },
+    {
+      "id": "b0112",
+      "order": 112,
+      "section_id": "s0002",
+      "type": "paragraph",
+      "source": {
+        "page_number": 7,
+        "path": "/html/body[1]/div[111]"
+      },
+      "text": "13.Includes the net impact of employee issuances. Excludes excise tax and commissions."
+    },
+    {
+      "id": "b0113",
+      "order": 113,
+      "section_id": "s0002",
+      "type": "paragraph",
+      "source": {
+        "page_number": 7,
+        "path": "/html/body[1]/div[112]"
+      },
+      "text": "14.Last twelve months (“LTM”)."
+    },
+    {
+      "id": "b0114",
+      "order": 114,
+      "section_id": "s0002",
+      "type": "paragraph",
+      "source": {
+        "page_number": 7,
+        "path": "/html/body[1]/div[113]"
+      },
+      "text": "15.Credit provided to clients represents new and renewed credit, including loans and lending-related commitments, as well as unused amounts of advised uncommitted lines of credit where the Firm has discretion on whether or not to make a loan under these lines. Credit and capital for corporations and non-U.S. government entities includes Individuals and Individual Entities primarily consisting of Global Private Bank clients within AWM."
+    },
+    {
+      "id": "b0115",
+      "order": 115,
+      "section_id": "s0002",
+      "type": "paragraph",
+      "source": {
+        "page_number": 8,
+        "path": "/html/body[1]/div[118]/div[1]"
+      },
+      "text": "JPMorgan Chase & Co."
+    },
+    {
+      "id": "b0116",
+      "order": 116,
+      "section_id": "s0002",
+      "type": "paragraph",
+      "source": {
+        "page_number": 8,
+        "path": "/html/body[1]/div[118]/div[2]"
+      },
+      "text": "News Release"
+    },
+    {
+      "id": "b0117",
+      "order": 117,
+      "section_id": "s0002",
+      "type": "paragraph",
+      "source": {
+        "page_number": 8,
+        "path": "/html/body[1]/div[120]"
+      },
+      "text": "JPMorgan Chase & Co. (NYSE: JPM) is a leading financial services firm based in the United States of America (“U.S.”), with operations worldwide. JPMorganChase had $5.0 trillion in assets and $375 billion in stockholders’ equity as of June 30, 2026. The Firm is a leader in investment banking, financial services for consumers and small businesses, commercial banking, financial transaction processing and asset management. Under the J.P. Morgan and Chase brands, the Firm serves millions of customers predominantly in the U.S., and many of the world’s most prominent corporate, institutional and government clients globally. Information about JPMorgan Chase & Co. is available at www.jpmorganchase.com."
+    },
+    {
+      "id": "b0118",
+      "order": 118,
+      "section_id": "s0002",
+      "type": "paragraph",
+      "source": {
+        "page_number": 8,
+        "path": "/html/body[1]/div[122]"
+      },
+      "text": "JPMorgan Chase & Co. will host a conference call today, July 14, 2026, at 8:30 a.m. (ET) to present second-quarter 2026 financial results. The general public can access the conference call by dialing the following numbers: 1 (888) 324-3618 in the U.S. and Canada; +1 (312) 470-7119 for international callers; use passcode 1364784#. Please dial in 15 minutes prior to the start of the call. The live audio webcast and presentation slides will be available on the Firm’s website, www.jpmorganchase.com, under Investor Relations, Events & Presentations."
+    },
+    {
+      "id": "b0119",
+      "order": 119,
+      "section_id": "s0002",
+      "type": "paragraph",
+      "source": {
+        "page_number": 8,
+        "path": "/html/body[1]/div[124]"
+      },
+      "text": "A replay of the conference call also will be available by telephone beginning at approximately 11:00 a.m. (ET) on July 14, 2026 through 11:59 p.m. (ET) on July 29, 2026 at 1 (800) 391-9851 (U.S. and Canada); +1 (203) 369-3268 (International); use passcode 67371#. The replay will be available via webcast on www.jpmorganchase.com under Investor Relations, Events & Presentations. Additional detailed financial, statistical and business-related information is included in a financial supplement. The earnings release and the financial supplement are available at www.jpmorganchase.com."
+    },
+    {
+      "id": "b0120",
+      "order": 120,
+      "section_id": "s0002",
+      "type": "paragraph",
+      "source": {
+        "page_number": 8,
+        "path": "/html/body[1]/div[126]"
+      },
+      "text": "This earnings release contains forward-looking statements within the meaning of the Private Securities Litigation Reform Act of 1995. These statements are based on the beliefs and expectations of JPMorgan Chase & Co.’s management, speak only as of the date on which they were made, and are subject to significant risks and uncertainties. Actual results may differ from those set forth in the forward-looking statements. Factors that could cause JPMorgan Chase & Co.’s actual results to differ materially from those described in the forward-looking statements can be found in JPMorgan Chase & Co.’s Annual Report on Form 10-K for the year ended December 31, 2025 and Quarterly Report on Form 10-Q for the quarter ended March 31, 2026, which have been filed with the Securities and Exchange Commission and are available on JPMorgan Chase & Co.’s website (https://jpmorganchaseco.gcs-web.com/ir/sec-other-filings/overview), and on the Securities and Exchange Commission’s website (www.sec.gov). JPMorgan Chase & Co. does not undertake to update any forward-looking statements."
+    }
+  ]
+}

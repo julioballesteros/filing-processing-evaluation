@@ -15,17 +15,33 @@ from filing_processing_evaluation.normalization.models import (
     StageOutcome,
     StructuredDocument,
 )
+from filing_processing_evaluation.normalization.stages.classification import (
+    text_features,
+)
 from filing_processing_evaluation.normalization.stages.sections import (
     NOTE_PATTERN,
     SectionDefinition,
     SectionPolicy,
 )
-from filing_processing_evaluation.normalization.stages.tables import normalize_table
+from filing_processing_evaluation.normalization.stages.tables import (
+    TableSemanticsPolicy,
+    layout_text_elements,
+    normalize_table,
+)
+from filing_processing_evaluation.normalization.xhtml import (
+    local_name,
+    visible_text,
+)
 
 
 class _StructureBuilder:
-    def __init__(self, section_definition: Callable[[str], SectionDefinition | None]):
+    def __init__(
+        self,
+        section_definition: Callable[[str], SectionDefinition | None],
+        table_policy: TableSemanticsPolicy,
+    ):
         self._section_definition = section_definition
+        self._table_policy = table_policy
         self.blocks: list[dict[str, Any]] = []
         self.sections: list[dict[str, Any]] = []
         self._section_by_level: dict[int, str] = {}
@@ -35,6 +51,8 @@ class _StructureBuilder:
         self._inside_note = False
         self._note_has_nonitalic_subheading = False
         self.discarded_empty_tables = 0
+        self.flattened_layout_tables = 0
+        self.flattened_layout_blocks = 0
         self.repeated_section_headings = 0
 
     @property
@@ -182,6 +200,22 @@ class _StructureBuilder:
         if normalized is None:
             self.discarded_empty_tables += 1
             return
+        if not self._table_policy.is_semantic(normalized):
+            self.flattened_layout_tables += 1
+            for element in layout_text_elements(value.element):
+                text = visible_text(element)
+                if not text:
+                    continue
+                self._add_text(
+                    ClassifiedText(
+                        text=text,
+                        tag=("li" if text.startswith("•") else local_name(element.tag)),
+                        source=value.source,
+                        features=text_features(element, text),
+                    )
+                )
+                self.flattened_layout_blocks += 1
+            return
         self._add_block("table", value.source, **normalized)
 
 
@@ -195,9 +229,10 @@ class BlockBuilder:
         classified: ClassifiedDocument,
         *,
         section_policy: SectionPolicy,
+        table_policy: TableSemanticsPolicy,
         filing_id: str,
     ) -> StageOutcome[StructuredDocument]:
-        builder = _StructureBuilder(section_policy.definition)
+        builder = _StructureBuilder(section_policy.definition, table_policy)
         for value in classified.elements:
             builder.add(value)
         if not builder.blocks:
@@ -216,6 +251,8 @@ class BlockBuilder:
                 "sections": len(builder.sections),
                 "tables": table_blocks,
                 "discarded_empty_tables": builder.discarded_empty_tables,
+                "flattened_layout_tables": builder.flattened_layout_tables,
+                "flattened_layout_blocks": builder.flattened_layout_blocks,
                 "repeated_section_headings": builder.repeated_section_headings,
             },
         )

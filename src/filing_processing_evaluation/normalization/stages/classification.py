@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import re
+import xml.etree.ElementTree as ET
 
 from filing_processing_evaluation.normalization.models import (
     ClassifiedDocument,
@@ -34,6 +35,22 @@ def _is_page_number(text: str, source_page_number: int) -> bool:
     return text.isascii() and text.isdigit() and int(text) == source_page_number
 
 
+def text_features(element: ET.Element, text: str) -> TextFeatures:
+    """Extract reusable semantic features from one parsed HTML element."""
+    profile = style_profile(element)
+    return TextFeatures(
+        mostly_bold=profile.mostly_bold,
+        mostly_italic=profile.mostly_italic,
+        centered=has_style(element, "text-align", "center"),
+        summary=any(
+            "-sec-extract:summary" in descendant.attrib.get("style", "").lower()
+            for descendant in element.iter()
+        ),
+        word_count=len(text.split()),
+        is_phone=PHONE_PATTERN.fullmatch(text) is not None,
+    )
+
+
 class ElementClassifier:
     """Turn projected HTML elements into text and table candidates."""
 
@@ -63,24 +80,12 @@ class ElementClassifier:
             if _is_page_number(text, value.source.page_number):
                 discarded_page_numbers += 1
                 continue
-            profile = style_profile(value.element)
-            features = TextFeatures(
-                mostly_bold=profile.mostly_bold,
-                mostly_italic=profile.mostly_italic,
-                centered=has_style(value.element, "text-align", "center"),
-                summary=any(
-                    "-sec-extract:summary" in descendant.attrib.get("style", "").lower()
-                    for descendant in value.element.iter()
-                ),
-                word_count=len(text.split()),
-                is_phone=PHONE_PATTERN.fullmatch(text) is not None,
-            )
             elements.append(
                 ClassifiedText(
                     text=text,
                     tag=value.tag,
                     source=value.source,
-                    features=features,
+                    features=text_features(value.element, text),
                 )
             )
         text_elements = sum(isinstance(value, ClassifiedText) for value in elements)

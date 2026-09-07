@@ -5,9 +5,14 @@ from __future__ import annotations
 import xml.etree.ElementTree as ET
 from typing import Any
 
+import pytest
+
 from filing_processing_evaluation.normalization import (
     _normalize_table,
     _validate_table,
+)
+from filing_processing_evaluation.normalization.stages.tables import (
+    EarningsReleaseTablePolicy,
 )
 
 
@@ -71,3 +76,41 @@ def test_logical_table_keeps_adjacent_vertical_spans_in_distinct_columns() -> No
     cells = {cell["text"]: cell for cell in table["cells"]}
     assert cells["“"]["column"] == 0
     assert cells["Quoted text"]["column"] == 1
+
+
+def test_earnings_release_table_policy_keeps_data_grid() -> None:
+    table = _normalized_table("""<table>
+        <tr><th>Metric</th><th>2026</th></tr>
+        <tr><td>Revenue</td><td>$42</td></tr>
+        </table>""")
+
+    assert EarningsReleaseTablePolicy().is_semantic(table)
+
+
+@pytest.mark.parametrize(
+    "table",
+    [
+        {
+            "row_count": 1,
+            "column_count": 1,
+            "cells": [{"text": "Guidance"}],
+        },
+        {
+            "row_count": 4,
+            "column_count": 2,
+            "cells": [
+                {"text": "Investor Relations"},
+                {"text": "investor@example.com"},
+            ],
+        },
+        {
+            "row_count": 7,
+            "column_count": 4,
+            "cells": [{"text": f"layout {index}"} for index in range(8)],
+        },
+    ],
+)
+def test_earnings_release_table_policy_flattens_layout_grid(
+    table: dict[str, Any],
+) -> None:
+    assert not EarningsReleaseTablePolicy().is_semantic(table)

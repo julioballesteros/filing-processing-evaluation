@@ -46,8 +46,13 @@ SAMPLE_SEC_HTML = b"""<DOCUMENT>
 <TEXT>
 <html><head><title>Example Earnings Release</title></head><body>
 <!-- generated exhibit comment -->
+<img src="logo.png" alt="Example logo">
 <div style="font-weight:700;text-align:center">Financial Highlights</div>
 <p>Revenue increased &amp; operating income improved.<br></p>
+<table><tr><td>
+  <div style="font-weight:700">Guidance</div>
+  <div>Revenue is expected to increase.</div>
+</td></tr></table>
 <table>
   <tr><th>Metric</th><th>2026</th></tr>
   <tr><td>Revenue</td><td>$42</td></tr>

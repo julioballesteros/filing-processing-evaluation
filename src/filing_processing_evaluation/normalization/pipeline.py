@@ -24,6 +24,10 @@ from filing_processing_evaluation.normalization.stages.projection import (
     InlineXbrlProjector,
 )
 from filing_processing_evaluation.normalization.stages.sections import SectionPolicy
+from filing_processing_evaluation.normalization.stages.tables import (
+    PreserveTablesPolicy,
+    TableSemanticsPolicy,
+)
 
 
 class DocumentParser(Protocol):
@@ -36,10 +40,15 @@ class HtmlDocumentPipeline:
     """Apply reusable semantic stages to one artifact selected by a workflow."""
 
     def __init__(
-        self, *, parser: DocumentParser, section_policy: SectionPolicy
+        self,
+        *,
+        parser: DocumentParser,
+        section_policy: SectionPolicy,
+        table_policy: TableSemanticsPolicy | None = None,
     ) -> None:
         self._parser = parser
         self._section_policy = section_policy
+        self._table_policy = table_policy or PreserveTablesPolicy()
         self._projector = InlineXbrlProjector()
         self._classifier = ElementClassifier()
         self._block_builder = BlockBuilder()
@@ -75,6 +84,7 @@ class HtmlDocumentPipeline:
         structured = self._block_builder.build(
             classified.value,
             section_policy=self._section_policy,
+            table_policy=self._table_policy,
             filing_id=source.metadata.filing_id,
         )
         diagnostics.extend(structured.diagnostics)

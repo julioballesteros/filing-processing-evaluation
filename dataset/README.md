@@ -43,6 +43,10 @@ rows and columns, recurring page furniture, and semantic page-break blocks. It
 preserves visible values but does not yet normalize Inline XBRL facts into a
 separate fact model. For an 8-K, the normalized content comes from the declared
 `earnings-release` exhibit rather than concatenating it with the primary filing.
+Presentation-only HTML tables are unfolded into ordered text while financial
+data grids retain logical rows, columns, cell roles, and source coordinates.
+Image-backed exhibits with flattened accessibility text remain page-level text
+because the source HTML does not expose reliable table or heading boundaries.
 `extractions/` remains empty until its annotation protocol is defined. Outputs
 from systems under test must not be placed in either reference directory.
 
