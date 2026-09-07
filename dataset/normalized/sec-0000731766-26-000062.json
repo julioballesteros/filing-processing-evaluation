@@ -1,7 +1,12 @@
 {
-  "schema_version": "0.0.3",
+  "schema_version": "1.2.0",
   "filing_id": "sec-0000731766-26-000062",
-  "raw_sha256": "ac66517766674908c3702dab75f52fc650729cef9dd81dfe04a580a8429c8543",
+  "source_artifact": {
+    "artifact_id": "primary",
+    "filename": "unh-20251231.htm",
+    "document_type": "10-K",
+    "sha256": "ac66517766674908c3702dab75f52fc650729cef9dd81dfe04a580a8429c8543"
+  },
   "document": {
     "title": "UnitedHealth Group Incorporated 10-K for period ended 2025-12-31",
     "source_title": "unh-20251231",
@@ -9,7 +14,9 @@
     "company_name": "UnitedHealth Group Incorporated",
     "form_type": "10-K",
     "filing_date": "2026-03-02",
-    "period_end_date": "2025-12-31"
+    "period_end_date": "2025-12-31",
+    "event_date": null,
+    "items": []
   },
   "page_count": 86,
   "sections": [

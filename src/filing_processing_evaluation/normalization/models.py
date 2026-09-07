@@ -19,15 +19,40 @@ class FilingMetadata:
     form_type: FormType
     filing_date: str
     period_end_date: str
-    primary_document: str
+    event_date: str | None
+    items: tuple[str, ...]
+
+
+@dataclass(frozen=True)
+class RawDocumentInput:
+    """One verified raw artifact available to a normalization workflow."""
+
+    artifact_id: str
+    filename: str
+    document_type: str
+    sha256: str
+    content: bytes
 
 
 @dataclass(frozen=True)
 class NormalizationInput:
-    """One fully loaded filing ready for deterministic processing."""
+    """A fully loaded filing bundle ready for deterministic processing."""
 
     metadata: FilingMetadata
-    content: bytes
+    artifacts: Mapping[str, RawDocumentInput]
+
+
+@dataclass(frozen=True)
+class DocumentInput:
+    """One artifact selected by a filing workflow for document processing."""
+
+    metadata: FilingMetadata
+    artifact: RawDocumentInput
+
+    @property
+    def content(self) -> bytes:
+        """Return the selected artifact bytes."""
+        return self.artifact.content
 
 
 @dataclass(frozen=True)
@@ -159,6 +184,17 @@ class NormalizedMetadata(TypedDict):
     form_type: FormType
     filing_date: str
     period_end_date: str
+    event_date: str | None
+    items: list[str]
+
+
+class SourceArtifactMetadata(TypedDict):
+    """Serializable identity and integrity metadata for normalized source content."""
+
+    artifact_id: str
+    filename: str
+    document_type: str
+    sha256: str
 
 
 class NormalizedDocument(TypedDict):
@@ -166,7 +202,7 @@ class NormalizedDocument(TypedDict):
 
     schema_version: str
     filing_id: str
-    raw_sha256: str
+    source_artifact: SourceArtifactMetadata
     document: NormalizedMetadata
     page_count: int
     sections: list[dict[str, Any]]

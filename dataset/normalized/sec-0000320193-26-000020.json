@@ -1,7 +1,12 @@
 {
-  "schema_version": "0.0.3",
+  "schema_version": "1.2.0",
   "filing_id": "sec-0000320193-26-000020",
-  "raw_sha256": "4ad5bea67cedfa7542d623900355cc8d143ef95c1acc135a597f2eedabdb9177",
+  "source_artifact": {
+    "artifact_id": "primary",
+    "filename": "aapl-20260627.htm",
+    "document_type": "10-Q",
+    "sha256": "4ad5bea67cedfa7542d623900355cc8d143ef95c1acc135a597f2eedabdb9177"
+  },
   "document": {
     "title": "Apple Inc. 10-Q for period ended 2026-06-27",
     "source_title": "aapl-20260627",
@@ -9,7 +14,9 @@
     "company_name": "Apple Inc.",
     "form_type": "10-Q",
     "filing_date": "2026-07-31",
-    "period_end_date": "2026-06-27"
+    "period_end_date": "2026-06-27",
+    "event_date": null,
+    "items": []
   },
   "page_count": 28,
   "sections": [

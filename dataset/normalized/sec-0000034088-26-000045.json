@@ -1,7 +1,12 @@
 {
-  "schema_version": "0.0.3",
+  "schema_version": "1.2.0",
   "filing_id": "sec-0000034088-26-000045",
-  "raw_sha256": "3591db2246ab14c52465d32f69b459b000919c141a5656c81cf59acf0a805be8",
+  "source_artifact": {
+    "artifact_id": "primary",
+    "filename": "xom-20251231.htm",
+    "document_type": "10-K",
+    "sha256": "3591db2246ab14c52465d32f69b459b000919c141a5656c81cf59acf0a805be8"
+  },
   "document": {
     "title": "Exxon Mobil Corporation 10-K for period ended 2025-12-31",
     "source_title": "xom-20251231",
@@ -9,7 +14,9 @@
     "company_name": "Exxon Mobil Corporation",
     "form_type": "10-K",
     "filing_date": "2026-02-18",
-    "period_end_date": "2025-12-31"
+    "period_end_date": "2025-12-31",
+    "event_date": null,
+    "items": []
   },
   "page_count": 131,
   "sections": [

@@ -1,7 +1,12 @@
 {
-  "schema_version": "0.0.3",
+  "schema_version": "1.2.0",
   "filing_id": "sec-0001193125-26-191507",
-  "raw_sha256": "76945a2c148afb8521cff13adcd320e99a8c09bcb1a2541b5d0ed5a2b02adf2d",
+  "source_artifact": {
+    "artifact_id": "primary",
+    "filename": "msft-20260331.htm",
+    "document_type": "10-Q",
+    "sha256": "76945a2c148afb8521cff13adcd320e99a8c09bcb1a2541b5d0ed5a2b02adf2d"
+  },
   "document": {
     "title": "Microsoft Corporation 10-Q for period ended 2026-03-31",
     "source_title": "10-Q",
@@ -9,7 +14,9 @@
     "company_name": "Microsoft Corporation",
     "form_type": "10-Q",
     "filing_date": "2026-04-29",
-    "period_end_date": "2026-03-31"
+    "period_end_date": "2026-03-31",
+    "event_date": null,
+    "items": []
   },
   "page_count": 69,
   "sections": [

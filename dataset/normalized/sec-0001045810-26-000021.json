@@ -1,7 +1,12 @@
 {
-  "schema_version": "0.0.3",
+  "schema_version": "1.2.0",
   "filing_id": "sec-0001045810-26-000021",
-  "raw_sha256": "73d81f5a111abcf72426c840871e76f5f5edc9631f436d495a86b6f87306d58b",
+  "source_artifact": {
+    "artifact_id": "primary",
+    "filename": "nvda-20260125.htm",
+    "document_type": "10-K",
+    "sha256": "73d81f5a111abcf72426c840871e76f5f5edc9631f436d495a86b6f87306d58b"
+  },
   "document": {
     "title": "NVIDIA Corporation 10-K for period ended 2026-01-25",
     "source_title": "nvda-20260125",
@@ -9,7 +14,9 @@
     "company_name": "NVIDIA Corporation",
     "form_type": "10-K",
     "filing_date": "2026-02-25",
-    "period_end_date": "2026-01-25"
+    "period_end_date": "2026-01-25",
+    "event_date": null,
+    "items": []
   },
   "page_count": 85,
   "sections": [

@@ -5,9 +5,10 @@ from __future__ import annotations
 from filing_processing_evaluation.normalization.errors import NormalizationError
 from filing_processing_evaluation.normalization.models import (
     Diagnostic,
-    NormalizationInput,
+    DocumentInput,
     NormalizedDocument,
     NormalizedMetadata,
+    SourceArtifactMetadata,
     StageOutcome,
     StructuredDocument,
 )
@@ -22,10 +23,8 @@ class DocumentAssembler:
 
     def assemble(
         self,
-        source: NormalizationInput,
+        source: DocumentInput,
         structured: StructuredDocument,
-        *,
-        raw_sha256: str,
     ) -> StageOutcome[NormalizedDocument]:
         metadata = source.metadata
         document_metadata = NormalizedMetadata(
@@ -39,11 +38,20 @@ class DocumentAssembler:
             form_type=metadata.form_type,
             filing_date=metadata.filing_date,
             period_end_date=metadata.period_end_date,
+            event_date=metadata.event_date,
+            items=list(metadata.items),
+        )
+        artifact = source.artifact
+        source_artifact = SourceArtifactMetadata(
+            artifact_id=artifact.artifact_id,
+            filename=artifact.filename,
+            document_type=artifact.document_type,
+            sha256=artifact.sha256,
         )
         document = NormalizedDocument(
             schema_version=SCHEMA_VERSION,
             filing_id=metadata.filing_id,
-            raw_sha256=raw_sha256,
+            source_artifact=source_artifact,
             document=document_metadata,
             page_count=structured.page_count,
             sections=structured.sections,

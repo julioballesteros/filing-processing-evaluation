@@ -13,6 +13,7 @@ from filing_processing_evaluation.artifacts import (
     update_normalized_manifest,
     write_normalized,
 )
+from filing_processing_evaluation.normalization import SCHEMA_VERSION
 from tests.support import normalize_document, prepare_normalization_fixture
 
 
@@ -46,6 +47,9 @@ def test_normalized_manifest_tracks_hash_and_review_state(tmp_path: Path) -> Non
     assert draft["reviewed_by"] is None
     assert draft["path"] == f"normalized/{entry.filing_id}.json"
 
+    draft["schema_version"] = "0.0.3"
+    manifest_path.write_text(json.dumps(draft) + "\n", encoding="utf-8")
+
     update_normalized_manifest(
         dataset_dir=tmp_path,
         normalized_path=normalized_path,
@@ -55,6 +59,7 @@ def test_normalized_manifest_tracks_hash_and_review_state(tmp_path: Path) -> Non
     )
     reviewed = json.loads(manifest_path.read_text())
     assert reviewed["status"] == "reviewed"
+    assert reviewed["schema_version"] == SCHEMA_VERSION
     assert reviewed["reviewed_by"] == "Test Reviewer"
     assert reviewed["reviewed_at"] == "2026-08-28T10:00:00Z"
 

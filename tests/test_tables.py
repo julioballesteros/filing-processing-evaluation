@@ -60,3 +60,14 @@ def test_logical_table_keeps_wide_and_row_spanning_headers_disjoint() -> None:
         2,
     )
     assert cells["Nonperforming"]["column"] == 1
+
+
+def test_logical_table_keeps_adjacent_vertical_spans_in_distinct_columns() -> None:
+    table = _normalized_table("""<table>
+        <tr><td colspan="12"></td><td rowspan="4" colspan="3">“</td></tr>
+        <tr><td colspan="15"></td><td rowspan="7" colspan="6">Quoted text</td></tr>
+        </table>""")
+
+    cells = {cell["text"]: cell for cell in table["cells"]}
+    assert cells["“"]["column"] == 0
+    assert cells["Quoted text"]["column"] == 1

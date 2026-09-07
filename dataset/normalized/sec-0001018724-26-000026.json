@@ -1,7 +1,12 @@
 {
-  "schema_version": "0.0.3",
+  "schema_version": "1.2.0",
   "filing_id": "sec-0001018724-26-000026",
-  "raw_sha256": "d07b8a88fa442c2c55bd65b3f1d336ca16e7d1e9fda831e1063d24adea60e4eb",
+  "source_artifact": {
+    "artifact_id": "primary",
+    "filename": "amzn-20260630.htm",
+    "document_type": "10-Q",
+    "sha256": "d07b8a88fa442c2c55bd65b3f1d336ca16e7d1e9fda831e1063d24adea60e4eb"
+  },
   "document": {
     "title": "Amazon.com, Inc. 10-Q for period ended 2026-06-30",
     "source_title": "amzn-20260630",
@@ -9,7 +14,9 @@
     "company_name": "Amazon.com, Inc.",
     "form_type": "10-Q",
     "filing_date": "2026-07-31",
-    "period_end_date": "2026-06-30"
+    "period_end_date": "2026-06-30",
+    "event_date": null,
+    "items": []
   },
   "page_count": 52,
   "sections": [],

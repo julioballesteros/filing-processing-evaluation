@@ -1,7 +1,12 @@
 {
-  "schema_version": "0.0.3",
+  "schema_version": "1.2.0",
   "filing_id": "sec-0001628280-26-054343",
-  "raw_sha256": "a26d1bf7303e06b74834b9d812e5be13b6132d6aa5031e11a43dc5c71bbf89c3",
+  "source_artifact": {
+    "artifact_id": "primary",
+    "filename": "jpm-20260630.htm",
+    "document_type": "10-Q",
+    "sha256": "a26d1bf7303e06b74834b9d812e5be13b6132d6aa5031e11a43dc5c71bbf89c3"
+  },
   "document": {
     "title": "JPMorgan Chase & Co. 10-Q for period ended 2026-06-30",
     "source_title": "jpm-20260630",
@@ -9,7 +14,9 @@
     "company_name": "JPMorgan Chase & Co.",
     "form_type": "10-Q",
     "filing_date": "2026-08-06",
-    "period_end_date": "2026-06-30"
+    "period_end_date": "2026-06-30",
+    "event_date": null,
+    "items": []
   },
   "page_count": 204,
   "sections": [

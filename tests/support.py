@@ -10,6 +10,7 @@ from pathlib import Path
 from filing_processing_evaluation.application import FilingNormalizationApplication
 from filing_processing_evaluation.artifacts import FileSystemRawFilingLoader
 from filing_processing_evaluation.dataset import Filing, load_manifest
+from filing_processing_evaluation.models import FormType
 from filing_processing_evaluation.normalization import NormalizedDocument
 
 ROOT = Path(__file__).parents[1]
@@ -36,6 +37,24 @@ SAMPLE_XHTML = b"""<?xml version="1.0" encoding="UTF-8"?>
     <hr/>
   </body>
 </html>
+"""
+SAMPLE_SEC_HTML = b"""<DOCUMENT>
+<TYPE>EX-99.1
+<SEQUENCE>2
+<FILENAME>earnings-release.htm
+<DESCRIPTION>Earnings release
+<TEXT>
+<html><head><title>Example Earnings Release</title></head><body>
+<!-- generated exhibit comment -->
+<div style="font-weight:700;text-align:center">Financial Highlights</div>
+<p>Revenue increased &amp; operating income improved.<br></p>
+<table>
+  <tr><th>Metric</th><th>2026</th></tr>
+  <tr><td>Revenue</td><td>$42</td></tr>
+</table>
+</body></html>
+</TEXT>
+</DOCUMENT>
 """
 
 
@@ -94,9 +113,51 @@ def prepare_batch_normalization_fixture(
     return entries, manifest
 
 
+def prepare_eight_k_normalization_fixture(
+    tmp_path: Path,
+) -> tuple[Filing, dict[str, str], Path]:
+    """Create a complete 8-K filing bundle with an SEC-wrapped HTML exhibit."""
+    entry = next(
+        filing
+        for filing in load_manifest(MANIFEST)
+        if filing.form_type == FormType.EIGHT_K
+    )
+    payloads = {
+        "primary": SAMPLE_XHTML,
+        "earnings-release": SAMPLE_SEC_HTML,
+    }
+    manifest = tmp_path / "manifest.jsonl"
+    write_manifest(manifest, [entry])
+    hashes: dict[str, str] = {}
+    locks = []
+    for artifact in entry.raw_artifacts:
+        payload = payloads[artifact.artifact_id]
+        raw_path = tmp_path / artifact.raw_path
+        raw_path.parent.mkdir(parents=True, exist_ok=True)
+        raw_path.write_bytes(payload)
+        digest = hashlib.sha256(payload).hexdigest()
+        hashes[artifact.artifact_id] = digest
+        locks.append(
+            {
+                "artifact_id": artifact.artifact_id,
+                "filing_id": entry.filing_id,
+                "retrieved_at": "2026-08-27T10:00:00Z",
+                "sha256": digest,
+                "size_bytes": len(payload),
+            }
+        )
+    (tmp_path / "raw.lock.jsonl").write_text(
+        "".join(json.dumps(lock) + "\n" for lock in locks), encoding="utf-8"
+    )
+    return entry, hashes, manifest
+
+
 def normalize_document(
     filing: Filing, *, dataset_dir: Path, expected_sha256: str
 ) -> NormalizedDocument:
     """Normalize one fixture filing through the application boundary."""
     application = FilingNormalizationApplication(FileSystemRawFilingLoader(dataset_dir))
-    return application.normalize(filing, expected_sha256=expected_sha256).document
+    return application.normalize(
+        filing,
+        expected_sha256_by_artifact={"primary": expected_sha256},
+    ).document

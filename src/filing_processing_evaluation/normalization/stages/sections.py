@@ -9,6 +9,31 @@ from typing import Protocol
 PART_PATTERN = re.compile(r"^PART\s+([IVX]+)(?:\s*[—-]\s*(.*))?$", re.IGNORECASE)
 ITEM_PATTERN = re.compile(r"^Item\s+(\d+[A-Z]?)\.?\s*(.*)$", re.IGNORECASE)
 NOTE_PATTERN = re.compile("^Note\\s+\\d+[A-Z]?\\s*[\\u2013\\u2014-]", re.IGNORECASE)
+EARNINGS_RELEASE_SECTION_PATTERNS = (
+    (
+        re.compile(
+            r"^(?:.*\s+)?(?:financial|business|operating|quarterly) highlights:?$",
+            re.IGNORECASE,
+        ),
+        "HIGHLIGHTS",
+    ),
+    (
+        re.compile(r"^(?:financial|quarterly|consolidated) results:?$", re.IGNORECASE),
+        "RESULTS",
+    ),
+    (re.compile(r"^(?:outlook|guidance):?$", re.IGNORECASE), "OUTLOOK"),
+    (
+        re.compile(r"^(?:conference call|webcast)(?: information)?:?$", re.IGNORECASE),
+        "CONFERENCE CALL",
+    ),
+    (
+        re.compile(
+            r"^(?:non-gaap|non-gaap financial measures)(?: reconciliations?)?:?$",
+            re.IGNORECASE,
+        ),
+        "NON-GAAP",
+    ),
+)
 
 
 @dataclass(frozen=True)
@@ -58,3 +83,13 @@ class TenQSectionPolicy:
 
     def definition(self, text: str) -> SectionDefinition | None:
         return section_definition(text)
+
+
+class EarningsReleaseSectionPolicy:
+    """Recognize conservative top-level sections in an earnings announcement."""
+
+    def definition(self, text: str) -> SectionDefinition | None:
+        for pattern, label in EARNINGS_RELEASE_SECTION_PATTERNS:
+            if pattern.fullmatch(text.strip()):
+                return SectionDefinition(level=1, label=label, title=text.strip())
+        return None

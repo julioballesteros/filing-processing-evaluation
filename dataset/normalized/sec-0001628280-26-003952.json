@@ -1,7 +1,12 @@
 {
-  "schema_version": "0.0.3",
+  "schema_version": "1.2.0",
   "filing_id": "sec-0001628280-26-003952",
-  "raw_sha256": "90d5d2bc4057df41c645f85dcebe575af9b0953a6a1902d189297bec17fd440a",
+  "source_artifact": {
+    "artifact_id": "primary",
+    "filename": "tsla-20251231.htm",
+    "document_type": "10-K",
+    "sha256": "90d5d2bc4057df41c645f85dcebe575af9b0953a6a1902d189297bec17fd440a"
+  },
   "document": {
     "title": "Tesla, Inc. 10-K for period ended 2025-12-31",
     "source_title": "tsla-20251231",
@@ -9,7 +14,9 @@
     "company_name": "Tesla, Inc.",
     "form_type": "10-K",
     "filing_date": "2026-01-29",
-    "period_end_date": "2025-12-31"
+    "period_end_date": "2025-12-31",
+    "event_date": null,
+    "items": []
   },
   "page_count": 105,
   "sections": [

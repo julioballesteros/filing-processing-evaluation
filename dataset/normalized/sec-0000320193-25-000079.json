@@ -1,7 +1,12 @@
 {
-  "schema_version": "0.0.3",
+  "schema_version": "1.2.0",
   "filing_id": "sec-0000320193-25-000079",
-  "raw_sha256": "548ae59778cf08ee0f2ee088e7ece20d947076c3c01f74d2d65db4c2777e436a",
+  "source_artifact": {
+    "artifact_id": "primary",
+    "filename": "aapl-20250927.htm",
+    "document_type": "10-K",
+    "sha256": "548ae59778cf08ee0f2ee088e7ece20d947076c3c01f74d2d65db4c2777e436a"
+  },
   "document": {
     "title": "Apple Inc. 10-K for period ended 2025-09-27",
     "source_title": "aapl-20250927",
@@ -9,7 +14,9 @@
     "company_name": "Apple Inc.",
     "form_type": "10-K",
     "filing_date": "2025-10-31",
-    "period_end_date": "2025-09-27"
+    "period_end_date": "2025-09-27",
+    "event_date": null,
+    "items": []
   },
   "page_count": 60,
   "sections": [

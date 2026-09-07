@@ -1,3 +1,3 @@
 """Schema constants shared by normalization components."""
 
-SCHEMA_VERSION = "0.0.3"
+SCHEMA_VERSION = "1.2.0"

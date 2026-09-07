@@ -1,7 +1,12 @@
 {
-  "schema_version": "0.0.3",
+  "schema_version": "1.2.0",
   "filing_id": "sec-0001628280-26-008131",
-  "raw_sha256": "4d9febdbc2038dcdca8726053286df4cbbfd48885051cbd781efcc3becb66a23",
+  "source_artifact": {
+    "artifact_id": "primary",
+    "filename": "jpm-20251231.htm",
+    "document_type": "10-K",
+    "sha256": "4d9febdbc2038dcdca8726053286df4cbbfd48885051cbd781efcc3becb66a23"
+  },
   "document": {
     "title": "JPMorgan Chase & Co. 10-K for period ended 2025-12-31",
     "source_title": "jpm-20251231",
@@ -9,7 +14,9 @@
     "company_name": "JPMorgan Chase & Co.",
     "form_type": "10-K",
     "filing_date": "2026-02-13",
-    "period_end_date": "2025-12-31"
+    "period_end_date": "2025-12-31",
+    "event_date": null,
+    "items": []
   },
   "page_count": 330,
   "sections": [

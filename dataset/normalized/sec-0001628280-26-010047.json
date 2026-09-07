@@ -1,7 +1,12 @@
 {
-  "schema_version": "0.0.3",
+  "schema_version": "1.2.0",
   "filing_id": "sec-0001628280-26-010047",
-  "raw_sha256": "22dd41f1aab4928f94a5f80e9497cf6203f27baa7c3f4e9088a6dd0aee929c66",
+  "source_artifact": {
+    "artifact_id": "primary",
+    "filename": "ko-20251231.htm",
+    "document_type": "10-K",
+    "sha256": "22dd41f1aab4928f94a5f80e9497cf6203f27baa7c3f4e9088a6dd0aee929c66"
+  },
   "document": {
     "title": "The Coca-Cola Company 10-K for period ended 2025-12-31",
     "source_title": "ko-20251231",
@@ -9,7 +14,9 @@
     "company_name": "The Coca-Cola Company",
     "form_type": "10-K",
     "filing_date": "2026-02-20",
-    "period_end_date": "2025-12-31"
+    "period_end_date": "2025-12-31",
+    "event_date": null,
+    "items": []
   },
   "page_count": 139,
   "sections": [

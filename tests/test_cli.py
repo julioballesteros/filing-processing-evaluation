@@ -16,6 +16,7 @@ from filing_processing_evaluation.dataset import DownloadSummary, load_lock
 from tests.support import (
     MANIFEST,
     prepare_batch_normalization_fixture,
+    prepare_eight_k_normalization_fixture,
     prepare_normalization_fixture,
 )
 
@@ -122,14 +123,44 @@ def test_normalization_and_render_cli(tmp_path: Path) -> None:
     assert "Rendered normalized filing" in render_result.output
 
 
-def test_normalize_cli_explicitly_rejects_8k() -> None:
+def test_normalize_and_render_cli_support_8k_earnings_release(
+    tmp_path: Path,
+) -> None:
+    entry, _, manifest = prepare_eight_k_normalization_fixture(tmp_path)
+    normalized_path = tmp_path / "normalized-8k.json"
+    rendered_path = tmp_path / "rendered-8k.html"
+
     result = CLI_RUNNER.invoke(
         app,
-        ["normalize", "--manifest", str(MANIFEST), "--form", "8-K"],
+        [
+            "normalize",
+            "--manifest",
+            str(manifest),
+            "--form",
+            "8-K",
+            "--output",
+            str(normalized_path),
+        ],
+    )
+    render_result = CLI_RUNNER.invoke(
+        app,
+        [
+            "render",
+            "--manifest",
+            str(manifest),
+            "--input",
+            str(normalized_path),
+            "--output",
+            str(rendered_path),
+            "--compare-raw",
+        ],
     )
 
-    assert result.exit_code == 2
-    assert "8-K raw artifacts are not supported by normalization yet" in result.output
+    assert result.exit_code == 0
+    assert render_result.exit_code == 0
+    document = load_normalized(normalized_path)
+    assert document["source_artifact"]["artifact_id"] == "earnings-release"
+    assert entry.exhibits[0].filename in rendered_path.read_text(encoding="utf-8")
 
 
 def test_default_normalize_and_accept_cli_update_reference_manifest(
@@ -300,5 +331,6 @@ def test_normalize_cli_rejects_invalid_batch_selection(tmp_path: Path) -> None:
     )
     assert missing_lock_result.exit_code == 2
     assert (
-        f"no raw lock entry for: {entries[1].filing_id}" in missing_lock_result.output
+        f"no raw lock entry for: {entries[1].filing_id}/primary"
+        in missing_lock_result.output
     )

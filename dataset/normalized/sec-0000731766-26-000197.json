@@ -1,7 +1,12 @@
 {
-  "schema_version": "0.0.3",
+  "schema_version": "1.2.0",
   "filing_id": "sec-0000731766-26-000197",
-  "raw_sha256": "3739e42dcf579aefb07d281e3278a33a6c247b3f4aa836ef52da188e9ea62207",
+  "source_artifact": {
+    "artifact_id": "primary",
+    "filename": "unh-20260630.htm",
+    "document_type": "10-Q",
+    "sha256": "3739e42dcf579aefb07d281e3278a33a6c247b3f4aa836ef52da188e9ea62207"
+  },
   "document": {
     "title": "UnitedHealth Group Incorporated 10-Q for period ended 2026-06-30",
     "source_title": "unh-20260630",
@@ -9,7 +14,9 @@
     "company_name": "UnitedHealth Group Incorporated",
     "form_type": "10-Q",
     "filing_date": "2026-08-10",
-    "period_end_date": "2026-06-30"
+    "period_end_date": "2026-06-30",
+    "event_date": null,
+    "items": []
   },
   "page_count": 30,
   "sections": [

@@ -1,7 +1,7 @@
 {
   "$schema": "./schemas/dataset.schema.json",
   "dataset_id": "filing-processing-benchmark",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Golden-set seed dataset for evaluating financial filing normalization and extraction.",
   "manifest": "manifest.jsonl",
   "stages": ["raw", "normalized", "extractions"],

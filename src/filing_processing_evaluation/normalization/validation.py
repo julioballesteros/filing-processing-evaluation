@@ -15,7 +15,7 @@ def validate_normalized(document: Mapping[str, Any]) -> None:
     required = {
         "schema_version",
         "filing_id",
-        "raw_sha256",
+        "source_artifact",
         "document",
         "page_count",
         "sections",
@@ -37,10 +37,22 @@ def validate_normalized(document: Mapping[str, Any]) -> None:
         "form_type",
         "filing_date",
         "period_end_date",
+        "event_date",
+        "items",
     }
-    if set(metadata) != metadata_fields or not all(
-        isinstance(metadata[field], str) and metadata[field]
-        for field in metadata_fields
+    string_metadata_fields = metadata_fields - {"event_date", "items"}
+    event_date = metadata.get("event_date")
+    items = metadata.get("items")
+    if (
+        set(metadata) != metadata_fields
+        or not all(
+            isinstance(metadata[field], str) and metadata[field]
+            for field in string_metadata_fields
+        )
+        or (event_date is not None and not isinstance(event_date, str))
+        or not isinstance(items, list)
+        or not all(isinstance(item, str) and item for item in items)
+        or len(set(items)) != len(items)
     ):
         raise NormalizationError("normalized document metadata has invalid fields")
     try:
@@ -49,18 +61,39 @@ def validate_normalized(document: Mapping[str, Any]) -> None:
         raise NormalizationError(
             "normalized document has an unsupported form type"
         ) from error
-    if form_type not in {FormType.TEN_K, FormType.TEN_Q}:
-        raise NormalizationError("normalized document has an unsupported form type")
+    if form_type == FormType.EIGHT_K and (not event_date or "2.02" not in items):
+        raise NormalizationError("normalized 8-K has invalid event metadata")
     filing_id = document.get("filing_id")
-    raw_sha256 = document.get("raw_sha256")
+    source_artifact = document.get("source_artifact")
     if not isinstance(filing_id, str) or not filing_id:
         raise NormalizationError("normalized document has an invalid filing ID")
+    source_artifact_fields = {
+        "artifact_id",
+        "filename",
+        "document_type",
+        "sha256",
+    }
     if (
-        not isinstance(raw_sha256, str)
-        or len(raw_sha256) != 64
-        or any(character not in "0123456789abcdef" for character in raw_sha256)
+        not isinstance(source_artifact, dict)
+        or set(source_artifact) != source_artifact_fields
+        or not all(
+            isinstance(source_artifact[field], str) and source_artifact[field]
+            for field in source_artifact_fields
+        )
     ):
-        raise NormalizationError("normalized document has an invalid raw SHA-256")
+        raise NormalizationError("normalized document has an invalid source artifact")
+    source_sha256 = source_artifact["sha256"]
+    if len(source_sha256) != 64 or any(
+        character not in "0123456789abcdef" for character in source_sha256
+    ):
+        raise NormalizationError("normalized source artifact has an invalid SHA-256")
+    expected_artifact_id = (
+        "earnings-release" if form_type == FormType.EIGHT_K else "primary"
+    )
+    if source_artifact["artifact_id"] != expected_artifact_id:
+        raise NormalizationError(
+            "normalized source artifact does not match the filing workflow"
+        )
     if not isinstance(sections, list) or not isinstance(blocks, list):
         raise NormalizationError(
             "normalized document sections and blocks must be arrays"

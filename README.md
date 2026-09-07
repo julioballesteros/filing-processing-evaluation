@@ -66,33 +66,35 @@ uv run filing-processing-evaluation validate --form 8-K --check-raw
 
 ## Build normalized drafts
 
-Create deterministic normalized drafts for the supported 10-K and 10-Q raw
-filings in the manifest:
+Create deterministic normalized drafts for every locked filing in the manifest:
 
 ```bash
 uv run filing-processing-evaluation normalize
 ```
 
-8-K earnings-release normalization is not implemented yet; raw 8-K entries are
-skipped by the default normalization command and explicitly rejected by
-`--form 8-K`. Use `--form 10-K`, `--form 10-Q`, or repeatable `--filing-id`
-arguments to target a supported subset. The equivalent Make target has the same
-defaults:
+For an 8-K, normalization uses the explicitly selected `earnings-release`
+exhibit as the canonical content source while retaining the primary filing in
+the verified raw bundle. Use `--form 10-K`, `--form 10-Q`, `--form 8-K`, or
+repeatable `--filing-id` arguments to target a subset. The equivalent Make
+target has the same defaults:
 
 ```bash
 make dataset-normalize
 make dataset-normalize FORM=10-Q
+make dataset-normalize FORM=8-K
 make dataset-normalize FILING_ID=MANIFEST_FILING_ID
 ```
 
-The normalizer core is storage-independent: it accepts a fully loaded filing and
-returns a normalized document plus deterministic stage diagnostics. Filesystem
-loading, lock-hash verification, JSON persistence, and review-manifest updates
-are artifact adapters outside the service. Separate `TenKNormalizer` and
-`TenQNormalizer` workflows each own a fixed composition of XHTML parsing,
-visible HTML projection, element classification, block/table construction, and
-document assembly stages. Shared stage implementations do not make a workflow
-externally configurable; form-specific workflows can diverge as their rules evolve.
+The normalizer core is storage-independent: it accepts a verified filing bundle
+and returns a normalized document plus deterministic stage diagnostics.
+Filesystem loading, lock-hash verification, JSON persistence, and
+review-manifest updates are artifact adapters outside the service. Separate
+`TenKNormalizer`, `TenQNormalizer`, and `EightKNormalizer` workflows select the
+appropriate source artifact and compose a shared HTML projection,
+classification, block/table, and assembly pipeline. Inline XBRL documents use a
+strict XHTML parser; SEC-wrapped exhibits use a tolerant HTML parser. Shared
+stage implementations do not make a workflow externally configurable;
+form-specific workflows can diverge as their rules evolve.
 
 Add `--diagnostics` to inspect the counts and decisions emitted by every stage:
 

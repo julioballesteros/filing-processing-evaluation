@@ -130,7 +130,7 @@ def download(
         typer.Option(help="Download files that already exist again."),
     ] = False,
 ) -> None:
-    """Download raw primary documents from SEC EDGAR."""
+    """Download selected raw filing artifacts from SEC EDGAR."""
     try:
         if not user_agent:
             raise DatasetError(
@@ -190,15 +190,7 @@ def normalize(
 ) -> None:
     """Create reviewable normalized drafts for selected locked raw filings."""
     try:
-        if form == FormType.EIGHT_K:
-            raise DatasetError(
-                "8-K raw artifacts are not supported by normalization yet"
-            )
-        entries = [
-            entry
-            for entry in load_manifest(manifest)
-            if entry.form_type in {FormType.TEN_K, FormType.TEN_Q}
-        ]
+        entries = load_manifest(manifest)
         filings = _select_filings(
             entries,
             form_type=form,
@@ -209,13 +201,14 @@ def normalize(
                 "--output requires a selection containing exactly one filing"
             )
         lock = load_lock(manifest.parent / "raw.lock.jsonl")
-        missing_lock_ids = [
-            filing.filing_id
+        missing_locks = [
+            f"{filing.filing_id}/{artifact.artifact_id}"
             for filing in filings
-            if (filing.filing_id, "primary") not in lock
+            for artifact in filing.raw_artifacts
+            if (filing.filing_id, artifact.artifact_id) not in lock
         ]
-        if missing_lock_ids:
-            raise DatasetError("no raw lock entry for: " + ", ".join(missing_lock_ids))
+        if missing_locks:
+            raise DatasetError("no raw lock entry for: " + ", ".join(missing_locks))
     except DatasetError as error:
         _abort(error)
 
@@ -228,7 +221,12 @@ def normalize(
         try:
             result = normalization_application.normalize(
                 filing,
-                expected_sha256=lock[(filing.filing_id, "primary")].sha256,
+                expected_sha256_by_artifact={
+                    artifact.artifact_id: lock[
+                        (filing.filing_id, artifact.artifact_id)
+                    ].sha256
+                    for artifact in filing.raw_artifacts
+                },
             )
             document = result.document
             normalized_path = output or (
@@ -334,7 +332,20 @@ def render(
         raw_href = None
         if compare_raw:
             filing = _find_filing(load_manifest(manifest), filing_id)
-            raw_path = manifest.parent / filing.raw_path
+            source_artifact_id = document["source_artifact"]["artifact_id"]
+            source_artifact = next(
+                (
+                    artifact
+                    for artifact in filing.raw_artifacts
+                    if artifact.artifact_id == source_artifact_id
+                ),
+                None,
+            )
+            if source_artifact is None:
+                raise DatasetError(
+                    f"filing has no {source_artifact_id} source artifact"
+                )
+            raw_path = manifest.parent / source_artifact.raw_path
             if not raw_path.is_file():
                 raise DatasetError(f"raw artifact not found: {raw_path}")
             raw_href = relative_href(raw_path, rendered_path)

@@ -231,25 +231,12 @@ def _nearest_anchor_index(anchors: list[int], physical_column: int) -> int:
     return insertion
 
 
-def normalize_table(table: ET.Element) -> dict[str, Any] | None:
-    """Convert an XHTML table's spacer grid into a logical table."""
-    physical_cells, physical_rows, physical_columns = _extract_physical_cells(table)
-    if not any(physical_cell.text for physical_cell in physical_cells):
-        return None
-    by_physical_row: dict[int, list[PhysicalCell]] = defaultdict(list)
-    for physical_cell in physical_cells:
-        by_physical_row[physical_cell.row].append(physical_cell)
-    rows = {
-        row: merged
-        for row, cells in by_physical_row.items()
-        if (merged := _merge_currency_cells(cells))
-    }
-    kept_rows = sorted(rows)
-    row_map = {physical: logical for logical, physical in enumerate(kept_rows)}
-    anchors = _logical_column_anchors(rows)
-    if not anchors:
-        return None
-
+def _project_logical_cells(
+    rows: Mapping[int, list[dict[str, Any]]],
+    kept_rows: list[int],
+    row_map: Mapping[int, int],
+    anchors: list[int],
+) -> list[dict[str, Any]]:
     logical_cells: list[dict[str, Any]] = []
     for physical_row in kept_rows:
         grouped: dict[int, dict[str, Any]] = {}
@@ -293,6 +280,56 @@ def normalize_table(table: ET.Element) -> dict[str, Any] | None:
             else:
                 grouped[column] = value
         logical_cells.extend(grouped[column] for column in sorted(grouped))
+    return logical_cells
+
+
+def _logical_cells_overlap(cells: list[dict[str, Any]]) -> bool:
+    occupied: set[tuple[int, int]] = set()
+    for cell in cells:
+        positions = (
+            (row, column)
+            for row in range(int(cell["row"]), int(cell["row"]) + int(cell["row_span"]))
+            for column in range(
+                int(cell["column"]),
+                int(cell["column"]) + int(cell["column_span"]),
+            )
+        )
+        for position in positions:
+            if position in occupied:
+                return True
+            occupied.add(position)
+    return False
+
+
+def normalize_table(table: ET.Element) -> dict[str, Any] | None:
+    """Convert an XHTML table's spacer grid into a logical table."""
+    physical_cells, physical_rows, physical_columns = _extract_physical_cells(table)
+    if not any(physical_cell.text for physical_cell in physical_cells):
+        return None
+    by_physical_row: dict[int, list[PhysicalCell]] = defaultdict(list)
+    for physical_cell in physical_cells:
+        by_physical_row[physical_cell.row].append(physical_cell)
+    rows = {
+        row: merged
+        for row, cells in by_physical_row.items()
+        if (merged := _merge_currency_cells(cells))
+    }
+    kept_rows = sorted(rows)
+    row_map = {physical: logical for logical, physical in enumerate(kept_rows)}
+    anchors = _logical_column_anchors(rows)
+    if not anchors:
+        return None
+
+    logical_cells = _project_logical_cells(rows, kept_rows, row_map, anchors)
+    if _logical_cells_overlap(logical_cells):
+        # Some layout tables use adjacent vertical spans that sparse anchor
+        # inference maps onto one logical column. Expand only those problematic
+        # tables so established financial-table projections remain unchanged.
+        anchors = sorted(
+            set(anchors)
+            | {int(cell["column"]) for row in rows.values() for cell in row}
+        )
+        logical_cells = _project_logical_cells(rows, kept_rows, row_map, anchors)
 
     cells_by_row: dict[int, list[dict[str, Any]]] = defaultdict(list)
     for logical_cell in logical_cells:

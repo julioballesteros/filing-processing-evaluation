@@ -1,6 +1,6 @@
 # Dataset
 
-Version `0.2.0` is a deliberately small golden set: one 10-K, one 10-Q, and one
+Version `0.3.0` is a deliberately small golden set: one 10-K, one 10-Q, and one
 earnings-announcement 8-K from each of ten SEC registrants. The companies span
 ten business areas, but this release is a regression fixture rather than a
 statistically representative benchmark.
@@ -24,7 +24,8 @@ Every normalized document follows the same provider-independent contract and
 remains a generated draft until its block boundaries, heading hierarchy, and
 logical tables have been reviewed. Normalized documents contain:
 
-- A schema version, filing ID, and raw-file SHA-256.
+- A schema version, filing ID, and the selected source artifact's identity and
+  SHA-256.
 - Self-contained filing metadata and a human-readable document title.
 - A flat, ordered list of headings, paragraphs, list items, and logical tables.
 - A separate section hierarchy pointing to heading blocks.
@@ -40,9 +41,10 @@ explicit `accept-normalized` workflow marks a human-reviewed artifact as
 The baseline excludes hidden Inline XBRL metadata, empty layout tables, spacer
 rows and columns, recurring page furniture, and semantic page-break blocks. It
 preserves visible values but does not yet normalize Inline XBRL facts into a
-separate fact model. `extractions/` remains empty until its annotation protocol
-is defined. Outputs from systems under test must not be placed in either
-reference directory.
+separate fact model. For an 8-K, the normalized content comes from the declared
+`earnings-release` exhibit rather than concatenating it with the primary filing.
+`extractions/` remains empty until its annotation protocol is defined. Outputs
+from systems under test must not be placed in either reference directory.
 
 ## Integrity
 
@@ -55,7 +57,7 @@ downloads are rejected if SEC content does not match the committed lock.
 The raw 8-K subset includes each primary filing and its declared
 `earnings-release` exhibit. Other exhibits, presentations, financial
 supplements, graphics, and the complete SEC submission package remain out of
-scope. The normalized stage continues to cover only 10-K and 10-Q documents.
+scope.
 
 SEC asks automated clients to identify themselves and limit request rates; see
 its [developer guidance](https://www.sec.gov/about/developer-resources) and

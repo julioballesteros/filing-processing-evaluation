@@ -19,6 +19,7 @@ from filing_processing_evaluation.dataset import load_manifest
 from filing_processing_evaluation.models import FormType
 from filing_processing_evaluation.normalization import (
     SCHEMA_VERSION,
+    EightKNormalizer,
     NormalizationError,
     NormalizationService,
     TenKNormalizer,
@@ -30,6 +31,7 @@ from tests.support import (
     SAMPLE_XHTML,
     normalize_document,
     prepare_batch_normalization_fixture,
+    prepare_eight_k_normalization_fixture,
     prepare_normalization_fixture,
 )
 
@@ -39,12 +41,20 @@ def test_normalize_filing_preserves_structure_and_omits_furniture(
 ) -> None:
     entry, digest, _ = prepare_normalization_fixture(tmp_path)
 
-    source = FileSystemRawFilingLoader(tmp_path).load(entry, expected_sha256=digest)
+    source = FileSystemRawFilingLoader(tmp_path).load(
+        entry,
+        expected_sha256_by_artifact={"primary": digest},
+    )
     result = NormalizationService().normalize(source)
     document = result.document
 
     assert document["schema_version"] == SCHEMA_VERSION
-    assert document["raw_sha256"] == digest
+    assert document["source_artifact"] == {
+        "artifact_id": "primary",
+        "filename": entry.primary_document,
+        "document_type": entry.form_type,
+        "sha256": digest,
+    }
     assert document["document"] == {
         "title": (
             f"{entry.company_name} {entry.form_type} for period ended "
@@ -56,6 +66,8 @@ def test_normalize_filing_preserves_structure_and_omits_furniture(
         "form_type": entry.form_type,
         "filing_date": entry.filing_date,
         "period_end_date": entry.period_end_date,
+        "event_date": None,
+        "items": [],
     }
     assert document["page_count"] == 2
     assert document["sections"] == [
@@ -125,12 +137,17 @@ def test_normalize_filing_preserves_structure_and_omits_furniture(
 def test_filing_type_workflows_are_separate_and_dispatchable(tmp_path: Path) -> None:
     assert not inspect.signature(TenKNormalizer).parameters
     assert not inspect.signature(TenQNormalizer).parameters
+    assert not inspect.signature(EightKNormalizer).parameters
 
     entries, _ = prepare_batch_normalization_fixture(tmp_path)
     loader = FileSystemRawFilingLoader(tmp_path)
     digest = hashlib.sha256(SAMPLE_XHTML).hexdigest()
-    annual_source = loader.load(entries[0], expected_sha256=digest)
-    quarterly_source = loader.load(entries[1], expected_sha256=digest)
+    annual_source = loader.load(
+        entries[0], expected_sha256_by_artifact={"primary": digest}
+    )
+    quarterly_source = loader.load(
+        entries[1], expected_sha256_by_artifact={"primary": digest}
+    )
 
     annual = TenKNormalizer().normalize(annual_source)
     quarterly = TenQNormalizer().normalize(quarterly_source)
@@ -145,13 +162,44 @@ def test_filing_type_workflows_are_separate_and_dispatchable(tmp_path: Path) -> 
         annual_source,
         metadata=replace(
             annual_source.metadata,
-            form_type=cast(FormType, "8-K"),
+            form_type=cast(FormType, "6-K"),
         ),
     )
     with pytest.raises(NormalizationError, match="no normalization workflow"):
         NormalizationService().normalize(unsupported_source)
     with pytest.raises(ValueError, match="form types must be unique"):
         NormalizationService((TenKNormalizer(), TenKNormalizer()))
+
+
+def test_eight_k_workflow_normalizes_earnings_release_exhibit(
+    tmp_path: Path,
+) -> None:
+    entry, hashes, _ = prepare_eight_k_normalization_fixture(tmp_path)
+    source = FileSystemRawFilingLoader(tmp_path).load(
+        entry,
+        expected_sha256_by_artifact=hashes,
+    )
+
+    result = NormalizationService().normalize(source)
+    document = result.document
+
+    assert document["source_artifact"] == {
+        "artifact_id": "earnings-release",
+        "filename": entry.exhibits[0].filename,
+        "document_type": "EX-99.1",
+        "sha256": hashes["earnings-release"],
+    }
+    assert document["document"]["form_type"] == FormType.EIGHT_K
+    assert document["document"]["event_date"] == entry.event_date
+    assert document["document"]["items"] == list(entry.items)
+    assert document["document"]["source_title"] == "Example Earnings Release"
+    assert document["sections"][0]["label"] == "HIGHLIGHTS"
+    assert any(block["type"] == "table" for block in document["blocks"])
+    assert any(
+        block.get("text") == "Revenue increased & operating income improved."
+        for block in document["blocks"]
+    )
+    assert result.diagnostics[0].stage == "parse_sec_html"
 
 
 def test_repeated_page_section_headings_reuse_active_sections(tmp_path: Path) -> None:
@@ -183,7 +231,10 @@ def test_repeated_page_section_headings_reuse_active_sections(tmp_path: Path) ->
 
     result = FilingNormalizationApplication(
         FileSystemRawFilingLoader(tmp_path)
-    ).normalize(entry, expected_sha256=hashlib.sha256(content).hexdigest())
+    ).normalize(
+        entry,
+        expected_sha256_by_artifact={"primary": hashlib.sha256(content).hexdigest()},
+    )
 
     assert [
         (section["label"], section["title"]) for section in result.document["sections"]
@@ -262,6 +313,13 @@ def test_normalizer_rejects_missing_or_modified_raw_artifact(tmp_path: Path) -> 
     raw_path.write_bytes(SAMPLE_XHTML)
     with pytest.raises(ArtifactError, match="failed integrity check"):
         normalize_document(entry, dataset_dir=tmp_path, expected_sha256="0" * 64)
+
+    eight_k, hashes, _ = prepare_eight_k_normalization_fixture(tmp_path)
+    with pytest.raises(ArtifactError, match="hashes do not match"):
+        FileSystemRawFilingLoader(tmp_path).load(
+            eight_k,
+            expected_sha256_by_artifact={"primary": hashes["primary"]},
+        )
 
 
 def test_normalize_text_uses_unicode_nfc() -> None:

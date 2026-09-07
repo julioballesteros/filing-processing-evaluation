@@ -12,6 +12,7 @@ from filing_processing_evaluation.normalization.models import (
     NormalizationResult,
 )
 from filing_processing_evaluation.normalization.workflows import (
+    EightKNormalizer,
     TenKNormalizer,
     TenQNormalizer,
 )
@@ -34,7 +35,7 @@ class NormalizationService:
         selected = (
             tuple(workflows)
             if workflows is not None
-            else (TenKNormalizer(), TenQNormalizer())
+            else (TenKNormalizer(), TenQNormalizer(), EightKNormalizer())
         )
         self._workflows = {workflow.form_type: workflow for workflow in selected}
         if len(self._workflows) != len(selected):

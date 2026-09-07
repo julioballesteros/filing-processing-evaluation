@@ -1,7 +1,12 @@
 {
-  "schema_version": "0.0.3",
+  "schema_version": "1.2.0",
   "filing_id": "sec-0000034088-26-000093",
-  "raw_sha256": "a258b9e876acf7c68dd26a64d1cc51dbe9b6aae76fd1b6ad5b37c83e5721de13",
+  "source_artifact": {
+    "artifact_id": "primary",
+    "filename": "xom-20260630.htm",
+    "document_type": "10-Q",
+    "sha256": "a258b9e876acf7c68dd26a64d1cc51dbe9b6aae76fd1b6ad5b37c83e5721de13"
+  },
   "document": {
     "title": "Exxon Mobil Corporation 10-Q for period ended 2026-06-30",
     "source_title": "xom-20260630",
@@ -9,7 +14,9 @@
     "company_name": "Exxon Mobil Corporation",
     "form_type": "10-Q",
     "filing_date": "2026-08-03",
-    "period_end_date": "2026-06-30"
+    "period_end_date": "2026-06-30",
+    "event_date": null,
+    "items": []
   },
   "page_count": 1,
   "sections": [

@@ -1,7 +1,12 @@
 {
-  "schema_version": "0.0.3",
+  "schema_version": "1.2.0",
   "filing_id": "sec-0001628280-26-050503",
-  "raw_sha256": "650f678075cac73d40e442d7ed35a5bdc5f20be7d381803f873712bf4911b274",
+  "source_artifact": {
+    "artifact_id": "primary",
+    "filename": "ko-20260703.htm",
+    "document_type": "10-Q",
+    "sha256": "650f678075cac73d40e442d7ed35a5bdc5f20be7d381803f873712bf4911b274"
+  },
   "document": {
     "title": "The Coca-Cola Company 10-Q for period ended 2026-07-03",
     "source_title": "ko-20260703",
@@ -9,7 +14,9 @@
     "company_name": "The Coca-Cola Company",
     "form_type": "10-Q",
     "filing_date": "2026-07-29",
-    "period_end_date": "2026-07-03"
+    "period_end_date": "2026-07-03",
+    "event_date": null,
+    "items": []
   },
   "page_count": 56,
   "sections": [

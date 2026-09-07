@@ -137,13 +137,16 @@ def render_normalized_html(
         raise DatasetError("normalized document sections and blocks must be arrays")
     title = _text(metadata.get("title", document.get("filing_id", "Filing")))
     filing_id = _text(document.get("filing_id", ""))
-    raw_sha256 = _text(document.get("raw_sha256", ""))
+    source_artifact = document.get("source_artifact", {})
+    source_artifact = source_artifact if isinstance(source_artifact, dict) else {}
+    source_artifact_id = source_artifact.get("artifact_id", "source")
+    source_sha256 = _text(source_artifact.get("sha256", ""))
     page_count = _text(document.get("page_count", ""))
     schema_version = _text(document.get("schema_version", ""))
     links: list[str] = []
     if raw_href:
         links.append(
-            f'<a href="{escape(raw_href, quote=True)}" target="_blank">Open raw filing</a>'
+            f'<a href="{escape(raw_href, quote=True)}" target="_blank">Open raw source</a>'
         )
     if json_href:
         links.append(
@@ -162,8 +165,8 @@ def render_normalized_html(
     if raw_href:
         body_class = ' class="with-raw"'
         raw_pane = (
-            '<section class="raw-pane"><div class="pane-label">Raw SEC filing</div>'
-            f'<iframe title="Raw SEC filing" src="{escape(raw_href, quote=True)}"></iframe>'
+            '<section class="raw-pane"><div class="pane-label">Raw SEC source</div>'
+            f'<iframe title="Raw SEC source" src="{escape(raw_href, quote=True)}"></iframe>'
             "</section>"
         )
     return f"""<!doctype html>
@@ -219,7 +222,7 @@ def render_normalized_html(
   <header>
     <h1>{title}</h1>
     <p>{filing_id} · schema {schema_version} · {page_count} source pages · {len(sections)} sections · {len(blocks)} blocks</p>
-    <p>Raw SHA-256: <code>{raw_sha256}</code>{(' · ' + toolbar) if toolbar else ''}</p>
+    <p>Source: {_text(source_artifact_id)} · SHA-256: <code>{source_sha256}</code>{(' · ' + toolbar) if toolbar else ''}</p>
   </header>
   <main>{raw_pane}{normalized}</main>
 </body>

@@ -1,7 +1,12 @@
 {
-  "schema_version": "0.0.3",
+  "schema_version": "1.2.0",
   "filing_id": "sec-0001628280-26-049270",
-  "raw_sha256": "8f562b36769e31c93590b7e97d1df69640dee8d7708f330785cd6f40b14c6101",
+  "source_artifact": {
+    "artifact_id": "primary",
+    "filename": "tsla-20260630.htm",
+    "document_type": "10-Q",
+    "sha256": "8f562b36769e31c93590b7e97d1df69640dee8d7708f330785cd6f40b14c6101"
+  },
   "document": {
     "title": "Tesla, Inc. 10-Q for period ended 2026-06-30",
     "source_title": "tsla-20260630",
@@ -9,7 +14,9 @@
     "company_name": "Tesla, Inc.",
     "form_type": "10-Q",
     "filing_date": "2026-07-23",
-    "period_end_date": "2026-06-30"
+    "period_end_date": "2026-06-30",
+    "event_date": null,
+    "items": []
   },
   "page_count": 40,
   "sections": [

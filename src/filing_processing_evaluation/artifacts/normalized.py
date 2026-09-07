@@ -25,6 +25,7 @@ NORMALIZED_MANIFEST_FIELDS = {
     "reviewed_at",
     "reviewed_by",
 }
+READABLE_MANIFEST_SCHEMA_VERSIONS = {"0.0.3", SCHEMA_VERSION}
 
 
 def write_normalized(document: Mapping[str, Any], path: Path) -> None:
@@ -85,7 +86,7 @@ def _load_normalized_manifest(path: Path) -> dict[str, dict[str, Any]]:
         reviewed_by = value.get("reviewed_by")
         sha256 = value.get("sha256")
         if (
-            value.get("schema_version") != SCHEMA_VERSION
+            value.get("schema_version") not in READABLE_MANIFEST_SCHEMA_VERSIONS
             or status not in {"draft", "reviewed"}
             or not isinstance(value.get("path"), str)
             or not str(value["path"]).startswith("normalized/")

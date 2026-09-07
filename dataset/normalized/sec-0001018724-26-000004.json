@@ -1,7 +1,12 @@
 {
-  "schema_version": "0.0.3",
+  "schema_version": "1.2.0",
   "filing_id": "sec-0001018724-26-000004",
-  "raw_sha256": "beb1bfc28558135e76882db0cf36ba72a1ab44e2144fe37534f4da1e120ddb57",
+  "source_artifact": {
+    "artifact_id": "primary",
+    "filename": "amzn-20251231.htm",
+    "document_type": "10-K",
+    "sha256": "beb1bfc28558135e76882db0cf36ba72a1ab44e2144fe37534f4da1e120ddb57"
+  },
   "document": {
     "title": "Amazon.com, Inc. 10-K for period ended 2025-12-31",
     "source_title": "amzn-20251231",
@@ -9,7 +14,9 @@
     "company_name": "Amazon.com, Inc.",
     "form_type": "10-K",
     "filing_date": "2026-02-06",
-    "period_end_date": "2025-12-31"
+    "period_end_date": "2025-12-31",
+    "event_date": null,
+    "items": []
   },
   "page_count": 79,
   "sections": [

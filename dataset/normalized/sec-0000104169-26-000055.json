@@ -1,7 +1,12 @@
 {
-  "schema_version": "0.0.3",
+  "schema_version": "1.2.0",
   "filing_id": "sec-0000104169-26-000055",
-  "raw_sha256": "276a6accff6066f00342ba03b390c6c2bd51aa7246f0346df22df0b839a5bf5c",
+  "source_artifact": {
+    "artifact_id": "primary",
+    "filename": "wmt-20260131.htm",
+    "document_type": "10-K",
+    "sha256": "276a6accff6066f00342ba03b390c6c2bd51aa7246f0346df22df0b839a5bf5c"
+  },
   "document": {
     "title": "Walmart Inc. 10-K for period ended 2026-01-31",
     "source_title": "wmt-20260131",
@@ -9,7 +14,9 @@
     "company_name": "Walmart Inc.",
     "form_type": "10-K",
     "filing_date": "2026-03-13",
-    "period_end_date": "2026-01-31"
+    "period_end_date": "2026-01-31",
+    "event_date": null,
+    "items": []
   },
   "page_count": 87,
   "sections": [

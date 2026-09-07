@@ -34,7 +34,7 @@ def test_normalized_round_trip_and_renderer(tmp_path: Path) -> None:
     assert load_normalized(normalized_path) == document
     assert isinstance(loaded["document"]["form_type"], FormType)
     assert rendered_path.read_text(encoding="utf-8") == html
-    assert "Raw SEC filing" in html
+    assert "Raw SEC source" in html
     assert "Open normalized JSON" in html
     assert "Text with normalized whitespace &amp; facts." in html
     assert 'rowspan="2"' in html
@@ -46,7 +46,10 @@ def test_normalized_round_trip_and_renderer(tmp_path: Path) -> None:
 def test_renderer_rejects_invalid_shapes() -> None:
     malformed: dict[str, Any] = {
         "filing_id": "id",
-        "raw_sha256": "0" * 64,
+        "source_artifact": {
+            "artifact_id": "primary",
+            "sha256": "0" * 64,
+        },
         "document": "bad",
         "sections": [],
         "blocks": [],

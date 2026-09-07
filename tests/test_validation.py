@@ -49,13 +49,13 @@ def test_semantic_validator_rejects_invalid_metadata_and_cell_provenance(
         validate_normalized(bad_metadata)
 
     bad_form = json.loads(json.dumps(document))
-    bad_form["document"]["form_type"] = "8-K"
+    bad_form["document"]["form_type"] = "6-K"
     with pytest.raises(NormalizationError, match="unsupported form type"):
         validate_normalized(bad_form)
 
     bad_hash = json.loads(json.dumps(document))
-    bad_hash["raw_sha256"] = "bad"
-    with pytest.raises(NormalizationError, match="invalid raw SHA"):
+    bad_hash["source_artifact"]["sha256"] = "bad"
+    with pytest.raises(NormalizationError, match="invalid SHA"):
         validate_normalized(bad_hash)
 
     bad_type = json.loads(json.dumps(document))
